@@ -1,4 +1,4 @@
-# OpenAPI\Client\PaymentsApi
+# Cpayment.Connector\PaymentsApi
 
 All URIs are relative to *http://localhost*
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## v1PaymentsAllByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet
 
-> \OpenAPI\Client\Model\PaymentOperationsResponse v1PaymentsAllByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet($order_ref, $merchant_id, $merchant_site_id, $auth_token)
+> \Cpayment.Connector\Model\PaymentOperationsResponse v1PaymentsAllByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet($order_ref, $merchant_id, $merchant_site_id, $auth_token)
 
 Gets ALL the details for a specified OrderRef.
 
@@ -26,7 +26,7 @@ Gets ALL the details for a specified OrderRef.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new OpenAPI\Client\Api\PaymentsApi(
+$apiInstance = new Cpayment.Connector\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
+[**\Cpayment.Connector\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ No authorization required
 
 ## v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdByOrderTagGet
 
-> \OpenAPI\Client\Model\PaymentOperationsResponse v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdByOrderTagGet($order_ref, $merchant_id, $merchant_site_id, $order_tag, $auth_token)
+> \Cpayment.Connector\Model\PaymentOperationsResponse v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdByOrderTagGet($order_ref, $merchant_id, $merchant_site_id, $order_tag, $auth_token)
 
 Gets the details for a specified couple of OrderRef/OrderTag.
 
@@ -86,7 +86,7 @@ Gets the details for a specified couple of OrderRef/OrderTag.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new OpenAPI\Client\Api\PaymentsApi(
+$apiInstance = new Cpayment.Connector\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
+[**\Cpayment.Connector\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ No authorization required
 
 ## v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet
 
-> \OpenAPI\Client\Model\PaymentOperationsResponse v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet($order_ref, $merchant_id, $merchant_site_id, $auth_token)
+> \Cpayment.Connector\Model\PaymentOperationsResponse v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet($order_ref, $merchant_id, $merchant_site_id, $auth_token)
 
 Gets the details for a specified OrderRef.
 
@@ -148,7 +148,7 @@ Gets the details for a specified OrderRef.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new OpenAPI\Client\Api\PaymentsApi(
+$apiInstance = new Cpayment.Connector\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
+[**\Cpayment.Connector\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
 
 ### Authorization
 
@@ -197,7 +197,7 @@ No authorization required
 
 ## v1PaymentsByOrderRefOperationsCancelOrRefundPut
 
-> \OpenAPI\Client\Model\PaymentOperationsResponse v1PaymentsByOrderRefOperationsCancelOrRefundPut($order_ref, $auth_token, $payment_operation_request)
+> \Cpayment.Connector\Model\PaymentOperationsResponse v1PaymentsByOrderRefOperationsCancelOrRefundPut($order_ref, $auth_token, $payment_operation_request)
 
 Executes a cancel or refund operation on the specified OrderRef.
 
@@ -210,14 +210,14 @@ This operation allows the merchant to cancel (also referred to as \"void\") or r
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new OpenAPI\Client\Api\PaymentsApi(
+$apiInstance = new Cpayment.Connector\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $order_ref = 'order_ref_example'; // string | The OrderRef.
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$payment_operation_request = new \OpenAPI\Client\Model\PaymentOperationsRequest(); // \OpenAPI\Client\Model\PaymentOperationsRequest | The payment operation request. Materialized by the Body of the PUT request
+$payment_operation_request = new \Cpayment.Connector\Model\PaymentOperationsRequest(); // \Cpayment.Connector\Model\PaymentOperationsRequest | The payment operation request. Materialized by the Body of the PUT request
 
 try {
     $result = $apiInstance->v1PaymentsByOrderRefOperationsCancelOrRefundPut($order_ref, $auth_token, $payment_operation_request);
@@ -235,11 +235,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order_ref** | **string**| The OrderRef. |
  **auth_token** | **string**| Gets or sets the authentication token. |
- **payment_operation_request** | [**\OpenAPI\Client\Model\PaymentOperationsRequest**](../Model/PaymentOperationsRequest.md)| The payment operation request. Materialized by the Body of the PUT request | [optional]
+ **payment_operation_request** | [**\Cpayment.Connector\Model\PaymentOperationsRequest**](../Model/PaymentOperationsRequest.md)| The payment operation request. Materialized by the Body of the PUT request | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
+[**\Cpayment.Connector\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
 
 ### Authorization
 
@@ -257,7 +257,7 @@ No authorization required
 
 ## v1PaymentsByOrderRefOperationsCapturePut
 
-> \OpenAPI\Client\Model\PaymentOperationsResponse v1PaymentsByOrderRefOperationsCapturePut($order_ref, $auth_token, $payment_operation_request)
+> \Cpayment.Connector\Model\PaymentOperationsResponse v1PaymentsByOrderRefOperationsCapturePut($order_ref, $auth_token, $payment_operation_request)
 
 Executes a capture operation on the specified OrderRef.
 
@@ -270,14 +270,14 @@ This operation charges the bank account of the customer, following a valid autho
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new OpenAPI\Client\Api\PaymentsApi(
+$apiInstance = new Cpayment.Connector\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $order_ref = 'order_ref_example'; // string | The OrderRef.
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$payment_operation_request = new \OpenAPI\Client\Model\PaymentOperationsRequest(); // \OpenAPI\Client\Model\PaymentOperationsRequest | The payment operation request. Materialized by the Body of the PUT request
+$payment_operation_request = new \Cpayment.Connector\Model\PaymentOperationsRequest(); // \Cpayment.Connector\Model\PaymentOperationsRequest | The payment operation request. Materialized by the Body of the PUT request
 
 try {
     $result = $apiInstance->v1PaymentsByOrderRefOperationsCapturePut($order_ref, $auth_token, $payment_operation_request);
@@ -295,11 +295,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order_ref** | **string**| The OrderRef. |
  **auth_token** | **string**| Gets or sets the authentication token. |
- **payment_operation_request** | [**\OpenAPI\Client\Model\PaymentOperationsRequest**](../Model/PaymentOperationsRequest.md)| The payment operation request. Materialized by the Body of the PUT request | [optional]
+ **payment_operation_request** | [**\Cpayment.Connector\Model\PaymentOperationsRequest**](../Model/PaymentOperationsRequest.md)| The payment operation request. Materialized by the Body of the PUT request | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
+[**\Cpayment.Connector\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
 
 ### Authorization
 
@@ -317,7 +317,7 @@ No authorization required
 
 ## v1PaymentsByOrderRefOperationsRecomputePut
 
-> \OpenAPI\Client\Model\PaymentOperationsResponse v1PaymentsByOrderRefOperationsRecomputePut($order_ref, $auth_token, $payment_operation_request)
+> \Cpayment.Connector\Model\PaymentOperationsResponse v1PaymentsByOrderRefOperationsRecomputePut($order_ref, $auth_token, $payment_operation_request)
 
 Executes a recompute operation on the specified OrderRef.
 
@@ -328,14 +328,14 @@ Executes a recompute operation on the specified OrderRef.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new OpenAPI\Client\Api\PaymentsApi(
+$apiInstance = new Cpayment.Connector\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $order_ref = 'order_ref_example'; // string | The OrderRef.
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$payment_operation_request = new \OpenAPI\Client\Model\PaymentOperationsRequest(); // \OpenAPI\Client\Model\PaymentOperationsRequest | The payment operation request. Materialized by the Body of the PUT request
+$payment_operation_request = new \Cpayment.Connector\Model\PaymentOperationsRequest(); // \Cpayment.Connector\Model\PaymentOperationsRequest | The payment operation request. Materialized by the Body of the PUT request
 
 try {
     $result = $apiInstance->v1PaymentsByOrderRefOperationsRecomputePut($order_ref, $auth_token, $payment_operation_request);
@@ -353,11 +353,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order_ref** | **string**| The OrderRef. |
  **auth_token** | **string**| Gets or sets the authentication token. |
- **payment_operation_request** | [**\OpenAPI\Client\Model\PaymentOperationsRequest**](../Model/PaymentOperationsRequest.md)| The payment operation request. Materialized by the Body of the PUT request | [optional]
+ **payment_operation_request** | [**\Cpayment.Connector\Model\PaymentOperationsRequest**](../Model/PaymentOperationsRequest.md)| The payment operation request. Materialized by the Body of the PUT request | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
+[**\Cpayment.Connector\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
 
 ### Authorization
 

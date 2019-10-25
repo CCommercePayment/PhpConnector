@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Cpayment.Connector\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Cpayment.Connector\ObjectSerializer;
 
 /**
  * OrderData Class Doc Comment
  *
  * @category Class
  * @description 
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -64,9 +64,9 @@ class OrderData implements ModelInterface, ArrayAccess
         'order_shipping_amount' => 'int',
         'tax_amount' => 'int',
         'free_text' => 'string',
-        'orders' => '\OpenAPI\Client\Model\SubOrder[]',
+        'orders' => '\Cpayment.Connector\Model\SubOrder[]',
         'order_summary_ref' => 'string',
-        'shipping_address' => '\OpenAPI\Client\Model\ShippingAddress',
+        'shipping_address' => '\Cpayment.Connector\Model\ShippingAddress',
         'order_ref' => 'string',
         'invoice_id' => 'int',
         'order_tag' => 'string',
@@ -439,7 +439,7 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Gets orders
      *
-     * @return \OpenAPI\Client\Model\SubOrder[]|null
+     * @return \Cpayment.Connector\Model\SubOrder[]|null
      */
     public function getOrders()
     {
@@ -449,7 +449,7 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Sets orders
      *
-     * @param \OpenAPI\Client\Model\SubOrder[]|null $orders Gets or sets the orders.
+     * @param \Cpayment.Connector\Model\SubOrder[]|null $orders Gets or sets the orders.
      *
      * @return $this
      */
@@ -487,7 +487,7 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_address
      *
-     * @return \OpenAPI\Client\Model\ShippingAddress|null
+     * @return \Cpayment.Connector\Model\ShippingAddress|null
      */
     public function getShippingAddress()
     {
@@ -497,7 +497,7 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_address
      *
-     * @param \OpenAPI\Client\Model\ShippingAddress|null $shipping_address shipping_address
+     * @param \Cpayment.Connector\Model\ShippingAddress|null $shipping_address shipping_address
      *
      * @return $this
      */

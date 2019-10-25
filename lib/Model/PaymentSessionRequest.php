@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Cpayment.Connector\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Cpayment.Connector\ObjectSerializer;
 
 /**
  * PaymentSessionRequest Class Doc Comment
  *
  * @category Class
  * @description 
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -60,14 +60,14 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'merchant_id' => 'int',
         'merchant_site_id' => 'string',
-        'customer' => '\OpenAPI\Client\Model\Customer',
-        'order_data' => '\OpenAPI\Client\Model\OrderData',
-        'stored_card_data' => '\OpenAPI\Client\Model\StoredCard[]',
+        'customer' => '\Cpayment.Connector\Model\Customer',
+        'order_data' => '\Cpayment.Connector\Model\OrderData',
+        'stored_card_data' => '\Cpayment.Connector\Model\StoredCard[]',
         'allow_card_storage' => 'bool',
         'forced_card_option_ref' => 'string',
         'force_card_storage' => 'bool',
         'force_immediate_stored_card_payment' => 'bool',
-        'configuration' => '\OpenAPI\Client\Model\Configuration'
+        'configuration' => '\Cpayment.Connector\Model\Configuration'
     ];
 
     /**
@@ -310,7 +310,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Gets customer
      *
-     * @return \OpenAPI\Client\Model\Customer|null
+     * @return \Cpayment.Connector\Model\Customer|null
      */
     public function getCustomer()
     {
@@ -320,7 +320,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets customer
      *
-     * @param \OpenAPI\Client\Model\Customer|null $customer customer
+     * @param \Cpayment.Connector\Model\Customer|null $customer customer
      *
      * @return $this
      */
@@ -334,7 +334,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Gets order_data
      *
-     * @return \OpenAPI\Client\Model\OrderData|null
+     * @return \Cpayment.Connector\Model\OrderData|null
      */
     public function getOrderData()
     {
@@ -344,7 +344,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets order_data
      *
-     * @param \OpenAPI\Client\Model\OrderData|null $order_data order_data
+     * @param \Cpayment.Connector\Model\OrderData|null $order_data order_data
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Gets stored_card_data
      *
-     * @return \OpenAPI\Client\Model\StoredCard[]|null
+     * @return \Cpayment.Connector\Model\StoredCard[]|null
      */
     public function getStoredCardData()
     {
@@ -368,7 +368,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets stored_card_data
      *
-     * @param \OpenAPI\Client\Model\StoredCard[]|null $stored_card_data StoredCardData
+     * @param \Cpayment.Connector\Model\StoredCard[]|null $stored_card_data StoredCardData
      *
      * @return $this
      */
@@ -478,7 +478,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Gets configuration
      *
-     * @return \OpenAPI\Client\Model\Configuration|null
+     * @return \Cpayment.Connector\Model\Configuration|null
      */
     public function getConfiguration()
     {
@@ -488,7 +488,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets configuration
      *
-     * @param \OpenAPI\Client\Model\Configuration|null $configuration configuration
+     * @param \Cpayment.Connector\Model\Configuration|null $configuration configuration
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **card3ds_payment_request_id** | **string** | The paymentRequest identifier (Use to 3DS) | [optional] 
-**card3ds_redirection_data** | [**\OpenAPI\Client\Model\RedirectionData**](RedirectionData.md) |  | [optional] 
+**card3ds_redirection_data** | [**\Cpayment.Connector\Model\RedirectionData**](RedirectionData.md) |  | [optional] 
 **card_enrollment_response_code** | **string** | Gets or Sets checkCard3DEnrollmentCode | [optional] 
 **response_message** | **string** | The response code of the service | [optional] 
 

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Cpayment.Connector\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Cpayment.Connector\ApiException;
+use Cpayment.Connector\Configuration;
+use Cpayment.Connector\HeaderSelector;
+use Cpayment.Connector\ObjectSerializer;
 
 /**
  * PaymentOptionsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -124,9 +124,9 @@ class PaymentOptionsApi
      * @param  string $merchant_site_id The merchant site identifier. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Cpayment.Connector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PaymentOptionsResponse
+     * @return \Cpayment.Connector\Model\PaymentOptionsResponse
      */
     public function v1PaymentOptionsMerchantsByMerchantIdSitesByMerchantSiteIdGet($merchant_id, $merchant_site_id, $auth_token)
     {
@@ -143,9 +143,9 @@ class PaymentOptionsApi
      * @param  string $merchant_site_id The merchant site identifier. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Cpayment.Connector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PaymentOptionsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Cpayment.Connector\Model\PaymentOptionsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1PaymentOptionsMerchantsByMerchantIdSitesByMerchantSiteIdGetWithHttpInfo($merchant_id, $merchant_site_id, $auth_token)
     {
@@ -182,20 +182,20 @@ class PaymentOptionsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PaymentOptionsResponse' === '\SplFileObject') {
+                    if ('\Cpayment.Connector\Model\PaymentOptionsResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PaymentOptionsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cpayment.Connector\Model\PaymentOptionsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PaymentOptionsResponse';
+            $returnType = '\Cpayment.Connector\Model\PaymentOptionsResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -214,7 +214,7 @@ class PaymentOptionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PaymentOptionsResponse',
+                        '\Cpayment.Connector\Model\PaymentOptionsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -260,7 +260,7 @@ class PaymentOptionsApi
      */
     public function v1PaymentOptionsMerchantsByMerchantIdSitesByMerchantSiteIdGetAsyncWithHttpInfo($merchant_id, $merchant_site_id, $auth_token)
     {
-        $returnType = '\OpenAPI\Client\Model\PaymentOptionsResponse';
+        $returnType = '\Cpayment.Connector\Model\PaymentOptionsResponse';
         $request = $this->v1PaymentOptionsMerchantsByMerchantIdSitesByMerchantSiteIdGetRequest($merchant_id, $merchant_site_id, $auth_token);
 
         return $this->client
@@ -427,11 +427,11 @@ class PaymentOptionsApi
      * Gets the payment options for a specified context.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \OpenAPI\Client\Model\PaymentOptionsRequest $payment_options_request The payment options request. (optional)
+     * @param  \Cpayment.Connector\Model\PaymentOptionsRequest $payment_options_request The payment options request. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Cpayment.Connector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PaymentOptionsResponse
+     * @return \Cpayment.Connector\Model\PaymentOptionsResponse
      */
     public function v1PaymentOptionsPost($auth_token, $payment_options_request = null)
     {
@@ -445,11 +445,11 @@ class PaymentOptionsApi
      * Gets the payment options for a specified context.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \OpenAPI\Client\Model\PaymentOptionsRequest $payment_options_request The payment options request. (optional)
+     * @param  \Cpayment.Connector\Model\PaymentOptionsRequest $payment_options_request The payment options request. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Cpayment.Connector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PaymentOptionsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Cpayment.Connector\Model\PaymentOptionsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1PaymentOptionsPostWithHttpInfo($auth_token, $payment_options_request = null)
     {
@@ -486,20 +486,20 @@ class PaymentOptionsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PaymentOptionsResponse' === '\SplFileObject') {
+                    if ('\Cpayment.Connector\Model\PaymentOptionsResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PaymentOptionsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cpayment.Connector\Model\PaymentOptionsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PaymentOptionsResponse';
+            $returnType = '\Cpayment.Connector\Model\PaymentOptionsResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -518,7 +518,7 @@ class PaymentOptionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PaymentOptionsResponse',
+                        '\Cpayment.Connector\Model\PaymentOptionsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -534,7 +534,7 @@ class PaymentOptionsApi
      * Gets the payment options for a specified context.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \OpenAPI\Client\Model\PaymentOptionsRequest $payment_options_request The payment options request. (optional)
+     * @param  \Cpayment.Connector\Model\PaymentOptionsRequest $payment_options_request The payment options request. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -555,14 +555,14 @@ class PaymentOptionsApi
      * Gets the payment options for a specified context.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \OpenAPI\Client\Model\PaymentOptionsRequest $payment_options_request The payment options request. (optional)
+     * @param  \Cpayment.Connector\Model\PaymentOptionsRequest $payment_options_request The payment options request. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function v1PaymentOptionsPostAsyncWithHttpInfo($auth_token, $payment_options_request = null)
     {
-        $returnType = '\OpenAPI\Client\Model\PaymentOptionsResponse';
+        $returnType = '\Cpayment.Connector\Model\PaymentOptionsResponse';
         $request = $this->v1PaymentOptionsPostRequest($auth_token, $payment_options_request);
 
         return $this->client
@@ -603,7 +603,7 @@ class PaymentOptionsApi
      * Create request for operation 'v1PaymentOptionsPost'
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \OpenAPI\Client\Model\PaymentOptionsRequest $payment_options_request The payment options request. (optional)
+     * @param  \Cpayment.Connector\Model\PaymentOptionsRequest $payment_options_request The payment options request. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -705,7 +705,7 @@ class PaymentOptionsApi
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  object $payment_option_eligibility_request The payment option eligibility request. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Cpayment.Connector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -722,7 +722,7 @@ class PaymentOptionsApi
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  object $payment_option_eligibility_request The payment option eligibility request. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Cpayment.Connector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

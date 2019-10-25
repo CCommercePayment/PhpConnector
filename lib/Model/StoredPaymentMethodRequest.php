@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Cpayment.Connector\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Cpayment.Connector\ObjectSerializer;
 
 /**
  * StoredPaymentMethodRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -57,8 +57,8 @@ class StoredPaymentMethodRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'context' => '\OpenAPI\Client\Model\CardPaymentContextData',
-        'card' => '\OpenAPI\Client\Model\CardData'
+        'context' => '\Cpayment.Connector\Model\CardPaymentContextData',
+        'card' => '\Cpayment.Connector\Model\CardData'
     ];
 
     /**
@@ -213,7 +213,7 @@ class StoredPaymentMethodRequest implements ModelInterface, ArrayAccess
     /**
      * Gets context
      *
-     * @return \OpenAPI\Client\Model\CardPaymentContextData|null
+     * @return \Cpayment.Connector\Model\CardPaymentContextData|null
      */
     public function getContext()
     {
@@ -223,7 +223,7 @@ class StoredPaymentMethodRequest implements ModelInterface, ArrayAccess
     /**
      * Sets context
      *
-     * @param \OpenAPI\Client\Model\CardPaymentContextData|null $context context
+     * @param \Cpayment.Connector\Model\CardPaymentContextData|null $context context
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class StoredPaymentMethodRequest implements ModelInterface, ArrayAccess
     /**
      * Gets card
      *
-     * @return \OpenAPI\Client\Model\CardData|null
+     * @return \Cpayment.Connector\Model\CardData|null
      */
     public function getCard()
     {
@@ -247,7 +247,7 @@ class StoredPaymentMethodRequest implements ModelInterface, ArrayAccess
     /**
      * Sets card
      *
-     * @param \OpenAPI\Client\Model\CardData|null $card card
+     * @param \Cpayment.Connector\Model\CardData|null $card card
      *
      * @return $this
      */

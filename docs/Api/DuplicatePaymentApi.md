@@ -1,4 +1,4 @@
-# OpenAPI\Client\DuplicatePaymentApi
+# Cpayment.Connector\DuplicatePaymentApi
 
 All URIs are relative to *http://localhost*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## v1PaymentsDuplicatePaymentBatchPost
 
-> \OpenAPI\Client\Model\CardPaymentResponse v1PaymentsDuplicatePaymentBatchPost($auth_token, $duplicate_payment_batch_request)
+> \Cpayment.Connector\Model\CardPaymentResponse v1PaymentsDuplicatePaymentBatchPost($auth_token, $duplicate_payment_batch_request)
 
 Achieve a batch of payments by copy of previously processed payments, with the same payment method.
 
@@ -22,13 +22,13 @@ Achieve a batch of payments by copy of previously processed payments, with the s
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new OpenAPI\Client\Api\DuplicatePaymentApi(
+$apiInstance = new Cpayment.Connector\Api\DuplicatePaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$duplicate_payment_batch_request = new \OpenAPI\Client\Model\DuplicatePaymentBatchRequest(); // \OpenAPI\Client\Model\DuplicatePaymentBatchRequest | All data needed to make process the payment, with the reference to the previously payment.
+$duplicate_payment_batch_request = new \Cpayment.Connector\Model\DuplicatePaymentBatchRequest(); // \Cpayment.Connector\Model\DuplicatePaymentBatchRequest | All data needed to make process the payment, with the reference to the previously payment.
 
 try {
     $result = $apiInstance->v1PaymentsDuplicatePaymentBatchPost($auth_token, $duplicate_payment_batch_request);
@@ -45,11 +45,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_token** | **string**| Gets or sets the authentication token. |
- **duplicate_payment_batch_request** | [**\OpenAPI\Client\Model\DuplicatePaymentBatchRequest**](../Model/DuplicatePaymentBatchRequest.md)| All data needed to make process the payment, with the reference to the previously payment. | [optional]
+ **duplicate_payment_batch_request** | [**\Cpayment.Connector\Model\DuplicatePaymentBatchRequest**](../Model/DuplicatePaymentBatchRequest.md)| All data needed to make process the payment, with the reference to the previously payment. | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CardPaymentResponse**](../Model/CardPaymentResponse.md)
+[**\Cpayment.Connector\Model\CardPaymentResponse**](../Model/CardPaymentResponse.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 
 ## v1PaymentsDuplicatePaymentPost
 
-> \OpenAPI\Client\Model\CardPaymentResponse v1PaymentsDuplicatePaymentPost($auth_token, $duplicate_payment_request)
+> \Cpayment.Connector\Model\CardPaymentResponse v1PaymentsDuplicatePaymentPost($auth_token, $duplicate_payment_request)
 
 Achieve a payment by copy of a previously processed payment, with the same payment method.
 
@@ -78,13 +78,13 @@ Achieve a payment by copy of a previously processed payment, with the same payme
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new OpenAPI\Client\Api\DuplicatePaymentApi(
+$apiInstance = new Cpayment.Connector\Api\DuplicatePaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$duplicate_payment_request = new \OpenAPI\Client\Model\DuplicatePaymentRequest(); // \OpenAPI\Client\Model\DuplicatePaymentRequest | All data needed to make process the payment, with the reference to the previously payment.
+$duplicate_payment_request = new \Cpayment.Connector\Model\DuplicatePaymentRequest(); // \Cpayment.Connector\Model\DuplicatePaymentRequest | All data needed to make process the payment, with the reference to the previously payment.
 
 try {
     $result = $apiInstance->v1PaymentsDuplicatePaymentPost($auth_token, $duplicate_payment_request);
@@ -101,11 +101,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_token** | **string**| Gets or sets the authentication token. |
- **duplicate_payment_request** | [**\OpenAPI\Client\Model\DuplicatePaymentRequest**](../Model/DuplicatePaymentRequest.md)| All data needed to make process the payment, with the reference to the previously payment. | [optional]
+ **duplicate_payment_request** | [**\Cpayment.Connector\Model\DuplicatePaymentRequest**](../Model/DuplicatePaymentRequest.md)| All data needed to make process the payment, with the reference to the previously payment. | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CardPaymentResponse**](../Model/CardPaymentResponse.md)
+[**\Cpayment.Connector\Model\CardPaymentResponse**](../Model/CardPaymentResponse.md)
 
 ### Authorization
 

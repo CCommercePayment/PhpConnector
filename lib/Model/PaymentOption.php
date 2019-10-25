@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Cpayment.Connector\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Cpayment.Connector\ObjectSerializer;
 
 /**
  * PaymentOption Class Doc Comment
  *
  * @category Class
  * @description All payment option data
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -64,11 +64,11 @@ class PaymentOption implements ModelInterface, ArrayAccess
         'min_amount' => 'int',
         'max_amount' => 'int',
         'stored_cards_enabled' => 'bool',
-        'payment_schedule_rules' => '\OpenAPI\Client\Model\PaymentScheduleRule[]',
-        'payment_fees' => '\OpenAPI\Client\Model\PaymentFee[]',
-        'payment_cards' => '\OpenAPI\Client\Model\PaymentCard[]',
-        'loan_offers' => '\OpenAPI\Client\Model\LoanOffer[]',
-        'acquiring_banks' => '\OpenAPI\Client\Model\AcquiringBank[]'
+        'payment_schedule_rules' => '\Cpayment.Connector\Model\PaymentScheduleRule[]',
+        'payment_fees' => '\Cpayment.Connector\Model\PaymentFee[]',
+        'payment_cards' => '\Cpayment.Connector\Model\PaymentCard[]',
+        'loan_offers' => '\Cpayment.Connector\Model\LoanOffer[]',
+        'acquiring_banks' => '\Cpayment.Connector\Model\AcquiringBank[]'
     ];
 
     /**
@@ -412,7 +412,7 @@ class PaymentOption implements ModelInterface, ArrayAccess
     /**
      * Gets payment_schedule_rules
      *
-     * @return \OpenAPI\Client\Model\PaymentScheduleRule[]|null
+     * @return \Cpayment.Connector\Model\PaymentScheduleRule[]|null
      */
     public function getPaymentScheduleRules()
     {
@@ -422,7 +422,7 @@ class PaymentOption implements ModelInterface, ArrayAccess
     /**
      * Sets payment_schedule_rules
      *
-     * @param \OpenAPI\Client\Model\PaymentScheduleRule[]|null $payment_schedule_rules All payment schedule rules data
+     * @param \Cpayment.Connector\Model\PaymentScheduleRule[]|null $payment_schedule_rules All payment schedule rules data
      *
      * @return $this
      */
@@ -436,7 +436,7 @@ class PaymentOption implements ModelInterface, ArrayAccess
     /**
      * Gets payment_fees
      *
-     * @return \OpenAPI\Client\Model\PaymentFee[]|null
+     * @return \Cpayment.Connector\Model\PaymentFee[]|null
      */
     public function getPaymentFees()
     {
@@ -446,7 +446,7 @@ class PaymentOption implements ModelInterface, ArrayAccess
     /**
      * Sets payment_fees
      *
-     * @param \OpenAPI\Client\Model\PaymentFee[]|null $payment_fees All payment fees data
+     * @param \Cpayment.Connector\Model\PaymentFee[]|null $payment_fees All payment fees data
      *
      * @return $this
      */
@@ -460,7 +460,7 @@ class PaymentOption implements ModelInterface, ArrayAccess
     /**
      * Gets payment_cards
      *
-     * @return \OpenAPI\Client\Model\PaymentCard[]|null
+     * @return \Cpayment.Connector\Model\PaymentCard[]|null
      */
     public function getPaymentCards()
     {
@@ -470,7 +470,7 @@ class PaymentOption implements ModelInterface, ArrayAccess
     /**
      * Sets payment_cards
      *
-     * @param \OpenAPI\Client\Model\PaymentCard[]|null $payment_cards All payment cards data
+     * @param \Cpayment.Connector\Model\PaymentCard[]|null $payment_cards All payment cards data
      *
      * @return $this
      */
@@ -484,7 +484,7 @@ class PaymentOption implements ModelInterface, ArrayAccess
     /**
      * Gets loan_offers
      *
-     * @return \OpenAPI\Client\Model\LoanOffer[]|null
+     * @return \Cpayment.Connector\Model\LoanOffer[]|null
      */
     public function getLoanOffers()
     {
@@ -494,7 +494,7 @@ class PaymentOption implements ModelInterface, ArrayAccess
     /**
      * Sets loan_offers
      *
-     * @param \OpenAPI\Client\Model\LoanOffer[]|null $loan_offers All loan offers data
+     * @param \Cpayment.Connector\Model\LoanOffer[]|null $loan_offers All loan offers data
      *
      * @return $this
      */
@@ -508,7 +508,7 @@ class PaymentOption implements ModelInterface, ArrayAccess
     /**
      * Gets acquiring_banks
      *
-     * @return \OpenAPI\Client\Model\AcquiringBank[]|null
+     * @return \Cpayment.Connector\Model\AcquiringBank[]|null
      */
     public function getAcquiringBanks()
     {
@@ -518,7 +518,7 @@ class PaymentOption implements ModelInterface, ArrayAccess
     /**
      * Sets acquiring_banks
      *
-     * @param \OpenAPI\Client\Model\AcquiringBank[]|null $acquiring_banks All acquiring banks data
+     * @param \Cpayment.Connector\Model\AcquiringBank[]|null $acquiring_banks All acquiring banks data
      *
      * @return $this
      */

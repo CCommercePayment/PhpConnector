@@ -10,9 +10,9 @@ Name | Type | Description | Notes
 **order_shipping_amount** | **int** | Gets or sets the order shipping amount. | [optional] 
 **tax_amount** | **int** | Gets or sets the tax amount. | [optional] 
 **free_text** | **string** | Gets or sets the free text. | [optional] 
-**orders** | [**\OpenAPI\Client\Model\SubOrder[]**](SubOrder.md) | Gets or sets the orders. | [optional] 
+**orders** | [**\Cpayment.Connector\Model\SubOrder[]**](SubOrder.md) | Gets or sets the orders. | [optional] 
 **order_summary_ref** | **string** | Gets or sets the order summary reference. | [optional] 
-**shipping_address** | [**\OpenAPI\Client\Model\ShippingAddress**](ShippingAddress.md) |  | [optional] 
+**shipping_address** | [**\Cpayment.Connector\Model\ShippingAddress**](ShippingAddress.md) |  | [optional] 
 **order_ref** | **string** | The order reference linked to the schedule and transaction | 
 **invoice_id** | **int** | The invoice identifier | [optional] 
 **order_tag** | **string** | The order tag is a label for the schedule | [optional] 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Cpayment.Connector\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Cpayment.Connector\ObjectSerializer;
 
 /**
  * PaymentCard Class Doc Comment
  *
  * @category Class
  * @description All payment card data
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -60,7 +60,7 @@ class PaymentCard implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'payment_card_ref' => 'string',
         'name' => 'string',
-        'payment_card_options' => '\OpenAPI\Client\Model\PaymentCardOption[]'
+        'payment_card_options' => '\Cpayment.Connector\Model\PaymentCardOption[]'
     ];
 
     /**
@@ -268,7 +268,7 @@ class PaymentCard implements ModelInterface, ArrayAccess
     /**
      * Gets payment_card_options
      *
-     * @return \OpenAPI\Client\Model\PaymentCardOption[]|null
+     * @return \Cpayment.Connector\Model\PaymentCardOption[]|null
      */
     public function getPaymentCardOptions()
     {
@@ -278,7 +278,7 @@ class PaymentCard implements ModelInterface, ArrayAccess
     /**
      * Sets payment_card_options
      *
-     * @param \OpenAPI\Client\Model\PaymentCardOption[]|null $payment_card_options All payment card options data
+     * @param \Cpayment.Connector\Model\PaymentCardOption[]|null $payment_card_options All payment card options data
      *
      * @return $this
      */

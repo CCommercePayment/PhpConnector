@@ -1,4 +1,4 @@
-# OpenAPI\Client\StoredPaymentMethodsApi
+# Cpayment.Connector\StoredPaymentMethodsApi
 
 All URIs are relative to *http://localhost*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGet
 
-> \OpenAPI\Client\Model\StoredPaymentMethodResponse v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGet($merchant_id, $merchant_site_id, $customer_ref, $auth_token)
+> \Cpayment.Connector\Model\StoredPaymentMethodResponse v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGet($merchant_id, $merchant_site_id, $customer_ref, $auth_token)
 
 Gets the stored payment methods by customer reference.
 
@@ -24,7 +24,7 @@ Gets the stored payment methods by customer reference.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new OpenAPI\Client\Api\StoredPaymentMethodsApi(
+$apiInstance = new Cpayment.Connector\Api\StoredPaymentMethodsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StoredPaymentMethodResponse**](../Model/StoredPaymentMethodResponse.md)
+[**\Cpayment.Connector\Model\StoredPaymentMethodResponse**](../Model/StoredPaymentMethodResponse.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Deletes the specified stored payment method.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new OpenAPI\Client\Api\StoredPaymentMethodsApi(
+$apiInstance = new Cpayment.Connector\Api\StoredPaymentMethodsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -133,7 +133,7 @@ No authorization required
 
 ## v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGet
 
-> \OpenAPI\Client\Model\StoredPaymentMethodResponse v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGet($merchant_id, $merchant_site_id, $stored_payment_method_id, $auth_token)
+> \Cpayment.Connector\Model\StoredPaymentMethodResponse v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGet($merchant_id, $merchant_site_id, $stored_payment_method_id, $auth_token)
 
 Gets the stored payment method by identifier.
 
@@ -144,7 +144,7 @@ Gets the stored payment method by identifier.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new OpenAPI\Client\Api\StoredPaymentMethodsApi(
+$apiInstance = new Cpayment.Connector\Api\StoredPaymentMethodsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\StoredPaymentMethodResponse**](../Model/StoredPaymentMethodResponse.md)
+[**\Cpayment.Connector\Model\StoredPaymentMethodResponse**](../Model/StoredPaymentMethodResponse.md)
 
 ### Authorization
 
@@ -204,13 +204,13 @@ Creates the specified stored payment method.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new OpenAPI\Client\Api\StoredPaymentMethodsApi(
+$apiInstance = new Cpayment.Connector\Api\StoredPaymentMethodsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$stored_payment_method_request = new \OpenAPI\Client\Model\StoredPaymentMethodRequest(); // \OpenAPI\Client\Model\StoredPaymentMethodRequest | The stored payment method
+$stored_payment_method_request = new \Cpayment.Connector\Model\StoredPaymentMethodRequest(); // \Cpayment.Connector\Model\StoredPaymentMethodRequest | The stored payment method
 
 try {
     $result = $apiInstance->v1StoredPaymentMethodsPost($auth_token, $stored_payment_method_request);
@@ -227,7 +227,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_token** | **string**| Gets or sets the authentication token. |
- **stored_payment_method_request** | [**\OpenAPI\Client\Model\StoredPaymentMethodRequest**](../Model/StoredPaymentMethodRequest.md)| The stored payment method | [optional]
+ **stored_payment_method_request** | [**\Cpayment.Connector\Model\StoredPaymentMethodRequest**](../Model/StoredPaymentMethodRequest.md)| The stored payment method | [optional]
 
 ### Return type
 

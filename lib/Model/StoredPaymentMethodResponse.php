@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Cpayment.Connector\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Cpayment.Connector\ObjectSerializer;
 
 /**
  * StoredPaymentMethodResponse Class Doc Comment
  *
  * @category Class
  * @description 
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -58,7 +58,7 @@ class StoredPaymentMethodResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'stored_payment_method_list' => '\OpenAPI\Client\Model\StoredPaymentMethod[]',
+        'stored_payment_method_list' => '\Cpayment.Connector\Model\StoredPaymentMethod[]',
         'response_message' => 'string'
     ];
 
@@ -214,7 +214,7 @@ class StoredPaymentMethodResponse implements ModelInterface, ArrayAccess
     /**
      * Gets stored_payment_method_list
      *
-     * @return \OpenAPI\Client\Model\StoredPaymentMethod[]|null
+     * @return \Cpayment.Connector\Model\StoredPaymentMethod[]|null
      */
     public function getStoredPaymentMethodList()
     {
@@ -224,7 +224,7 @@ class StoredPaymentMethodResponse implements ModelInterface, ArrayAccess
     /**
      * Sets stored_payment_method_list
      *
-     * @param \OpenAPI\Client\Model\StoredPaymentMethod[]|null $stored_payment_method_list Gets or sets the stored payment method list.
+     * @param \Cpayment.Connector\Model\StoredPaymentMethod[]|null $stored_payment_method_list Gets or sets the stored payment method list.
      *
      * @return $this
      */

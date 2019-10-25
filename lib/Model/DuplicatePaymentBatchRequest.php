@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Cpayment.Connector\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Cpayment.Connector\ObjectSerializer;
 
 /**
  * DuplicatePaymentBatchRequest Class Doc Comment
  *
  * @category Class
  * @description The AuthorByCopy batch Payment Request
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -58,7 +58,7 @@ class DuplicatePaymentBatchRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'duplicate_payment_request_list' => '\OpenAPI\Client\Model\DuplicatePaymentRequest[]'
+        'duplicate_payment_request_list' => '\Cpayment.Connector\Model\DuplicatePaymentRequest[]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class DuplicatePaymentBatchRequest implements ModelInterface, ArrayAccess
     /**
      * Gets duplicate_payment_request_list
      *
-     * @return \OpenAPI\Client\Model\DuplicatePaymentRequest[]|null
+     * @return \Cpayment.Connector\Model\DuplicatePaymentRequest[]|null
      */
     public function getDuplicatePaymentRequestList()
     {
@@ -218,7 +218,7 @@ class DuplicatePaymentBatchRequest implements ModelInterface, ArrayAccess
     /**
      * Sets duplicate_payment_request_list
      *
-     * @param \OpenAPI\Client\Model\DuplicatePaymentRequest[]|null $duplicate_payment_request_list Gets or Sets ContextData
+     * @param \Cpayment.Connector\Model\DuplicatePaymentRequest[]|null $duplicate_payment_request_list Gets or Sets ContextData
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Cpayment.Connector\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Cpayment.Connector\ApiException;
+use Cpayment.Connector\Configuration;
+use Cpayment.Connector\HeaderSelector;
+use Cpayment.Connector\ObjectSerializer;
 
 /**
  * DuplicatePaymentApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -121,11 +121,11 @@ class DuplicatePaymentApi
      * Achieve a batch of payments by copy of previously processed payments, with the same payment method.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \OpenAPI\Client\Model\DuplicatePaymentBatchRequest $duplicate_payment_batch_request All data needed to make process the payment, with the reference to the previously payment. (optional)
+     * @param  \Cpayment.Connector\Model\DuplicatePaymentBatchRequest $duplicate_payment_batch_request All data needed to make process the payment, with the reference to the previously payment. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Cpayment.Connector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CardPaymentResponse
+     * @return \Cpayment.Connector\Model\CardPaymentResponse
      */
     public function v1PaymentsDuplicatePaymentBatchPost($auth_token, $duplicate_payment_batch_request = null)
     {
@@ -139,11 +139,11 @@ class DuplicatePaymentApi
      * Achieve a batch of payments by copy of previously processed payments, with the same payment method.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \OpenAPI\Client\Model\DuplicatePaymentBatchRequest $duplicate_payment_batch_request All data needed to make process the payment, with the reference to the previously payment. (optional)
+     * @param  \Cpayment.Connector\Model\DuplicatePaymentBatchRequest $duplicate_payment_batch_request All data needed to make process the payment, with the reference to the previously payment. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Cpayment.Connector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CardPaymentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Cpayment.Connector\Model\CardPaymentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1PaymentsDuplicatePaymentBatchPostWithHttpInfo($auth_token, $duplicate_payment_batch_request = null)
     {
@@ -180,20 +180,20 @@ class DuplicatePaymentApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CardPaymentResponse' === '\SplFileObject') {
+                    if ('\Cpayment.Connector\Model\CardPaymentResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CardPaymentResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cpayment.Connector\Model\CardPaymentResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CardPaymentResponse';
+            $returnType = '\Cpayment.Connector\Model\CardPaymentResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -212,7 +212,7 @@ class DuplicatePaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CardPaymentResponse',
+                        '\Cpayment.Connector\Model\CardPaymentResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -228,7 +228,7 @@ class DuplicatePaymentApi
      * Achieve a batch of payments by copy of previously processed payments, with the same payment method.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \OpenAPI\Client\Model\DuplicatePaymentBatchRequest $duplicate_payment_batch_request All data needed to make process the payment, with the reference to the previously payment. (optional)
+     * @param  \Cpayment.Connector\Model\DuplicatePaymentBatchRequest $duplicate_payment_batch_request All data needed to make process the payment, with the reference to the previously payment. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -249,14 +249,14 @@ class DuplicatePaymentApi
      * Achieve a batch of payments by copy of previously processed payments, with the same payment method.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \OpenAPI\Client\Model\DuplicatePaymentBatchRequest $duplicate_payment_batch_request All data needed to make process the payment, with the reference to the previously payment. (optional)
+     * @param  \Cpayment.Connector\Model\DuplicatePaymentBatchRequest $duplicate_payment_batch_request All data needed to make process the payment, with the reference to the previously payment. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function v1PaymentsDuplicatePaymentBatchPostAsyncWithHttpInfo($auth_token, $duplicate_payment_batch_request = null)
     {
-        $returnType = '\OpenAPI\Client\Model\CardPaymentResponse';
+        $returnType = '\Cpayment.Connector\Model\CardPaymentResponse';
         $request = $this->v1PaymentsDuplicatePaymentBatchPostRequest($auth_token, $duplicate_payment_batch_request);
 
         return $this->client
@@ -297,7 +297,7 @@ class DuplicatePaymentApi
      * Create request for operation 'v1PaymentsDuplicatePaymentBatchPost'
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \OpenAPI\Client\Model\DuplicatePaymentBatchRequest $duplicate_payment_batch_request All data needed to make process the payment, with the reference to the previously payment. (optional)
+     * @param  \Cpayment.Connector\Model\DuplicatePaymentBatchRequest $duplicate_payment_batch_request All data needed to make process the payment, with the reference to the previously payment. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -397,11 +397,11 @@ class DuplicatePaymentApi
      * Achieve a payment by copy of a previously processed payment, with the same payment method.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \OpenAPI\Client\Model\DuplicatePaymentRequest $duplicate_payment_request All data needed to make process the payment, with the reference to the previously payment. (optional)
+     * @param  \Cpayment.Connector\Model\DuplicatePaymentRequest $duplicate_payment_request All data needed to make process the payment, with the reference to the previously payment. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Cpayment.Connector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CardPaymentResponse
+     * @return \Cpayment.Connector\Model\CardPaymentResponse
      */
     public function v1PaymentsDuplicatePaymentPost($auth_token, $duplicate_payment_request = null)
     {
@@ -415,11 +415,11 @@ class DuplicatePaymentApi
      * Achieve a payment by copy of a previously processed payment, with the same payment method.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \OpenAPI\Client\Model\DuplicatePaymentRequest $duplicate_payment_request All data needed to make process the payment, with the reference to the previously payment. (optional)
+     * @param  \Cpayment.Connector\Model\DuplicatePaymentRequest $duplicate_payment_request All data needed to make process the payment, with the reference to the previously payment. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Cpayment.Connector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CardPaymentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Cpayment.Connector\Model\CardPaymentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1PaymentsDuplicatePaymentPostWithHttpInfo($auth_token, $duplicate_payment_request = null)
     {
@@ -456,20 +456,20 @@ class DuplicatePaymentApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CardPaymentResponse' === '\SplFileObject') {
+                    if ('\Cpayment.Connector\Model\CardPaymentResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CardPaymentResponse', []),
+                        ObjectSerializer::deserialize($content, '\Cpayment.Connector\Model\CardPaymentResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CardPaymentResponse';
+            $returnType = '\Cpayment.Connector\Model\CardPaymentResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -488,7 +488,7 @@ class DuplicatePaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CardPaymentResponse',
+                        '\Cpayment.Connector\Model\CardPaymentResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -504,7 +504,7 @@ class DuplicatePaymentApi
      * Achieve a payment by copy of a previously processed payment, with the same payment method.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \OpenAPI\Client\Model\DuplicatePaymentRequest $duplicate_payment_request All data needed to make process the payment, with the reference to the previously payment. (optional)
+     * @param  \Cpayment.Connector\Model\DuplicatePaymentRequest $duplicate_payment_request All data needed to make process the payment, with the reference to the previously payment. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -525,14 +525,14 @@ class DuplicatePaymentApi
      * Achieve a payment by copy of a previously processed payment, with the same payment method.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \OpenAPI\Client\Model\DuplicatePaymentRequest $duplicate_payment_request All data needed to make process the payment, with the reference to the previously payment. (optional)
+     * @param  \Cpayment.Connector\Model\DuplicatePaymentRequest $duplicate_payment_request All data needed to make process the payment, with the reference to the previously payment. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function v1PaymentsDuplicatePaymentPostAsyncWithHttpInfo($auth_token, $duplicate_payment_request = null)
     {
-        $returnType = '\OpenAPI\Client\Model\CardPaymentResponse';
+        $returnType = '\Cpayment.Connector\Model\CardPaymentResponse';
         $request = $this->v1PaymentsDuplicatePaymentPostRequest($auth_token, $duplicate_payment_request);
 
         return $this->client
@@ -573,7 +573,7 @@ class DuplicatePaymentApi
      * Create request for operation 'v1PaymentsDuplicatePaymentPost'
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \OpenAPI\Client\Model\DuplicatePaymentRequest $duplicate_payment_request All data needed to make process the payment, with the reference to the previously payment. (optional)
+     * @param  \Cpayment.Connector\Model\DuplicatePaymentRequest $duplicate_payment_request All data needed to make process the payment, with the reference to the previously payment. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Cpayment.Connector\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Cpayment.Connector\ObjectSerializer;
 
 /**
  * PaymentOptionsRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -59,7 +59,7 @@ class PaymentOptionsRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'merchant_id' => 'int',
         'merchant_site_id' => 'string',
-        'context' => '\OpenAPI\Client\Model\PaymentOptionsContextData'
+        'context' => '\Cpayment.Connector\Model\PaymentOptionsContextData'
     ];
 
     /**
@@ -276,7 +276,7 @@ class PaymentOptionsRequest implements ModelInterface, ArrayAccess
     /**
      * Gets context
      *
-     * @return \OpenAPI\Client\Model\PaymentOptionsContextData
+     * @return \Cpayment.Connector\Model\PaymentOptionsContextData
      */
     public function getContext()
     {
@@ -286,7 +286,7 @@ class PaymentOptionsRequest implements ModelInterface, ArrayAccess
     /**
      * Sets context
      *
-     * @param \OpenAPI\Client\Model\PaymentOptionsContextData $context context
+     * @param \Cpayment.Connector\Model\PaymentOptionsContextData $context context
      *
      * @return $this
      */

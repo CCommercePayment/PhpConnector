@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Cpayment.Connector\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Cpayment.Connector\ObjectSerializer;
 
 /**
  * LoanOffer Class Doc Comment
  *
  * @category Class
  * @description All loan offer data
- * @package  OpenAPI\Client
+ * @package  Cpayment.Connector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -59,7 +59,7 @@ class LoanOffer implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'loan_ref' => 'string',
-        'loan_terms' => '\OpenAPI\Client\Model\LoanTerm[]'
+        'loan_terms' => '\Cpayment.Connector\Model\LoanTerm[]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class LoanOffer implements ModelInterface, ArrayAccess
     /**
      * Gets loan_terms
      *
-     * @return \OpenAPI\Client\Model\LoanTerm[]|null
+     * @return \Cpayment.Connector\Model\LoanTerm[]|null
      */
     public function getLoanTerms()
     {
@@ -248,7 +248,7 @@ class LoanOffer implements ModelInterface, ArrayAccess
     /**
      * Sets loan_terms
      *
-     * @param \OpenAPI\Client\Model\LoanTerm[]|null $loan_terms All loan terms data
+     * @param \Cpayment.Connector\Model\LoanTerm[]|null $loan_terms All loan terms data
      *
      * @return $this
      */
