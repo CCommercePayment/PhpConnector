@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Cpayment.Connector
+ * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Cpayment.Connector\Api;
+namespace CpaymentConnector\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Cpayment.Connector\ApiException;
-use Cpayment.Connector\Configuration;
-use Cpayment.Connector\HeaderSelector;
-use Cpayment.Connector\ObjectSerializer;
+use CpaymentConnector\ApiException;
+use CpaymentConnector\Configuration;
+use CpaymentConnector\HeaderSelector;
+use CpaymentConnector\ObjectSerializer;
 
 /**
  * StoredPaymentMethodsApi Class Doc Comment
  *
  * @category Class
- * @package  Cpayment.Connector
+ * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -125,9 +125,9 @@ class StoredPaymentMethodsApi
      * @param  string $customer_ref The customer reference. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
      *
-     * @throws \Cpayment.Connector\ApiException on non-2xx response
+     * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Cpayment.Connector\Model\StoredPaymentMethodResponse
+     * @return \CpaymentConnector\Model\StoredPaymentMethodResponse
      */
     public function v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGet($merchant_id, $merchant_site_id, $customer_ref, $auth_token)
     {
@@ -145,9 +145,9 @@ class StoredPaymentMethodsApi
      * @param  string $customer_ref The customer reference. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
      *
-     * @throws \Cpayment.Connector\ApiException on non-2xx response
+     * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Cpayment.Connector\Model\StoredPaymentMethodResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CpaymentConnector\Model\StoredPaymentMethodResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGetWithHttpInfo($merchant_id, $merchant_site_id, $customer_ref, $auth_token)
     {
@@ -184,20 +184,20 @@ class StoredPaymentMethodsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Cpayment.Connector\Model\StoredPaymentMethodResponse' === '\SplFileObject') {
+                    if ('\CpaymentConnector\Model\StoredPaymentMethodResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cpayment.Connector\Model\StoredPaymentMethodResponse', []),
+                        ObjectSerializer::deserialize($content, '\CpaymentConnector\Model\StoredPaymentMethodResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Cpayment.Connector\Model\StoredPaymentMethodResponse';
+            $returnType = '\CpaymentConnector\Model\StoredPaymentMethodResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -216,7 +216,7 @@ class StoredPaymentMethodsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cpayment.Connector\Model\StoredPaymentMethodResponse',
+                        '\CpaymentConnector\Model\StoredPaymentMethodResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -264,7 +264,7 @@ class StoredPaymentMethodsApi
      */
     public function v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGetAsyncWithHttpInfo($merchant_id, $merchant_site_id, $customer_ref, $auth_token)
     {
-        $returnType = '\Cpayment.Connector\Model\StoredPaymentMethodResponse';
+        $returnType = '\CpaymentConnector\Model\StoredPaymentMethodResponse';
         $request = $this->v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGetRequest($merchant_id, $merchant_site_id, $customer_ref, $auth_token);
 
         return $this->client
@@ -450,7 +450,7 @@ class StoredPaymentMethodsApi
      * @param  string $stored_payment_method_id The stored payment method identifier (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
      *
-     * @throws \Cpayment.Connector\ApiException on non-2xx response
+     * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -470,7 +470,7 @@ class StoredPaymentMethodsApi
      * @param  string $stored_payment_method_id The stored payment method identifier (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
      *
-     * @throws \Cpayment.Connector\ApiException on non-2xx response
+     * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -775,9 +775,9 @@ class StoredPaymentMethodsApi
      * @param  string $stored_payment_method_id The stored payment method identifier. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
      *
-     * @throws \Cpayment.Connector\ApiException on non-2xx response
+     * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Cpayment.Connector\Model\StoredPaymentMethodResponse
+     * @return \CpaymentConnector\Model\StoredPaymentMethodResponse
      */
     public function v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGet($merchant_id, $merchant_site_id, $stored_payment_method_id, $auth_token)
     {
@@ -795,9 +795,9 @@ class StoredPaymentMethodsApi
      * @param  string $stored_payment_method_id The stored payment method identifier. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
      *
-     * @throws \Cpayment.Connector\ApiException on non-2xx response
+     * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Cpayment.Connector\Model\StoredPaymentMethodResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CpaymentConnector\Model\StoredPaymentMethodResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGetWithHttpInfo($merchant_id, $merchant_site_id, $stored_payment_method_id, $auth_token)
     {
@@ -834,20 +834,20 @@ class StoredPaymentMethodsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Cpayment.Connector\Model\StoredPaymentMethodResponse' === '\SplFileObject') {
+                    if ('\CpaymentConnector\Model\StoredPaymentMethodResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cpayment.Connector\Model\StoredPaymentMethodResponse', []),
+                        ObjectSerializer::deserialize($content, '\CpaymentConnector\Model\StoredPaymentMethodResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Cpayment.Connector\Model\StoredPaymentMethodResponse';
+            $returnType = '\CpaymentConnector\Model\StoredPaymentMethodResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -866,7 +866,7 @@ class StoredPaymentMethodsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cpayment.Connector\Model\StoredPaymentMethodResponse',
+                        '\CpaymentConnector\Model\StoredPaymentMethodResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -914,7 +914,7 @@ class StoredPaymentMethodsApi
      */
     public function v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGetAsyncWithHttpInfo($merchant_id, $merchant_site_id, $stored_payment_method_id, $auth_token)
     {
-        $returnType = '\Cpayment.Connector\Model\StoredPaymentMethodResponse';
+        $returnType = '\CpaymentConnector\Model\StoredPaymentMethodResponse';
         $request = $this->v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGetRequest($merchant_id, $merchant_site_id, $stored_payment_method_id, $auth_token);
 
         return $this->client
@@ -1096,9 +1096,9 @@ class StoredPaymentMethodsApi
      * Creates the specified stored payment method.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\StoredPaymentMethodRequest $stored_payment_method_request The stored payment method (optional)
+     * @param  \CpaymentConnector\Model\StoredPaymentMethodRequest $stored_payment_method_request The stored payment method (optional)
      *
-     * @throws \Cpayment.Connector\ApiException on non-2xx response
+     * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -1114,9 +1114,9 @@ class StoredPaymentMethodsApi
      * Creates the specified stored payment method.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\StoredPaymentMethodRequest $stored_payment_method_request The stored payment method (optional)
+     * @param  \CpaymentConnector\Model\StoredPaymentMethodRequest $stored_payment_method_request The stored payment method (optional)
      *
-     * @throws \Cpayment.Connector\ApiException on non-2xx response
+     * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1203,7 +1203,7 @@ class StoredPaymentMethodsApi
      * Creates the specified stored payment method.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\StoredPaymentMethodRequest $stored_payment_method_request The stored payment method (optional)
+     * @param  \CpaymentConnector\Model\StoredPaymentMethodRequest $stored_payment_method_request The stored payment method (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1224,7 +1224,7 @@ class StoredPaymentMethodsApi
      * Creates the specified stored payment method.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\StoredPaymentMethodRequest $stored_payment_method_request The stored payment method (optional)
+     * @param  \CpaymentConnector\Model\StoredPaymentMethodRequest $stored_payment_method_request The stored payment method (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1272,7 +1272,7 @@ class StoredPaymentMethodsApi
      * Create request for operation 'v1StoredPaymentMethodsPost'
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\StoredPaymentMethodRequest $stored_payment_method_request The stored payment method (optional)
+     * @param  \CpaymentConnector\Model\StoredPaymentMethodRequest $stored_payment_method_request The stored payment method (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

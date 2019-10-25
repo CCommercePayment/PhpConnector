@@ -60,13 +60,13 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new Cpayment.Connector\Api\CardApi(
+$apiInstance = new CpaymentConnector\Api\CardApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$request = new \Cpayment.Connector\Model\CardPaymentCreditHolderRequest(); // \Cpayment.Connector\Model\CardPaymentCreditHolderRequest | 
+$request = new \CpaymentConnector\Model\CardPaymentCreditHolderRequest(); // \CpaymentConnector\Model\CardPaymentCreditHolderRequest | 
 
 try {
     $result = $apiInstance->v1CardCreditHolderPost($auth_token, $request);

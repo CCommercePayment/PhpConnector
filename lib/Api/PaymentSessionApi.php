@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Cpayment.Connector
+ * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Cpayment.Connector\Api;
+namespace CpaymentConnector\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Cpayment.Connector\ApiException;
-use Cpayment.Connector\Configuration;
-use Cpayment.Connector\HeaderSelector;
-use Cpayment.Connector\ObjectSerializer;
+use CpaymentConnector\ApiException;
+use CpaymentConnector\Configuration;
+use CpaymentConnector\HeaderSelector;
+use CpaymentConnector\ObjectSerializer;
 
 /**
  * PaymentSessionApi Class Doc Comment
  *
  * @category Class
- * @package  Cpayment.Connector
+ * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -123,9 +123,9 @@ class PaymentSessionApi
      * @param  string $payment_session_id The payment session id. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
      *
-     * @throws \Cpayment.Connector\ApiException on non-2xx response
+     * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Cpayment.Connector\Model\GetPaymentSessionResult
+     * @return \CpaymentConnector\Model\GetPaymentSessionResult
      */
     public function v1PaymentSessionsByPaymentSessionIdPaymentResultGet($payment_session_id, $auth_token)
     {
@@ -141,9 +141,9 @@ class PaymentSessionApi
      * @param  string $payment_session_id The payment session id. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
      *
-     * @throws \Cpayment.Connector\ApiException on non-2xx response
+     * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Cpayment.Connector\Model\GetPaymentSessionResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CpaymentConnector\Model\GetPaymentSessionResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1PaymentSessionsByPaymentSessionIdPaymentResultGetWithHttpInfo($payment_session_id, $auth_token)
     {
@@ -180,20 +180,20 @@ class PaymentSessionApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Cpayment.Connector\Model\GetPaymentSessionResult' === '\SplFileObject') {
+                    if ('\CpaymentConnector\Model\GetPaymentSessionResult' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cpayment.Connector\Model\GetPaymentSessionResult', []),
+                        ObjectSerializer::deserialize($content, '\CpaymentConnector\Model\GetPaymentSessionResult', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Cpayment.Connector\Model\GetPaymentSessionResult';
+            $returnType = '\CpaymentConnector\Model\GetPaymentSessionResult';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -212,7 +212,7 @@ class PaymentSessionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cpayment.Connector\Model\GetPaymentSessionResult',
+                        '\CpaymentConnector\Model\GetPaymentSessionResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -256,7 +256,7 @@ class PaymentSessionApi
      */
     public function v1PaymentSessionsByPaymentSessionIdPaymentResultGetAsyncWithHttpInfo($payment_session_id, $auth_token)
     {
-        $returnType = '\Cpayment.Connector\Model\GetPaymentSessionResult';
+        $returnType = '\CpaymentConnector\Model\GetPaymentSessionResult';
         $request = $this->v1PaymentSessionsByPaymentSessionIdPaymentResultGetRequest($payment_session_id, $auth_token);
 
         return $this->client
@@ -408,11 +408,11 @@ class PaymentSessionApi
      * Creates a payment session.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\PaymentSessionRequest $payment_session_request The payment session request. (optional)
+     * @param  \CpaymentConnector\Model\PaymentSessionRequest $payment_session_request The payment session request. (optional)
      *
-     * @throws \Cpayment.Connector\ApiException on non-2xx response
+     * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Cpayment.Connector\Model\PaymentSessionResponse
+     * @return \CpaymentConnector\Model\PaymentSessionResponse
      */
     public function v1PaymentSessionsPost($auth_token, $payment_session_request = null)
     {
@@ -426,11 +426,11 @@ class PaymentSessionApi
      * Creates a payment session.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\PaymentSessionRequest $payment_session_request The payment session request. (optional)
+     * @param  \CpaymentConnector\Model\PaymentSessionRequest $payment_session_request The payment session request. (optional)
      *
-     * @throws \Cpayment.Connector\ApiException on non-2xx response
+     * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Cpayment.Connector\Model\PaymentSessionResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CpaymentConnector\Model\PaymentSessionResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1PaymentSessionsPostWithHttpInfo($auth_token, $payment_session_request = null)
     {
@@ -467,20 +467,20 @@ class PaymentSessionApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Cpayment.Connector\Model\PaymentSessionResponse' === '\SplFileObject') {
+                    if ('\CpaymentConnector\Model\PaymentSessionResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cpayment.Connector\Model\PaymentSessionResponse', []),
+                        ObjectSerializer::deserialize($content, '\CpaymentConnector\Model\PaymentSessionResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Cpayment.Connector\Model\PaymentSessionResponse';
+            $returnType = '\CpaymentConnector\Model\PaymentSessionResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -499,7 +499,7 @@ class PaymentSessionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cpayment.Connector\Model\PaymentSessionResponse',
+                        '\CpaymentConnector\Model\PaymentSessionResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -515,7 +515,7 @@ class PaymentSessionApi
      * Creates a payment session.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\PaymentSessionRequest $payment_session_request The payment session request. (optional)
+     * @param  \CpaymentConnector\Model\PaymentSessionRequest $payment_session_request The payment session request. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -536,14 +536,14 @@ class PaymentSessionApi
      * Creates a payment session.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\PaymentSessionRequest $payment_session_request The payment session request. (optional)
+     * @param  \CpaymentConnector\Model\PaymentSessionRequest $payment_session_request The payment session request. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function v1PaymentSessionsPostAsyncWithHttpInfo($auth_token, $payment_session_request = null)
     {
-        $returnType = '\Cpayment.Connector\Model\PaymentSessionResponse';
+        $returnType = '\CpaymentConnector\Model\PaymentSessionResponse';
         $request = $this->v1PaymentSessionsPostRequest($auth_token, $payment_session_request);
 
         return $this->client
@@ -584,7 +584,7 @@ class PaymentSessionApi
      * Create request for operation 'v1PaymentSessionsPost'
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\PaymentSessionRequest $payment_session_request The payment session request. (optional)
+     * @param  \CpaymentConnector\Model\PaymentSessionRequest $payment_session_request The payment session request. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

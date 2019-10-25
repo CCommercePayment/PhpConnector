@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Cpayment.Connector
+ * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Cpayment.Connector\Model;
+namespace CpaymentConnector\Model;
 
 use \ArrayAccess;
-use \Cpayment.Connector\ObjectSerializer;
+use \CpaymentConnector\ObjectSerializer;
 
 /**
  * Card3DsPaymentResponse Class Doc Comment
  *
  * @category Class
  * @description The card payment response
- * @package  Cpayment.Connector
+ * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -59,7 +59,7 @@ class Card3DsPaymentResponse implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'card3ds_payment_request_id' => 'string',
-        'card3ds_redirection_data' => '\Cpayment.Connector\Model\RedirectionData',
+        'card3ds_redirection_data' => '\CpaymentConnector\Model\RedirectionData',
         'card_enrollment_response_code' => 'string',
         'response_message' => 'string'
     ];
@@ -275,7 +275,7 @@ class Card3DsPaymentResponse implements ModelInterface, ArrayAccess
     /**
      * Gets card3ds_redirection_data
      *
-     * @return \Cpayment.Connector\Model\RedirectionData|null
+     * @return \CpaymentConnector\Model\RedirectionData|null
      */
     public function getCard3dsRedirectionData()
     {
@@ -285,7 +285,7 @@ class Card3DsPaymentResponse implements ModelInterface, ArrayAccess
     /**
      * Sets card3ds_redirection_data
      *
-     * @param \Cpayment.Connector\Model\RedirectionData|null $card3ds_redirection_data card3ds_redirection_data
+     * @param \CpaymentConnector\Model\RedirectionData|null $card3ds_redirection_data card3ds_redirection_data
      *
      * @return $this
      */

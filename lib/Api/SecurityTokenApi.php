@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Cpayment.Connector
+ * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Cpayment.Connector\Api;
+namespace CpaymentConnector\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Cpayment.Connector\ApiException;
-use Cpayment.Connector\Configuration;
-use Cpayment.Connector\HeaderSelector;
-use Cpayment.Connector\ObjectSerializer;
+use CpaymentConnector\ApiException;
+use CpaymentConnector\Configuration;
+use CpaymentConnector\HeaderSelector;
+use CpaymentConnector\ObjectSerializer;
 
 /**
  * SecurityTokenApi Class Doc Comment
  *
  * @category Class
- * @package  Cpayment.Connector
+ * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -122,7 +122,7 @@ class SecurityTokenApi
      *
      * @param  string $authorization The credentials (login:password in base64) (optional)
      *
-     * @throws \Cpayment.Connector\ApiException on non-2xx response
+     * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -139,7 +139,7 @@ class SecurityTokenApi
      *
      * @param  string $authorization The credentials (login:password in base64) (optional)
      *
-     * @throws \Cpayment.Connector\ApiException on non-2xx response
+     * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */

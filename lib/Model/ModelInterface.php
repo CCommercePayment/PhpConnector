@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Cpayment.Connector\Model
+ * @package  CpaymentConnector\Model
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,12 +27,12 @@
  * Do not edit the class manually.
  */
 
-namespace Cpayment.Connector\Model;
+namespace CpaymentConnector\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package Cpayment.Connector\Model
+ * @package CpaymentConnector\Model
  * @author  OpenAPI Generator team
  */
 interface ModelInterface

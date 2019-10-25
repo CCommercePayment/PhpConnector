@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Cpayment.Connector
+ * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Cpayment.Connector\Api;
+namespace CpaymentConnector\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Cpayment.Connector\ApiException;
-use Cpayment.Connector\Configuration;
-use Cpayment.Connector\HeaderSelector;
-use Cpayment.Connector\ObjectSerializer;
+use CpaymentConnector\ApiException;
+use CpaymentConnector\Configuration;
+use CpaymentConnector\HeaderSelector;
+use CpaymentConnector\ObjectSerializer;
 
 /**
  * CardApi Class Doc Comment
  *
  * @category Class
- * @package  Cpayment.Connector
+ * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -121,11 +121,11 @@ class CardApi
      * Credit a card payment
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\CardPaymentCreditHolderRequest $request request (optional)
+     * @param  \CpaymentConnector\Model\CardPaymentCreditHolderRequest $request request (optional)
      *
-     * @throws \Cpayment.Connector\ApiException on non-2xx response
+     * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Cpayment.Connector\Model\CardPaymentCreditHolderResponse
+     * @return \CpaymentConnector\Model\CardPaymentCreditHolderResponse
      */
     public function v1CardCreditHolderPost($auth_token, $request = null)
     {
@@ -139,11 +139,11 @@ class CardApi
      * Credit a card payment
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\CardPaymentCreditHolderRequest $request (optional)
+     * @param  \CpaymentConnector\Model\CardPaymentCreditHolderRequest $request (optional)
      *
-     * @throws \Cpayment.Connector\ApiException on non-2xx response
+     * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Cpayment.Connector\Model\CardPaymentCreditHolderResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CpaymentConnector\Model\CardPaymentCreditHolderResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1CardCreditHolderPostWithHttpInfo($auth_token, $request = null)
     {
@@ -180,20 +180,20 @@ class CardApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Cpayment.Connector\Model\CardPaymentCreditHolderResponse' === '\SplFileObject') {
+                    if ('\CpaymentConnector\Model\CardPaymentCreditHolderResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cpayment.Connector\Model\CardPaymentCreditHolderResponse', []),
+                        ObjectSerializer::deserialize($content, '\CpaymentConnector\Model\CardPaymentCreditHolderResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Cpayment.Connector\Model\CardPaymentCreditHolderResponse';
+            $returnType = '\CpaymentConnector\Model\CardPaymentCreditHolderResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -212,7 +212,7 @@ class CardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cpayment.Connector\Model\CardPaymentCreditHolderResponse',
+                        '\CpaymentConnector\Model\CardPaymentCreditHolderResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -228,7 +228,7 @@ class CardApi
      * Credit a card payment
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\CardPaymentCreditHolderRequest $request (optional)
+     * @param  \CpaymentConnector\Model\CardPaymentCreditHolderRequest $request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -249,14 +249,14 @@ class CardApi
      * Credit a card payment
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\CardPaymentCreditHolderRequest $request (optional)
+     * @param  \CpaymentConnector\Model\CardPaymentCreditHolderRequest $request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function v1CardCreditHolderPostAsyncWithHttpInfo($auth_token, $request = null)
     {
-        $returnType = '\Cpayment.Connector\Model\CardPaymentCreditHolderResponse';
+        $returnType = '\CpaymentConnector\Model\CardPaymentCreditHolderResponse';
         $request = $this->v1CardCreditHolderPostRequest($auth_token, $request);
 
         return $this->client
@@ -297,7 +297,7 @@ class CardApi
      * Create request for operation 'v1CardCreditHolderPost'
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\CardPaymentCreditHolderRequest $request (optional)
+     * @param  \CpaymentConnector\Model\CardPaymentCreditHolderRequest $request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

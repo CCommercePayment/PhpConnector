@@ -1,4 +1,4 @@
-# Cpayment.Connector\CardPaymentApi
+# CpaymentConnector\CardPaymentApi
 
 All URIs are relative to *http://localhost*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## v1PaymentsCardPaymentPost
 
-> \Cpayment.Connector\Model\CardPaymentResponse v1PaymentsCardPaymentPost($auth_token, $card_payment_request)
+> \CpaymentConnector\Model\CardPaymentResponse v1PaymentsCardPaymentPost($auth_token, $card_payment_request)
 
 Achieve a payment with a card without 3DSecure.  To achieve a 3DS payment (CheckEnrollment), see the /payment/card3ds-payment resource.
 
@@ -21,13 +21,13 @@ Achieve a payment with a card without 3DSecure.  To achieve a 3DS payment (Check
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Cpayment.Connector\Api\CardPaymentApi(
+$apiInstance = new CpaymentConnector\Api\CardPaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$card_payment_request = new \Cpayment.Connector\Model\CardPaymentRequest(); // \Cpayment.Connector\Model\CardPaymentRequest | All data needed to make card payment
+$card_payment_request = new \CpaymentConnector\Model\CardPaymentRequest(); // \CpaymentConnector\Model\CardPaymentRequest | All data needed to make card payment
 
 try {
     $result = $apiInstance->v1PaymentsCardPaymentPost($auth_token, $card_payment_request);
@@ -44,11 +44,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_token** | **string**| Gets or sets the authentication token. |
- **card_payment_request** | [**\Cpayment.Connector\Model\CardPaymentRequest**](../Model/CardPaymentRequest.md)| All data needed to make card payment | [optional]
+ **card_payment_request** | [**\CpaymentConnector\Model\CardPaymentRequest**](../Model/CardPaymentRequest.md)| All data needed to make card payment | [optional]
 
 ### Return type
 
-[**\Cpayment.Connector\Model\CardPaymentResponse**](../Model/CardPaymentResponse.md)
+[**\CpaymentConnector\Model\CardPaymentResponse**](../Model/CardPaymentResponse.md)
 
 ### Authorization
 

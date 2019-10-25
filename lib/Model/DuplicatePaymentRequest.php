@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Cpayment.Connector
+ * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Cpayment.Connector\Model;
+namespace CpaymentConnector\Model;
 
 use \ArrayAccess;
-use \Cpayment.Connector\ObjectSerializer;
+use \CpaymentConnector\ObjectSerializer;
 
 /**
  * DuplicatePaymentRequest Class Doc Comment
  *
  * @category Class
  * @description The AuthorByCopy Payment Request
- * @package  Cpayment.Connector
+ * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -58,11 +58,11 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'context' => '\Cpayment.Connector\Model\CardPaymentContextData',
-        'options' => '\Cpayment.Connector\Model\Options',
-        'order' => '\Cpayment.Connector\Model\Order',
-        'copy_reference' => '\Cpayment.Connector\Model\CopyReference',
-        'validation_mode' => '\Cpayment.Connector\Model\ValidationModeOverride',
+        'context' => '\CpaymentConnector\Model\CardPaymentContextData',
+        'options' => '\CpaymentConnector\Model\Options',
+        'order' => '\CpaymentConnector\Model\Order',
+        'copy_reference' => '\CpaymentConnector\Model\CopyReference',
+        'validation_mode' => '\CpaymentConnector\Model\ValidationModeOverride',
         'notification_url' => 'string'
     ];
 
@@ -247,7 +247,7 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets context
      *
-     * @return \Cpayment.Connector\Model\CardPaymentContextData
+     * @return \CpaymentConnector\Model\CardPaymentContextData
      */
     public function getContext()
     {
@@ -257,7 +257,7 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets context
      *
-     * @param \Cpayment.Connector\Model\CardPaymentContextData $context context
+     * @param \CpaymentConnector\Model\CardPaymentContextData $context context
      *
      * @return $this
      */
@@ -271,7 +271,7 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets options
      *
-     * @return \Cpayment.Connector\Model\Options|null
+     * @return \CpaymentConnector\Model\Options|null
      */
     public function getOptions()
     {
@@ -281,7 +281,7 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \Cpayment.Connector\Model\Options|null $options options
+     * @param \CpaymentConnector\Model\Options|null $options options
      *
      * @return $this
      */
@@ -295,7 +295,7 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets order
      *
-     * @return \Cpayment.Connector\Model\Order
+     * @return \CpaymentConnector\Model\Order
      */
     public function getOrder()
     {
@@ -305,7 +305,7 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets order
      *
-     * @param \Cpayment.Connector\Model\Order $order order
+     * @param \CpaymentConnector\Model\Order $order order
      *
      * @return $this
      */
@@ -319,7 +319,7 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets copy_reference
      *
-     * @return \Cpayment.Connector\Model\CopyReference
+     * @return \CpaymentConnector\Model\CopyReference
      */
     public function getCopyReference()
     {
@@ -329,7 +329,7 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets copy_reference
      *
-     * @param \Cpayment.Connector\Model\CopyReference $copy_reference copy_reference
+     * @param \CpaymentConnector\Model\CopyReference $copy_reference copy_reference
      *
      * @return $this
      */
@@ -343,7 +343,7 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets validation_mode
      *
-     * @return \Cpayment.Connector\Model\ValidationModeOverride|null
+     * @return \CpaymentConnector\Model\ValidationModeOverride|null
      */
     public function getValidationMode()
     {
@@ -353,7 +353,7 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets validation_mode
      *
-     * @param \Cpayment.Connector\Model\ValidationModeOverride|null $validation_mode validation_mode
+     * @param \CpaymentConnector\Model\ValidationModeOverride|null $validation_mode validation_mode
      *
      * @return $this
      */

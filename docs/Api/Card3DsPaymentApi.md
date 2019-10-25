@@ -1,4 +1,4 @@
-# Cpayment.Connector\Card3DsPaymentApi
+# CpaymentConnector\Card3DsPaymentApi
 
 All URIs are relative to *http://localhost*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## v1PaymentsCard3dsPaymentPost
 
-> \Cpayment.Connector\Model\Card3DsPaymentResponse v1PaymentsCard3dsPaymentPost($auth_token, $card3_ds_payment_request)
+> \CpaymentConnector\Model\Card3DsPaymentResponse v1PaymentsCard3dsPaymentPost($auth_token, $card3_ds_payment_request)
 
 Achieve a 3DS payment (CheckEnrollment)
 
@@ -22,13 +22,13 @@ Achieve a 3DS payment (CheckEnrollment)
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Cpayment.Connector\Api\Card3DsPaymentApi(
+$apiInstance = new CpaymentConnector\Api\Card3DsPaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$card3_ds_payment_request = new \Cpayment.Connector\Model\Card3DsPaymentRequest(); // \Cpayment.Connector\Model\Card3DsPaymentRequest | All data needed to make a 3DS card payment
+$card3_ds_payment_request = new \CpaymentConnector\Model\Card3DsPaymentRequest(); // \CpaymentConnector\Model\Card3DsPaymentRequest | All data needed to make a 3DS card payment
 
 try {
     $result = $apiInstance->v1PaymentsCard3dsPaymentPost($auth_token, $card3_ds_payment_request);
@@ -45,11 +45,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_token** | **string**| Gets or sets the authentication token. |
- **card3_ds_payment_request** | [**\Cpayment.Connector\Model\Card3DsPaymentRequest**](../Model/Card3DsPaymentRequest.md)| All data needed to make a 3DS card payment | [optional]
+ **card3_ds_payment_request** | [**\CpaymentConnector\Model\Card3DsPaymentRequest**](../Model/Card3DsPaymentRequest.md)| All data needed to make a 3DS card payment | [optional]
 
 ### Return type
 
-[**\Cpayment.Connector\Model\Card3DsPaymentResponse**](../Model/Card3DsPaymentResponse.md)
+[**\CpaymentConnector\Model\Card3DsPaymentResponse**](../Model/Card3DsPaymentResponse.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 
 ## v1PaymentsCard3dsPaymentPut
 
-> \Cpayment.Connector\Model\CardPaymentResponse v1PaymentsCard3dsPaymentPut($auth_token, $card3_ds_payment_put_request)
+> \CpaymentConnector\Model\CardPaymentResponse v1PaymentsCard3dsPaymentPut($auth_token, $card3_ds_payment_put_request)
 
 Finish the 3DS payment.  Reuse the order references and the paymentRequestId (returned from the POST).
 
@@ -78,13 +78,13 @@ Finish the 3DS payment.  Reuse the order references and the paymentRequestId (re
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Cpayment.Connector\Api\Card3DsPaymentApi(
+$apiInstance = new CpaymentConnector\Api\Card3DsPaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$card3_ds_payment_put_request = new \Cpayment.Connector\Model\Card3DsPaymentPutRequest(); // \Cpayment.Connector\Model\Card3DsPaymentPutRequest | The card payment put request.
+$card3_ds_payment_put_request = new \CpaymentConnector\Model\Card3DsPaymentPutRequest(); // \CpaymentConnector\Model\Card3DsPaymentPutRequest | The card payment put request.
 
 try {
     $result = $apiInstance->v1PaymentsCard3dsPaymentPut($auth_token, $card3_ds_payment_put_request);
@@ -101,11 +101,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_token** | **string**| Gets or sets the authentication token. |
- **card3_ds_payment_put_request** | [**\Cpayment.Connector\Model\Card3DsPaymentPutRequest**](../Model/Card3DsPaymentPutRequest.md)| The card payment put request. | [optional]
+ **card3_ds_payment_put_request** | [**\CpaymentConnector\Model\Card3DsPaymentPutRequest**](../Model/Card3DsPaymentPutRequest.md)| The card payment put request. | [optional]
 
 ### Return type
 
-[**\Cpayment.Connector\Model\CardPaymentResponse**](../Model/CardPaymentResponse.md)
+[**\CpaymentConnector\Model\CardPaymentResponse**](../Model/CardPaymentResponse.md)
 
 ### Authorization
 

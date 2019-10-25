@@ -1,4 +1,4 @@
-# Cpayment.Connector\PaymentSessionApi
+# CpaymentConnector\PaymentSessionApi
 
 All URIs are relative to *http://localhost*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## v1PaymentSessionsByPaymentSessionIdPaymentResultGet
 
-> \Cpayment.Connector\Model\GetPaymentSessionResult v1PaymentSessionsByPaymentSessionIdPaymentResultGet($payment_session_id, $auth_token)
+> \CpaymentConnector\Model\GetPaymentSessionResult v1PaymentSessionsByPaymentSessionIdPaymentResultGet($payment_session_id, $auth_token)
 
 Gets the payment result from its session id.
 
@@ -22,7 +22,7 @@ Gets the payment result from its session id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Cpayment.Connector\Api\PaymentSessionApi(
+$apiInstance = new CpaymentConnector\Api\PaymentSessionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Cpayment.Connector\Model\GetPaymentSessionResult**](../Model/GetPaymentSessionResult.md)
+[**\CpaymentConnector\Model\GetPaymentSessionResult**](../Model/GetPaymentSessionResult.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 
 ## v1PaymentSessionsPost
 
-> \Cpayment.Connector\Model\PaymentSessionResponse v1PaymentSessionsPost($auth_token, $payment_session_request)
+> \CpaymentConnector\Model\PaymentSessionResponse v1PaymentSessionsPost($auth_token, $payment_session_request)
 
 Creates a payment session.
 
@@ -78,13 +78,13 @@ Creates a payment session.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Cpayment.Connector\Api\PaymentSessionApi(
+$apiInstance = new CpaymentConnector\Api\PaymentSessionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$payment_session_request = new \Cpayment.Connector\Model\PaymentSessionRequest(); // \Cpayment.Connector\Model\PaymentSessionRequest | The payment session request.
+$payment_session_request = new \CpaymentConnector\Model\PaymentSessionRequest(); // \CpaymentConnector\Model\PaymentSessionRequest | The payment session request.
 
 try {
     $result = $apiInstance->v1PaymentSessionsPost($auth_token, $payment_session_request);
@@ -101,11 +101,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_token** | **string**| Gets or sets the authentication token. |
- **payment_session_request** | [**\Cpayment.Connector\Model\PaymentSessionRequest**](../Model/PaymentSessionRequest.md)| The payment session request. | [optional]
+ **payment_session_request** | [**\CpaymentConnector\Model\PaymentSessionRequest**](../Model/PaymentSessionRequest.md)| The payment session request. | [optional]
 
 ### Return type
 
-[**\Cpayment.Connector\Model\PaymentSessionResponse**](../Model/PaymentSessionResponse.md)
+[**\CpaymentConnector\Model\PaymentSessionResponse**](../Model/PaymentSessionResponse.md)
 
 ### Authorization
 

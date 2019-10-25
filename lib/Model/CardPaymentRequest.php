@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Cpayment.Connector
+ * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Cpayment.Connector\Model;
+namespace CpaymentConnector\Model;
 
 use \ArrayAccess;
-use \Cpayment.Connector\ObjectSerializer;
+use \CpaymentConnector\ObjectSerializer;
 
 /**
  * CardPaymentRequest Class Doc Comment
  *
  * @category Class
  * @description 
- * @package  Cpayment.Connector
+ * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -58,12 +58,12 @@ class CardPaymentRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'context' => '\Cpayment.Connector\Model\CardPaymentContextData',
-        'options' => '\Cpayment.Connector\Model\Options',
-        'order' => '\Cpayment.Connector\Model\Order',
-        'card' => '\Cpayment.Connector\Model\CardData',
-        'stored_card' => '\Cpayment.Connector\Model\StoredCard',
-        'validation_mode' => '\Cpayment.Connector\Model\ValidationModeOverride',
+        'context' => '\CpaymentConnector\Model\CardPaymentContextData',
+        'options' => '\CpaymentConnector\Model\Options',
+        'order' => '\CpaymentConnector\Model\Order',
+        'card' => '\CpaymentConnector\Model\CardData',
+        'stored_card' => '\CpaymentConnector\Model\StoredCard',
+        'validation_mode' => '\CpaymentConnector\Model\ValidationModeOverride',
         'notification_url' => 'string'
     ];
 
@@ -250,7 +250,7 @@ class CardPaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets context
      *
-     * @return \Cpayment.Connector\Model\CardPaymentContextData
+     * @return \CpaymentConnector\Model\CardPaymentContextData
      */
     public function getContext()
     {
@@ -260,7 +260,7 @@ class CardPaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets context
      *
-     * @param \Cpayment.Connector\Model\CardPaymentContextData $context context
+     * @param \CpaymentConnector\Model\CardPaymentContextData $context context
      *
      * @return $this
      */
@@ -274,7 +274,7 @@ class CardPaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets options
      *
-     * @return \Cpayment.Connector\Model\Options|null
+     * @return \CpaymentConnector\Model\Options|null
      */
     public function getOptions()
     {
@@ -284,7 +284,7 @@ class CardPaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \Cpayment.Connector\Model\Options|null $options options
+     * @param \CpaymentConnector\Model\Options|null $options options
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class CardPaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets order
      *
-     * @return \Cpayment.Connector\Model\Order
+     * @return \CpaymentConnector\Model\Order
      */
     public function getOrder()
     {
@@ -308,7 +308,7 @@ class CardPaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets order
      *
-     * @param \Cpayment.Connector\Model\Order $order order
+     * @param \CpaymentConnector\Model\Order $order order
      *
      * @return $this
      */
@@ -322,7 +322,7 @@ class CardPaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets card
      *
-     * @return \Cpayment.Connector\Model\CardData|null
+     * @return \CpaymentConnector\Model\CardData|null
      */
     public function getCard()
     {
@@ -332,7 +332,7 @@ class CardPaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets card
      *
-     * @param \Cpayment.Connector\Model\CardData|null $card card
+     * @param \CpaymentConnector\Model\CardData|null $card card
      *
      * @return $this
      */
@@ -346,7 +346,7 @@ class CardPaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets stored_card
      *
-     * @return \Cpayment.Connector\Model\StoredCard|null
+     * @return \CpaymentConnector\Model\StoredCard|null
      */
     public function getStoredCard()
     {
@@ -356,7 +356,7 @@ class CardPaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets stored_card
      *
-     * @param \Cpayment.Connector\Model\StoredCard|null $stored_card stored_card
+     * @param \CpaymentConnector\Model\StoredCard|null $stored_card stored_card
      *
      * @return $this
      */
@@ -370,7 +370,7 @@ class CardPaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets validation_mode
      *
-     * @return \Cpayment.Connector\Model\ValidationModeOverride|null
+     * @return \CpaymentConnector\Model\ValidationModeOverride|null
      */
     public function getValidationMode()
     {
@@ -380,7 +380,7 @@ class CardPaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets validation_mode
      *
-     * @param \Cpayment.Connector\Model\ValidationModeOverride|null $validation_mode validation_mode
+     * @param \CpaymentConnector\Model\ValidationModeOverride|null $validation_mode validation_mode
      *
      * @return $this
      */

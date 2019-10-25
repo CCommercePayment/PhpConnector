@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Cpayment.Connector
+ * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Cpayment.Connector\Api;
+namespace CpaymentConnector\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Cpayment.Connector\ApiException;
-use Cpayment.Connector\Configuration;
-use Cpayment.Connector\HeaderSelector;
-use Cpayment.Connector\ObjectSerializer;
+use CpaymentConnector\ApiException;
+use CpaymentConnector\Configuration;
+use CpaymentConnector\HeaderSelector;
+use CpaymentConnector\ObjectSerializer;
 
 /**
  * Card3DsPaymentApi Class Doc Comment
  *
  * @category Class
- * @package  Cpayment.Connector
+ * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -121,11 +121,11 @@ class Card3DsPaymentApi
      * Achieve a 3DS payment (CheckEnrollment)
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\Card3DsPaymentRequest $card3_ds_payment_request All data needed to make a 3DS card payment (optional)
+     * @param  \CpaymentConnector\Model\Card3DsPaymentRequest $card3_ds_payment_request All data needed to make a 3DS card payment (optional)
      *
-     * @throws \Cpayment.Connector\ApiException on non-2xx response
+     * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Cpayment.Connector\Model\Card3DsPaymentResponse
+     * @return \CpaymentConnector\Model\Card3DsPaymentResponse
      */
     public function v1PaymentsCard3dsPaymentPost($auth_token, $card3_ds_payment_request = null)
     {
@@ -139,11 +139,11 @@ class Card3DsPaymentApi
      * Achieve a 3DS payment (CheckEnrollment)
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\Card3DsPaymentRequest $card3_ds_payment_request All data needed to make a 3DS card payment (optional)
+     * @param  \CpaymentConnector\Model\Card3DsPaymentRequest $card3_ds_payment_request All data needed to make a 3DS card payment (optional)
      *
-     * @throws \Cpayment.Connector\ApiException on non-2xx response
+     * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Cpayment.Connector\Model\Card3DsPaymentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CpaymentConnector\Model\Card3DsPaymentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1PaymentsCard3dsPaymentPostWithHttpInfo($auth_token, $card3_ds_payment_request = null)
     {
@@ -180,20 +180,20 @@ class Card3DsPaymentApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Cpayment.Connector\Model\Card3DsPaymentResponse' === '\SplFileObject') {
+                    if ('\CpaymentConnector\Model\Card3DsPaymentResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cpayment.Connector\Model\Card3DsPaymentResponse', []),
+                        ObjectSerializer::deserialize($content, '\CpaymentConnector\Model\Card3DsPaymentResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Cpayment.Connector\Model\Card3DsPaymentResponse';
+            $returnType = '\CpaymentConnector\Model\Card3DsPaymentResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -212,7 +212,7 @@ class Card3DsPaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cpayment.Connector\Model\Card3DsPaymentResponse',
+                        '\CpaymentConnector\Model\Card3DsPaymentResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -228,7 +228,7 @@ class Card3DsPaymentApi
      * Achieve a 3DS payment (CheckEnrollment)
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\Card3DsPaymentRequest $card3_ds_payment_request All data needed to make a 3DS card payment (optional)
+     * @param  \CpaymentConnector\Model\Card3DsPaymentRequest $card3_ds_payment_request All data needed to make a 3DS card payment (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -249,14 +249,14 @@ class Card3DsPaymentApi
      * Achieve a 3DS payment (CheckEnrollment)
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\Card3DsPaymentRequest $card3_ds_payment_request All data needed to make a 3DS card payment (optional)
+     * @param  \CpaymentConnector\Model\Card3DsPaymentRequest $card3_ds_payment_request All data needed to make a 3DS card payment (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function v1PaymentsCard3dsPaymentPostAsyncWithHttpInfo($auth_token, $card3_ds_payment_request = null)
     {
-        $returnType = '\Cpayment.Connector\Model\Card3DsPaymentResponse';
+        $returnType = '\CpaymentConnector\Model\Card3DsPaymentResponse';
         $request = $this->v1PaymentsCard3dsPaymentPostRequest($auth_token, $card3_ds_payment_request);
 
         return $this->client
@@ -297,7 +297,7 @@ class Card3DsPaymentApi
      * Create request for operation 'v1PaymentsCard3dsPaymentPost'
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\Card3DsPaymentRequest $card3_ds_payment_request All data needed to make a 3DS card payment (optional)
+     * @param  \CpaymentConnector\Model\Card3DsPaymentRequest $card3_ds_payment_request All data needed to make a 3DS card payment (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -397,11 +397,11 @@ class Card3DsPaymentApi
      * Finish the 3DS payment.  Reuse the order references and the paymentRequestId (returned from the POST).
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\Card3DsPaymentPutRequest $card3_ds_payment_put_request The card payment put request. (optional)
+     * @param  \CpaymentConnector\Model\Card3DsPaymentPutRequest $card3_ds_payment_put_request The card payment put request. (optional)
      *
-     * @throws \Cpayment.Connector\ApiException on non-2xx response
+     * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Cpayment.Connector\Model\CardPaymentResponse
+     * @return \CpaymentConnector\Model\CardPaymentResponse
      */
     public function v1PaymentsCard3dsPaymentPut($auth_token, $card3_ds_payment_put_request = null)
     {
@@ -415,11 +415,11 @@ class Card3DsPaymentApi
      * Finish the 3DS payment.  Reuse the order references and the paymentRequestId (returned from the POST).
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\Card3DsPaymentPutRequest $card3_ds_payment_put_request The card payment put request. (optional)
+     * @param  \CpaymentConnector\Model\Card3DsPaymentPutRequest $card3_ds_payment_put_request The card payment put request. (optional)
      *
-     * @throws \Cpayment.Connector\ApiException on non-2xx response
+     * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Cpayment.Connector\Model\CardPaymentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \CpaymentConnector\Model\CardPaymentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1PaymentsCard3dsPaymentPutWithHttpInfo($auth_token, $card3_ds_payment_put_request = null)
     {
@@ -456,20 +456,20 @@ class Card3DsPaymentApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Cpayment.Connector\Model\CardPaymentResponse' === '\SplFileObject') {
+                    if ('\CpaymentConnector\Model\CardPaymentResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Cpayment.Connector\Model\CardPaymentResponse', []),
+                        ObjectSerializer::deserialize($content, '\CpaymentConnector\Model\CardPaymentResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Cpayment.Connector\Model\CardPaymentResponse';
+            $returnType = '\CpaymentConnector\Model\CardPaymentResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -488,7 +488,7 @@ class Card3DsPaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Cpayment.Connector\Model\CardPaymentResponse',
+                        '\CpaymentConnector\Model\CardPaymentResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -504,7 +504,7 @@ class Card3DsPaymentApi
      * Finish the 3DS payment.  Reuse the order references and the paymentRequestId (returned from the POST).
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\Card3DsPaymentPutRequest $card3_ds_payment_put_request The card payment put request. (optional)
+     * @param  \CpaymentConnector\Model\Card3DsPaymentPutRequest $card3_ds_payment_put_request The card payment put request. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -525,14 +525,14 @@ class Card3DsPaymentApi
      * Finish the 3DS payment.  Reuse the order references and the paymentRequestId (returned from the POST).
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\Card3DsPaymentPutRequest $card3_ds_payment_put_request The card payment put request. (optional)
+     * @param  \CpaymentConnector\Model\Card3DsPaymentPutRequest $card3_ds_payment_put_request The card payment put request. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function v1PaymentsCard3dsPaymentPutAsyncWithHttpInfo($auth_token, $card3_ds_payment_put_request = null)
     {
-        $returnType = '\Cpayment.Connector\Model\CardPaymentResponse';
+        $returnType = '\CpaymentConnector\Model\CardPaymentResponse';
         $request = $this->v1PaymentsCard3dsPaymentPutRequest($auth_token, $card3_ds_payment_put_request);
 
         return $this->client
@@ -573,7 +573,7 @@ class Card3DsPaymentApi
      * Create request for operation 'v1PaymentsCard3dsPaymentPut'
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \Cpayment.Connector\Model\Card3DsPaymentPutRequest $card3_ds_payment_put_request The card payment put request. (optional)
+     * @param  \CpaymentConnector\Model\Card3DsPaymentPutRequest $card3_ds_payment_put_request The card payment put request. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

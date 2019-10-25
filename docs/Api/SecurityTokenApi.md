@@ -1,4 +1,4 @@
-# Cpayment.Connector\SecurityTokenApi
+# CpaymentConnector\SecurityTokenApi
 
 All URIs are relative to *http://localhost*
 
@@ -23,7 +23,7 @@ See the following lines for example :  GET /v1/auth/token  {  \"authorization\":
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new Cpayment.Connector\Api\SecurityTokenApi(
+$apiInstance = new CpaymentConnector\Api\SecurityTokenApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

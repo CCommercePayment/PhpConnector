@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Cpayment.Connector
+ * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Cpayment.Connector\Model;
+namespace CpaymentConnector\Model;
 
 use \ArrayAccess;
-use \Cpayment.Connector\ObjectSerializer;
+use \CpaymentConnector\ObjectSerializer;
 
 /**
  * PaymentOperationsResponse Class Doc Comment
  *
  * @category Class
  * @description All payment operation data for the response
- * @package  Cpayment.Connector
+ * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -59,7 +59,7 @@ class PaymentOperationsResponse implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'order_tag' => 'string',
-        'schedules' => '\Cpayment.Connector\Model\Schedule[]',
+        'schedules' => '\CpaymentConnector\Model\Schedule[]',
         'order_ref' => 'string',
         'response_code' => 'string',
         'action_type' => 'string',
@@ -295,7 +295,7 @@ class PaymentOperationsResponse implements ModelInterface, ArrayAccess
     /**
      * Gets schedules
      *
-     * @return \Cpayment.Connector\Model\Schedule[]|null
+     * @return \CpaymentConnector\Model\Schedule[]|null
      */
     public function getSchedules()
     {
@@ -305,7 +305,7 @@ class PaymentOperationsResponse implements ModelInterface, ArrayAccess
     /**
      * Sets schedules
      *
-     * @param \Cpayment.Connector\Model\Schedule[]|null $schedules All schedules data
+     * @param \CpaymentConnector\Model\Schedule[]|null $schedules All schedules data
      *
      * @return $this
      */

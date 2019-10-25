@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **order_tag** | **string** | The orderTag | [optional] 
-**schedules** | [**\Cpayment.Connector\Model\Schedule[]**](Schedule.md) | All schedules data | [optional] 
+**schedules** | [**\CpaymentConnector\Model\Schedule[]**](Schedule.md) | All schedules data | [optional] 
 **order_ref** | **string** | The orderRef | [optional] 
 **response_code** | **string** | The response code of the service | [optional] 
 **action_type** | **string** | The action type | [optional] 

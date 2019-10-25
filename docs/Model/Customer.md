@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**billing_address** | [**\Cpayment.Connector\Model\ShippingAddress**](ShippingAddress.md) |  | [optional] 
+**billing_address** | [**\CpaymentConnector\Model\ShippingAddress**](ShippingAddress.md) |  | [optional] 
 **birth_date** | [**\DateTime**](\DateTime.md) | Gets or sets the birth date. | [optional] 
 **civility** | **string** | Gets or sets the civility. | [optional] 
 **country** | **string** | Gets or sets the country field. | [optional] 
 **customer_ip** | **string** | Gets or sets the customer ip field. | [optional] 
 **customer_ref** | **string** | Gets or sets the customer reference field. | [optional] 
-**delivery_address** | [**\Cpayment.Connector\Model\ShippingAddress**](ShippingAddress.md) |  | [optional] 
+**delivery_address** | [**\CpaymentConnector\Model\ShippingAddress**](ShippingAddress.md) |  | [optional] 
 **email** | **string** | Gets or sets the email. | [optional] 
 **first_name** | **string** | Gets or sets the first name. | [optional] 
 **last_name** | **string** | Gets or sets the last name. | [optional] 

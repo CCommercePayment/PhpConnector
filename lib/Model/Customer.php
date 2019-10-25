@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Cpayment.Connector
+ * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Cpayment.Connector\Model;
+namespace CpaymentConnector\Model;
 
 use \ArrayAccess;
-use \Cpayment.Connector\ObjectSerializer;
+use \CpaymentConnector\ObjectSerializer;
 
 /**
  * Customer Class Doc Comment
  *
  * @category Class
  * @description Customer
- * @package  Cpayment.Connector
+ * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -58,13 +58,13 @@ class Customer implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'billing_address' => '\Cpayment.Connector\Model\ShippingAddress',
+        'billing_address' => '\CpaymentConnector\Model\ShippingAddress',
         'birth_date' => '\DateTime',
         'civility' => 'string',
         'country' => 'string',
         'customer_ip' => 'string',
         'customer_ref' => 'string',
-        'delivery_address' => '\Cpayment.Connector\Model\ShippingAddress',
+        'delivery_address' => '\CpaymentConnector\Model\ShippingAddress',
         'email' => 'string',
         'first_name' => 'string',
         'last_name' => 'string',
@@ -794,7 +794,7 @@ class Customer implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address
      *
-     * @return \Cpayment.Connector\Model\ShippingAddress|null
+     * @return \CpaymentConnector\Model\ShippingAddress|null
      */
     public function getBillingAddress()
     {
@@ -804,7 +804,7 @@ class Customer implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \Cpayment.Connector\Model\ShippingAddress|null $billing_address billing_address
+     * @param \CpaymentConnector\Model\ShippingAddress|null $billing_address billing_address
      *
      * @return $this
      */
@@ -956,7 +956,7 @@ class Customer implements ModelInterface, ArrayAccess
     /**
      * Gets delivery_address
      *
-     * @return \Cpayment.Connector\Model\ShippingAddress|null
+     * @return \CpaymentConnector\Model\ShippingAddress|null
      */
     public function getDeliveryAddress()
     {
@@ -966,7 +966,7 @@ class Customer implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_address
      *
-     * @param \Cpayment.Connector\Model\ShippingAddress|null $delivery_address delivery_address
+     * @param \CpaymentConnector\Model\ShippingAddress|null $delivery_address delivery_address
      *
      * @return $this
      */
