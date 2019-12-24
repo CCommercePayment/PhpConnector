@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **payment_method_ref** | **string** | The payment method ref | [optional] 
 **stored_payment_method_id** | **string** | The stored payment method identifier | [optional] 
 **truncated_payment_method_number** | **string** | The truncated payment method number | [optional] 
+**label** | **string** | The Label | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

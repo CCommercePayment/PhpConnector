@@ -84,36 +84,41 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CardApi* | [**v1CardCreditHolderPost**](docs/Api/CardApi.md#v1cardcreditholderpost) | **POST** /v1/card/creditHolder | Credit a card payment
-*Card3DsPaymentApi* | [**v1PaymentsCard3dsPaymentPost**](docs/Api/Card3DsPaymentApi.md#v1paymentscard3dspaymentpost) | **POST** /v1/payments/card3ds-payment | Achieve a 3DS payment (CheckEnrollment)
-*Card3DsPaymentApi* | [**v1PaymentsCard3dsPaymentPut**](docs/Api/Card3DsPaymentApi.md#v1paymentscard3dspaymentput) | **PUT** /v1/payments/card3ds-payment | Finish the 3DS payment.  Reuse the order references and the paymentRequestId (returned from the POST).
-*CardPaymentApi* | [**v1PaymentsCardPaymentPost**](docs/Api/CardPaymentApi.md#v1paymentscardpaymentpost) | **POST** /v1/payments/card-payment | Achieve a payment with a card without 3DSecure.  To achieve a 3DS payment (CheckEnrollment), see the /payment/card3ds-payment resource.
-*DuplicatePaymentApi* | [**v1PaymentsDuplicatePaymentBatchPost**](docs/Api/DuplicatePaymentApi.md#v1paymentsduplicatepaymentbatchpost) | **POST** /v1/payments/duplicate-payment/batch | Achieve a batch of payments by copy of previously processed payments, with the same payment method.
-*DuplicatePaymentApi* | [**v1PaymentsDuplicatePaymentPost**](docs/Api/DuplicatePaymentApi.md#v1paymentsduplicatepaymentpost) | **POST** /v1/payments/duplicate-payment | Achieve a payment by copy of a previously processed payment, with the same payment method.
-*PaymentOptionsApi* | [**v1PaymentOptionsMerchantsByMerchantIdSitesByMerchantSiteIdGet**](docs/Api/PaymentOptionsApi.md#v1paymentoptionsmerchantsbymerchantidsitesbymerchantsiteidget) | **GET** /v1/payment-options/merchants/{merchantId}/sites/{merchantSiteId} | Gets the payment options for a specified site.
-*PaymentOptionsApi* | [**v1PaymentOptionsPost**](docs/Api/PaymentOptionsApi.md#v1paymentoptionspost) | **POST** /v1/payment-options | Gets the payment options for a specified context.
-*PaymentOptionsApi* | [**v1PaymentOptionsValidateEligibilityPost**](docs/Api/PaymentOptionsApi.md#v1paymentoptionsvalidateeligibilitypost) | **POST** /v1/payment-options/validateEligibility | Validates the eligibility of the given payment option, according to context.
+*CardApi* | [**v1CardCreditHolderPost**](docs/Api/CardApi.md#v1cardcreditholderpost) | **POST** /v1/card/creditHolder | Credit a card.
+*Card3DsPaymentApi* | [**v1PaymentsCard3dsPaymentAuthenticationPost**](docs/Api/Card3DsPaymentApi.md#v1paymentscard3dspaymentauthenticationpost) | **POST** /v1/payments/card3ds-payment/authentication | Validate authentication.
+*Card3DsPaymentApi* | [**v1PaymentsCard3dsPaymentPost**](docs/Api/Card3DsPaymentApi.md#v1paymentscard3dspaymentpost) | **POST** /v1/payments/card3ds-payment | Check enrollment
+*Card3DsPaymentApi* | [**v1PaymentsCard3dsPaymentPut**](docs/Api/Card3DsPaymentApi.md#v1paymentscard3dspaymentput) | **PUT** /v1/payments/card3ds-payment | Validate authentication AND authorize / payment
+*Card3DsPaymentApi* | [**v1PaymentsCard3dsPaymentWithAuthenticationDataPost**](docs/Api/Card3DsPaymentApi.md#v1paymentscard3dspaymentwithauthenticationdatapost) | **POST** /v1/payments/card3ds-payment/with-authentication-data | Authorization / payment -with- authentication data
+*CardPaymentApi* | [**v1PaymentsCardPaymentPost**](docs/Api/CardPaymentApi.md#v1paymentscardpaymentpost) | **POST** /v1/payments/card-payment | Authorization / payment
+*DuplicatePaymentApi* | [**v1PaymentsDuplicatePaymentBatchPost**](docs/Api/DuplicatePaymentApi.md#v1paymentsduplicatepaymentbatchpost) | **POST** /v1/payments/duplicate-payment/batch | Duplicate payment batch
+*DuplicatePaymentApi* | [**v1PaymentsDuplicatePaymentPost**](docs/Api/DuplicatePaymentApi.md#v1paymentsduplicatepaymentpost) | **POST** /v1/payments/duplicate-payment | Duplicate payment
+*PaymentOptionsApi* | [**v1PaymentOptionsMerchantsByMerchantIdSitesByMerchantSiteIdGet**](docs/Api/PaymentOptionsApi.md#v1paymentoptionsmerchantsbymerchantidsitesbymerchantsiteidget) | **GET** /v1/payment-options/merchants/{merchantId}/sites/{merchantSiteId} | Gets payment options
+*PaymentOptionsApi* | [**v1PaymentOptionsPost**](docs/Api/PaymentOptionsApi.md#v1paymentoptionspost) | **POST** /v1/payment-options | Gets payment options for a context
+*PaymentOptionsApi* | [**v1PaymentOptionsValidateEligibilityPost**](docs/Api/PaymentOptionsApi.md#v1paymentoptionsvalidateeligibilitypost) | **POST** /v1/payment-options/validateEligibility | Validates eligibility
 *PaymentSessionApi* | [**v1PaymentSessionsByPaymentSessionIdPaymentResultGet**](docs/Api/PaymentSessionApi.md#v1paymentsessionsbypaymentsessionidpaymentresultget) | **GET** /v1/payment-sessions/{paymentSessionId}/paymentResult | Gets the payment result from its session id.
 *PaymentSessionApi* | [**v1PaymentSessionsPost**](docs/Api/PaymentSessionApi.md#v1paymentsessionspost) | **POST** /v1/payment-sessions | Creates a payment session.
-*PaymentsApi* | [**v1PaymentsAllByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet**](docs/Api/PaymentsApi.md#v1paymentsallbyorderrefmerchantsbymerchantidsitesbymerchantsiteidget) | **GET** /v1/payments/all/{orderRef}/merchants/{merchantId}/sites/{merchantSiteId} | Gets ALL the details for a specified OrderRef.
-*PaymentsApi* | [**v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdByOrderTagGet**](docs/Api/PaymentsApi.md#v1paymentsbyorderrefmerchantsbymerchantidsitesbymerchantsiteidbyordertagget) | **GET** /v1/payments/{orderRef}/merchants/{merchantId}/sites/{merchantSiteId}/{orderTag} | Gets the details for a specified couple of OrderRef/OrderTag.
-*PaymentsApi* | [**v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet**](docs/Api/PaymentsApi.md#v1paymentsbyorderrefmerchantsbymerchantidsitesbymerchantsiteidget) | **GET** /v1/payments/{orderRef}/merchants/{merchantId}/sites/{merchantSiteId} | Gets the details for a specified OrderRef.
-*PaymentsApi* | [**v1PaymentsByOrderRefOperationsCancelOrRefundPut**](docs/Api/PaymentsApi.md#v1paymentsbyorderrefoperationscancelorrefundput) | **PUT** /v1/payments/{orderRef}/operations/cancelOrRefund | Executes a cancel or refund operation on the specified OrderRef.
-*PaymentsApi* | [**v1PaymentsByOrderRefOperationsCapturePut**](docs/Api/PaymentsApi.md#v1paymentsbyorderrefoperationscaptureput) | **PUT** /v1/payments/{orderRef}/operations/capture | Executes a capture operation on the specified OrderRef.
-*PaymentsApi* | [**v1PaymentsByOrderRefOperationsRecomputePut**](docs/Api/PaymentsApi.md#v1paymentsbyorderrefoperationsrecomputeput) | **PUT** /v1/payments/{orderRef}/operations/recompute | Executes a recompute operation on the specified OrderRef.
-*SecurityTokenApi* | [**v1AuthTokenGet**](docs/Api/SecurityTokenApi.md#v1authtokenget) | **GET** /v1/auth/token | Get the token provided by the Security Token Service (STS).  The authentication token is mandatory for the others api calls.  It&#39;s expire after 48h by default.
-*StoredPaymentMethodsApi* | [**v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGet**](docs/Api/StoredPaymentMethodsApi.md#v1storedpaymentmethodsmerchantsbymerchantidsitesbymerchantsiteidcustomerrefbycustomerrefget) | **GET** /v1/stored-payment-methods/merchants/{merchantId}/sites/{merchantSiteId}/customerRef/{customerRef} | Gets the stored payment methods by customer reference.
-*StoredPaymentMethodsApi* | [**v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdDelete**](docs/Api/StoredPaymentMethodsApi.md#v1storedpaymentmethodsmerchantsbymerchantidsitesbymerchantsiteidstoredpaymentmethodidbystoredpaymentmethodiddelete) | **DELETE** /v1/stored-payment-methods/merchants/{merchantId}/sites/{merchantSiteId}/storedPaymentMethodId/{storedPaymentMethodId} | Deletes the specified stored payment method.
-*StoredPaymentMethodsApi* | [**v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGet**](docs/Api/StoredPaymentMethodsApi.md#v1storedpaymentmethodsmerchantsbymerchantidsitesbymerchantsiteidstoredpaymentmethodidbystoredpaymentmethodidget) | **GET** /v1/stored-payment-methods/merchants/{merchantId}/sites/{merchantSiteId}/storedPaymentMethodId/{storedPaymentMethodId} | Gets the stored payment method by identifier.
-*StoredPaymentMethodsApi* | [**v1StoredPaymentMethodsPost**](docs/Api/StoredPaymentMethodsApi.md#v1storedpaymentmethodspost) | **POST** /v1/stored-payment-methods | Creates the specified stored payment method.
+*PaymentsApi* | [**v1PaymentsAllByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet**](docs/Api/PaymentsApi.md#v1paymentsallbyorderrefmerchantsbymerchantidsitesbymerchantsiteidget) | **GET** /v1/payments/all/{orderRef}/merchants/{merchantId}/sites/{merchantSiteId} | Gets all payment schedules
+*PaymentsApi* | [**v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdByOrderTagGet**](docs/Api/PaymentsApi.md#v1paymentsbyorderrefmerchantsbymerchantidsitesbymerchantsiteidbyordertagget) | **GET** /v1/payments/{orderRef}/merchants/{merchantId}/sites/{merchantSiteId}/{orderTag} | Gets payment schedule by tag.
+*PaymentsApi* | [**v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet**](docs/Api/PaymentsApi.md#v1paymentsbyorderrefmerchantsbymerchantidsitesbymerchantsiteidget) | **GET** /v1/payments/{orderRef}/merchants/{merchantId}/sites/{merchantSiteId} | Gets payment schedule
+*PaymentsApi* | [**v1PaymentsByOrderRefOperationsCancelOrRefundPut**](docs/Api/PaymentsApi.md#v1paymentsbyorderrefoperationscancelorrefundput) | **PUT** /v1/payments/{orderRef}/operations/cancelOrRefund | Cancel or refund
+*PaymentsApi* | [**v1PaymentsByOrderRefOperationsCapturePut**](docs/Api/PaymentsApi.md#v1paymentsbyorderrefoperationscaptureput) | **PUT** /v1/payments/{orderRef}/operations/capture | Capture
+*PaymentsApi* | [**v1PaymentsByOrderRefOperationsRecomputePut**](docs/Api/PaymentsApi.md#v1paymentsbyorderrefoperationsrecomputeput) | **PUT** /v1/payments/{orderRef}/operations/recompute | Recompute schedule
+*SecurityTokenApi* | [**v1AuthTokenGet**](docs/Api/SecurityTokenApi.md#v1authtokenget) | **GET** /v1/auth/token | Authenticate
+*StoredPaymentMethodsApi* | [**v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGet**](docs/Api/StoredPaymentMethodsApi.md#v1storedpaymentmethodsmerchantsbymerchantidsitesbymerchantsiteidcustomerrefbycustomerrefget) | **GET** /v1/stored-payment-methods/merchants/{merchantId}/sites/{merchantSiteId}/customerRef/{customerRef} | Gets stored payment methods by CustomerRef
+*StoredPaymentMethodsApi* | [**v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdDelete**](docs/Api/StoredPaymentMethodsApi.md#v1storedpaymentmethodsmerchantsbymerchantidsitesbymerchantsiteidstoredpaymentmethodidbystoredpaymentmethodiddelete) | **DELETE** /v1/stored-payment-methods/merchants/{merchantId}/sites/{merchantSiteId}/storedPaymentMethodId/{storedPaymentMethodId} | Deletes a stored payment method
+*StoredPaymentMethodsApi* | [**v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGet**](docs/Api/StoredPaymentMethodsApi.md#v1storedpaymentmethodsmerchantsbymerchantidsitesbymerchantsiteidstoredpaymentmethodidbystoredpaymentmethodidget) | **GET** /v1/stored-payment-methods/merchants/{merchantId}/sites/{merchantSiteId}/storedPaymentMethodId/{storedPaymentMethodId} | Gets a stored payment method
+*StoredPaymentMethodsApi* | [**v1StoredPaymentMethodsPost**](docs/Api/StoredPaymentMethodsApi.md#v1storedpaymentmethodspost) | **POST** /v1/stored-payment-methods | Stores a new payment method.
 
 
 ## Documentation For Models
 
  - [AcquiringBank](docs/Model/AcquiringBank.md)
- - [Card3DsPaymentPutRequest](docs/Model/Card3DsPaymentPutRequest.md)
- - [Card3DsPaymentRequest](docs/Model/Card3DsPaymentRequest.md)
- - [Card3DsPaymentResponse](docs/Model/Card3DsPaymentResponse.md)
+ - [Card3DsAuthorizeWithAuthDataRequest](docs/Model/Card3DsAuthorizeWithAuthDataRequest.md)
+ - [Card3DsCheckEnrollmentRequest](docs/Model/Card3DsCheckEnrollmentRequest.md)
+ - [Card3DsCheckEnrollmentResponse](docs/Model/Card3DsCheckEnrollmentResponse.md)
+ - [Card3DsValidateAuthenticationAndAuthorizeRequest](docs/Model/Card3DsValidateAuthenticationAndAuthorizeRequest.md)
+ - [Card3DsValidateAuthenticationRequest](docs/Model/Card3DsValidateAuthenticationRequest.md)
+ - [Card3DsValidateAuthenticationResponse](docs/Model/Card3DsValidateAuthenticationResponse.md)
  - [CardData](docs/Model/CardData.md)
  - [CardPaymentContextData](docs/Model/CardPaymentContextData.md)
  - [CardPaymentCreditHolderRequest](docs/Model/CardPaymentCreditHolderRequest.md)

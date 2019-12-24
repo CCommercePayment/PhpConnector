@@ -1,6 +1,6 @@
 <?php
 /**
- * CardPaymentCreditHolderResponse
+ * Card3DsAuthorizeWithAuthDataRequest
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \CpaymentConnector\ObjectSerializer;
 
 /**
- * CardPaymentCreditHolderResponse Class Doc Comment
+ * Card3DsAuthorizeWithAuthDataRequest Class Doc Comment
  *
  * @category Class
- * @description Response object for CardPaymentCreditHolder
+ * @description Authorization / payment request with authentication data
  * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
+class Card3DsAuthorizeWithAuthDataRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'CardPaymentCreditHolderResponse';
+    protected static $openAPIModelName = 'Card3DsAuthorizeWithAuthDataRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,12 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'response_code' => 'string',
-        'merchant_account_ref' => 'string',
-        'response_message' => 'string'
+        'context' => '\CpaymentConnector\Model\CardPaymentContextData',
+        'options' => '\CpaymentConnector\Model\Options',
+        'order' => '\CpaymentConnector\Model\Order',
+        'authentication_data' => 'map[string,string]',
+        'validation_mode' => '\CpaymentConnector\Model\ValidationModeOverride',
+        'notification_url' => 'string'
     ];
 
     /**
@@ -69,9 +72,12 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'response_code' => null,
-        'merchant_account_ref' => null,
-        'response_message' => null
+        'context' => null,
+        'options' => null,
+        'order' => null,
+        'authentication_data' => null,
+        'validation_mode' => null,
+        'notification_url' => null
     ];
 
     /**
@@ -101,9 +107,12 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'response_code' => 'responseCode',
-        'merchant_account_ref' => 'merchantAccountRef',
-        'response_message' => 'responseMessage'
+        'context' => 'context',
+        'options' => 'options',
+        'order' => 'order',
+        'authentication_data' => 'authenticationData',
+        'validation_mode' => 'validationMode',
+        'notification_url' => 'notificationUrl'
     ];
 
     /**
@@ -112,9 +121,12 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'response_code' => 'setResponseCode',
-        'merchant_account_ref' => 'setMerchantAccountRef',
-        'response_message' => 'setResponseMessage'
+        'context' => 'setContext',
+        'options' => 'setOptions',
+        'order' => 'setOrder',
+        'authentication_data' => 'setAuthenticationData',
+        'validation_mode' => 'setValidationMode',
+        'notification_url' => 'setNotificationUrl'
     ];
 
     /**
@@ -123,9 +135,12 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'response_code' => 'getResponseCode',
-        'merchant_account_ref' => 'getMerchantAccountRef',
-        'response_message' => 'getResponseMessage'
+        'context' => 'getContext',
+        'options' => 'getOptions',
+        'order' => 'getOrder',
+        'authentication_data' => 'getAuthenticationData',
+        'validation_mode' => 'getValidationMode',
+        'notification_url' => 'getNotificationUrl'
     ];
 
     /**
@@ -188,9 +203,12 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['response_code'] = isset($data['response_code']) ? $data['response_code'] : null;
-        $this->container['merchant_account_ref'] = isset($data['merchant_account_ref']) ? $data['merchant_account_ref'] : null;
-        $this->container['response_message'] = isset($data['response_message']) ? $data['response_message'] : null;
+        $this->container['context'] = isset($data['context']) ? $data['context'] : null;
+        $this->container['options'] = isset($data['options']) ? $data['options'] : null;
+        $this->container['order'] = isset($data['order']) ? $data['order'] : null;
+        $this->container['authentication_data'] = isset($data['authentication_data']) ? $data['authentication_data'] : null;
+        $this->container['validation_mode'] = isset($data['validation_mode']) ? $data['validation_mode'] : null;
+        $this->container['notification_url'] = isset($data['notification_url']) ? $data['notification_url'] : null;
     }
 
     /**
@@ -202,6 +220,15 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['context'] === null) {
+            $invalidProperties[] = "'context' can't be null";
+        }
+        if ($this->container['order'] === null) {
+            $invalidProperties[] = "'order' can't be null";
+        }
+        if ($this->container['authentication_data'] === null) {
+            $invalidProperties[] = "'authentication_data' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -218,73 +245,145 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets response_code
+     * Gets context
      *
-     * @return string|null
+     * @return \CpaymentConnector\Model\CardPaymentContextData
      */
-    public function getResponseCode()
+    public function getContext()
     {
-        return $this->container['response_code'];
+        return $this->container['context'];
     }
 
     /**
-     * Sets response_code
+     * Sets context
      *
-     * @param string|null $response_code The response code of the service
+     * @param \CpaymentConnector\Model\CardPaymentContextData $context context
      *
      * @return $this
      */
-    public function setResponseCode($response_code)
+    public function setContext($context)
     {
-        $this->container['response_code'] = $response_code;
+        $this->container['context'] = $context;
 
         return $this;
     }
 
     /**
-     * Gets merchant_account_ref
+     * Gets options
      *
-     * @return string|null
+     * @return \CpaymentConnector\Model\Options|null
      */
-    public function getMerchantAccountRef()
+    public function getOptions()
     {
-        return $this->container['merchant_account_ref'];
+        return $this->container['options'];
     }
 
     /**
-     * Sets merchant_account_ref
+     * Sets options
      *
-     * @param string|null $merchant_account_ref The MerchantAccountRef used for the credit
+     * @param \CpaymentConnector\Model\Options|null $options options
      *
      * @return $this
      */
-    public function setMerchantAccountRef($merchant_account_ref)
+    public function setOptions($options)
     {
-        $this->container['merchant_account_ref'] = $merchant_account_ref;
+        $this->container['options'] = $options;
 
         return $this;
     }
 
     /**
-     * Gets response_message
+     * Gets order
      *
-     * @return string|null
+     * @return \CpaymentConnector\Model\Order
      */
-    public function getResponseMessage()
+    public function getOrder()
     {
-        return $this->container['response_message'];
+        return $this->container['order'];
     }
 
     /**
-     * Sets response_message
+     * Sets order
      *
-     * @param string|null $response_message The global response message
+     * @param \CpaymentConnector\Model\Order $order order
      *
      * @return $this
      */
-    public function setResponseMessage($response_message)
+    public function setOrder($order)
     {
-        $this->container['response_message'] = $response_message;
+        $this->container['order'] = $order;
+
+        return $this;
+    }
+
+    /**
+     * Gets authentication_data
+     *
+     * @return map[string,string]
+     */
+    public function getAuthenticationData()
+    {
+        return $this->container['authentication_data'];
+    }
+
+    /**
+     * Sets authentication_data
+     *
+     * @param map[string,string] $authentication_data All authentication data, as a dictionary of multiple key/value pairs.
+     *
+     * @return $this
+     */
+    public function setAuthenticationData($authentication_data)
+    {
+        $this->container['authentication_data'] = $authentication_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets validation_mode
+     *
+     * @return \CpaymentConnector\Model\ValidationModeOverride|null
+     */
+    public function getValidationMode()
+    {
+        return $this->container['validation_mode'];
+    }
+
+    /**
+     * Sets validation_mode
+     *
+     * @param \CpaymentConnector\Model\ValidationModeOverride|null $validation_mode validation_mode
+     *
+     * @return $this
+     */
+    public function setValidationMode($validation_mode)
+    {
+        $this->container['validation_mode'] = $validation_mode;
+
+        return $this;
+    }
+
+    /**
+     * Gets notification_url
+     *
+     * @return string|null
+     */
+    public function getNotificationUrl()
+    {
+        return $this->container['notification_url'];
+    }
+
+    /**
+     * Sets notification_url
+     *
+     * @param string|null $notification_url Url for the notification of the payment
+     *
+     * @return $this
+     */
+    public function setNotificationUrl($notification_url)
+    {
+        $this->container['notification_url'] = $notification_url;
 
         return $this;
     }

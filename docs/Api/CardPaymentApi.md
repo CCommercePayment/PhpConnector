@@ -4,13 +4,15 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v1PaymentsCardPaymentPost**](CardPaymentApi.md#v1PaymentsCardPaymentPost) | **POST** /v1/payments/card-payment | Achieve a payment with a card without 3DSecure.  To achieve a 3DS payment (CheckEnrollment), see the /payment/card3ds-payment resource.
+[**v1PaymentsCardPaymentPost**](CardPaymentApi.md#v1PaymentsCardPaymentPost) | **POST** /v1/payments/card-payment | Authorization / payment
 
 
 
 ## v1PaymentsCardPaymentPost
 
 > \CpaymentConnector\Model\CardPaymentResponse v1PaymentsCardPaymentPost($auth_token, $card_payment_request)
+
+Authorization / payment
 
 Achieve a payment with a card without 3DSecure.  To achieve a 3DS payment (CheckEnrollment), see the /payment/card3ds-payment resource.
 

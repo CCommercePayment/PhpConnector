@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v1CardCreditHolderPost**](CardApi.md#v1CardCreditHolderPost) | **POST** /v1/card/creditHolder | Credit a card payment
+[**v1CardCreditHolderPost**](CardApi.md#v1CardCreditHolderPost) | **POST** /v1/card/creditHolder | Credit a card.
 
 
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 > \CpaymentConnector\Model\CardPaymentCreditHolderResponse v1CardCreditHolderPost($auth_token, $request)
 
-Credit a card payment
+Credit a card.
 
 ### Example
 

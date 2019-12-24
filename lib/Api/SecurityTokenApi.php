@@ -118,7 +118,7 @@ class SecurityTokenApi
     /**
      * Operation v1AuthTokenGet
      *
-     * Get the token provided by the Security Token Service (STS).  The authentication token is mandatory for the others api calls.  It's expire after 48h by default.
+     * Authenticate
      *
      * @param  string $authorization The credentials (login:password in base64) (optional)
      *
@@ -135,7 +135,7 @@ class SecurityTokenApi
     /**
      * Operation v1AuthTokenGetWithHttpInfo
      *
-     * Get the token provided by the Security Token Service (STS).  The authentication token is mandatory for the others api calls.  It's expire after 48h by default.
+     * Authenticate
      *
      * @param  string $authorization The credentials (login:password in base64) (optional)
      *
@@ -223,7 +223,7 @@ class SecurityTokenApi
     /**
      * Operation v1AuthTokenGetAsync
      *
-     * Get the token provided by the Security Token Service (STS).  The authentication token is mandatory for the others api calls.  It's expire after 48h by default.
+     * Authenticate
      *
      * @param  string $authorization The credentials (login:password in base64) (optional)
      *
@@ -243,7 +243,7 @@ class SecurityTokenApi
     /**
      * Operation v1AuthTokenGetAsyncWithHttpInfo
      *
-     * Get the token provided by the Security Token Service (STS).  The authentication token is mandatory for the others api calls.  It's expire after 48h by default.
+     * Authenticate
      *
      * @param  string $authorization The credentials (login:password in base64) (optional)
      *

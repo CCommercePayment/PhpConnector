@@ -1,6 +1,6 @@
 <?php
 /**
- * CardPaymentCreditHolderResponse
+ * Card3DsValidateAuthenticationRequest
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \CpaymentConnector\ObjectSerializer;
 
 /**
- * CardPaymentCreditHolderResponse Class Doc Comment
+ * Card3DsValidateAuthenticationRequest Class Doc Comment
  *
  * @category Class
- * @description Response object for CardPaymentCreditHolder
+ * @description The validate authentication request.
  * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
+class Card3DsValidateAuthenticationRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'CardPaymentCreditHolderResponse';
+    protected static $openAPIModelName = 'Card3DsValidateAuthenticationRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,11 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'response_code' => 'string',
-        'merchant_account_ref' => 'string',
-        'response_message' => 'string'
+        'merchant_id' => 'int',
+        'merchant_site_id' => 'string',
+        'card3ds_payment_request_id' => 'string',
+        'order_ref' => 'string',
+        'order_tag' => 'string'
     ];
 
     /**
@@ -69,9 +71,11 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'response_code' => null,
-        'merchant_account_ref' => null,
-        'response_message' => null
+        'merchant_id' => 'int32',
+        'merchant_site_id' => null,
+        'card3ds_payment_request_id' => null,
+        'order_ref' => null,
+        'order_tag' => null
     ];
 
     /**
@@ -101,9 +105,11 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'response_code' => 'responseCode',
-        'merchant_account_ref' => 'merchantAccountRef',
-        'response_message' => 'responseMessage'
+        'merchant_id' => 'merchantId',
+        'merchant_site_id' => 'merchantSiteId',
+        'card3ds_payment_request_id' => 'card3dsPaymentRequestId',
+        'order_ref' => 'orderRef',
+        'order_tag' => 'orderTag'
     ];
 
     /**
@@ -112,9 +118,11 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'response_code' => 'setResponseCode',
-        'merchant_account_ref' => 'setMerchantAccountRef',
-        'response_message' => 'setResponseMessage'
+        'merchant_id' => 'setMerchantId',
+        'merchant_site_id' => 'setMerchantSiteId',
+        'card3ds_payment_request_id' => 'setCard3dsPaymentRequestId',
+        'order_ref' => 'setOrderRef',
+        'order_tag' => 'setOrderTag'
     ];
 
     /**
@@ -123,9 +131,11 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'response_code' => 'getResponseCode',
-        'merchant_account_ref' => 'getMerchantAccountRef',
-        'response_message' => 'getResponseMessage'
+        'merchant_id' => 'getMerchantId',
+        'merchant_site_id' => 'getMerchantSiteId',
+        'card3ds_payment_request_id' => 'getCard3dsPaymentRequestId',
+        'order_ref' => 'getOrderRef',
+        'order_tag' => 'getOrderTag'
     ];
 
     /**
@@ -188,9 +198,11 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['response_code'] = isset($data['response_code']) ? $data['response_code'] : null;
-        $this->container['merchant_account_ref'] = isset($data['merchant_account_ref']) ? $data['merchant_account_ref'] : null;
-        $this->container['response_message'] = isset($data['response_message']) ? $data['response_message'] : null;
+        $this->container['merchant_id'] = isset($data['merchant_id']) ? $data['merchant_id'] : null;
+        $this->container['merchant_site_id'] = isset($data['merchant_site_id']) ? $data['merchant_site_id'] : null;
+        $this->container['card3ds_payment_request_id'] = isset($data['card3ds_payment_request_id']) ? $data['card3ds_payment_request_id'] : null;
+        $this->container['order_ref'] = isset($data['order_ref']) ? $data['order_ref'] : null;
+        $this->container['order_tag'] = isset($data['order_tag']) ? $data['order_tag'] : null;
     }
 
     /**
@@ -202,6 +214,18 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['merchant_id'] === null) {
+            $invalidProperties[] = "'merchant_id' can't be null";
+        }
+        if ($this->container['merchant_site_id'] === null) {
+            $invalidProperties[] = "'merchant_site_id' can't be null";
+        }
+        if ($this->container['card3ds_payment_request_id'] === null) {
+            $invalidProperties[] = "'card3ds_payment_request_id' can't be null";
+        }
+        if ($this->container['order_ref'] === null) {
+            $invalidProperties[] = "'order_ref' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -218,73 +242,121 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets response_code
+     * Gets merchant_id
      *
-     * @return string|null
+     * @return int
      */
-    public function getResponseCode()
+    public function getMerchantId()
     {
-        return $this->container['response_code'];
+        return $this->container['merchant_id'];
     }
 
     /**
-     * Sets response_code
+     * Sets merchant_id
      *
-     * @param string|null $response_code The response code of the service
+     * @param int $merchant_id The merchant identifier
      *
      * @return $this
      */
-    public function setResponseCode($response_code)
+    public function setMerchantId($merchant_id)
     {
-        $this->container['response_code'] = $response_code;
+        $this->container['merchant_id'] = $merchant_id;
 
         return $this;
     }
 
     /**
-     * Gets merchant_account_ref
+     * Gets merchant_site_id
      *
-     * @return string|null
+     * @return string
      */
-    public function getMerchantAccountRef()
+    public function getMerchantSiteId()
     {
-        return $this->container['merchant_account_ref'];
+        return $this->container['merchant_site_id'];
     }
 
     /**
-     * Sets merchant_account_ref
+     * Sets merchant_site_id
      *
-     * @param string|null $merchant_account_ref The MerchantAccountRef used for the credit
+     * @param string $merchant_site_id The merchant site identifier
      *
      * @return $this
      */
-    public function setMerchantAccountRef($merchant_account_ref)
+    public function setMerchantSiteId($merchant_site_id)
     {
-        $this->container['merchant_account_ref'] = $merchant_account_ref;
+        $this->container['merchant_site_id'] = $merchant_site_id;
 
         return $this;
     }
 
     /**
-     * Gets response_message
+     * Gets card3ds_payment_request_id
      *
-     * @return string|null
+     * @return string
      */
-    public function getResponseMessage()
+    public function getCard3dsPaymentRequestId()
     {
-        return $this->container['response_message'];
+        return $this->container['card3ds_payment_request_id'];
     }
 
     /**
-     * Sets response_message
+     * Sets card3ds_payment_request_id
      *
-     * @param string|null $response_message The global response message
+     * @param string $card3ds_payment_request_id The payment session identifier (guid), use it for 3DS payment
      *
      * @return $this
      */
-    public function setResponseMessage($response_message)
+    public function setCard3dsPaymentRequestId($card3ds_payment_request_id)
     {
-        $this->container['response_message'] = $response_message;
+        $this->container['card3ds_payment_request_id'] = $card3ds_payment_request_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets order_ref
+     *
+     * @return string
+     */
+    public function getOrderRef()
+    {
+        return $this->container['order_ref'];
+    }
+
+    /**
+     * Sets order_ref
+     *
+     * @param string $order_ref The order reference linked to the schedule and transaction
+     *
+     * @return $this
+     */
+    public function setOrderRef($order_ref)
+    {
+        $this->container['order_ref'] = $order_ref;
+
+        return $this;
+    }
+
+    /**
+     * Gets order_tag
+     *
+     * @return string|null
+     */
+    public function getOrderTag()
+    {
+        return $this->container['order_tag'];
+    }
+
+    /**
+     * Sets order_tag
+     *
+     * @param string|null $order_tag The order tag is a label for the schedule
+     *
+     * @return $this
+     */
+    public function setOrderTag($order_tag)
+    {
+        $this->container['order_tag'] = $order_tag;
 
         return $this;
     }

@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v1AuthTokenGet**](SecurityTokenApi.md#v1AuthTokenGet) | **GET** /v1/auth/token | Get the token provided by the Security Token Service (STS).  The authentication token is mandatory for the others api calls.  It&#39;s expire after 48h by default.
+[**v1AuthTokenGet**](SecurityTokenApi.md#v1AuthTokenGet) | **GET** /v1/auth/token | Authenticate
 
 
 
@@ -12,9 +12,9 @@ Method | HTTP request | Description
 
 > string v1AuthTokenGet($authorization)
 
-Get the token provided by the Security Token Service (STS).  The authentication token is mandatory for the others api calls.  It's expire after 48h by default.
+Authenticate
 
-See the following lines for example :  GET /v1/auth/token  {  \"authorization\": \"Y2Rpc2NvdW50OmNkaXNjb3VudDEyMzQv\"  }
+Get the token provided by the Security Token Service (STS).  The authentication token is mandatory for the others api calls.  It's expire after 48h by default.
 
 ### Example
 

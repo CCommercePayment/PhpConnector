@@ -4,14 +4,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v1PaymentsDuplicatePaymentBatchPost**](DuplicatePaymentApi.md#v1PaymentsDuplicatePaymentBatchPost) | **POST** /v1/payments/duplicate-payment/batch | Achieve a batch of payments by copy of previously processed payments, with the same payment method.
-[**v1PaymentsDuplicatePaymentPost**](DuplicatePaymentApi.md#v1PaymentsDuplicatePaymentPost) | **POST** /v1/payments/duplicate-payment | Achieve a payment by copy of a previously processed payment, with the same payment method.
+[**v1PaymentsDuplicatePaymentBatchPost**](DuplicatePaymentApi.md#v1PaymentsDuplicatePaymentBatchPost) | **POST** /v1/payments/duplicate-payment/batch | Duplicate payment batch
+[**v1PaymentsDuplicatePaymentPost**](DuplicatePaymentApi.md#v1PaymentsDuplicatePaymentPost) | **POST** /v1/payments/duplicate-payment | Duplicate payment
 
 
 
 ## v1PaymentsDuplicatePaymentBatchPost
 
 > \CpaymentConnector\Model\CardPaymentResponse v1PaymentsDuplicatePaymentBatchPost($auth_token, $duplicate_payment_batch_request)
+
+Duplicate payment batch
 
 Achieve a batch of payments by copy of previously processed payments, with the same payment method.
 
@@ -68,6 +70,8 @@ No authorization required
 ## v1PaymentsDuplicatePaymentPost
 
 > \CpaymentConnector\Model\CardPaymentResponse v1PaymentsDuplicatePaymentPost($auth_token, $duplicate_payment_request)
+
+Duplicate payment
 
 Achieve a payment by copy of a previously processed payment, with the same payment method.
 

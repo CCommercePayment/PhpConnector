@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v1PaymentOptionsMerchantsByMerchantIdSitesByMerchantSiteIdGet**](PaymentOptionsApi.md#v1PaymentOptionsMerchantsByMerchantIdSitesByMerchantSiteIdGet) | **GET** /v1/payment-options/merchants/{merchantId}/sites/{merchantSiteId} | Gets the payment options for a specified site.
-[**v1PaymentOptionsPost**](PaymentOptionsApi.md#v1PaymentOptionsPost) | **POST** /v1/payment-options | Gets the payment options for a specified context.
-[**v1PaymentOptionsValidateEligibilityPost**](PaymentOptionsApi.md#v1PaymentOptionsValidateEligibilityPost) | **POST** /v1/payment-options/validateEligibility | Validates the eligibility of the given payment option, according to context.
+[**v1PaymentOptionsMerchantsByMerchantIdSitesByMerchantSiteIdGet**](PaymentOptionsApi.md#v1PaymentOptionsMerchantsByMerchantIdSitesByMerchantSiteIdGet) | **GET** /v1/payment-options/merchants/{merchantId}/sites/{merchantSiteId} | Gets payment options
+[**v1PaymentOptionsPost**](PaymentOptionsApi.md#v1PaymentOptionsPost) | **POST** /v1/payment-options | Gets payment options for a context
+[**v1PaymentOptionsValidateEligibilityPost**](PaymentOptionsApi.md#v1PaymentOptionsValidateEligibilityPost) | **POST** /v1/payment-options/validateEligibility | Validates eligibility
 
 
 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 > \CpaymentConnector\Model\PaymentOptionsResponse v1PaymentOptionsMerchantsByMerchantIdSitesByMerchantSiteIdGet($merchant_id, $merchant_site_id, $auth_token)
 
-Gets the payment options for a specified site.
+Gets payment options
 
 ### Example
 
@@ -72,7 +72,7 @@ No authorization required
 
 > \CpaymentConnector\Model\PaymentOptionsResponse v1PaymentOptionsPost($auth_token, $payment_options_request)
 
-Gets the payment options for a specified context.
+Gets payment options for a context
 
 ### Example
 
@@ -128,7 +128,9 @@ No authorization required
 
 > v1PaymentOptionsValidateEligibilityPost($auth_token, $payment_option_eligibility_request)
 
-Validates the eligibility of the given payment option, according to context.
+Validates eligibility
+
+WARNING : NOT IMPLEMENTED YET.     Validates the eligibility of the given payment option, according to context.
 
 ### Example
 

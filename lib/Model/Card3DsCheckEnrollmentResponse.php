@@ -1,6 +1,6 @@
 <?php
 /**
- * CardPaymentCreditHolderResponse
+ * Card3DsCheckEnrollmentResponse
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \CpaymentConnector\ObjectSerializer;
 
 /**
- * CardPaymentCreditHolderResponse Class Doc Comment
+ * Card3DsCheckEnrollmentResponse Class Doc Comment
  *
  * @category Class
- * @description Response object for CardPaymentCreditHolder
+ * @description The card payment response
  * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
+class Card3DsCheckEnrollmentResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'CardPaymentCreditHolderResponse';
+    protected static $openAPIModelName = 'Card3DsCheckEnrollmentResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,9 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'response_code' => 'string',
-        'merchant_account_ref' => 'string',
+        'card3ds_payment_request_id' => 'string',
+        'card3ds_redirection_data' => '\CpaymentConnector\Model\RedirectionData',
+        'card_enrollment_response_code' => 'string',
         'response_message' => 'string'
     ];
 
@@ -69,8 +70,9 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'response_code' => null,
-        'merchant_account_ref' => null,
+        'card3ds_payment_request_id' => null,
+        'card3ds_redirection_data' => null,
+        'card_enrollment_response_code' => null,
         'response_message' => null
     ];
 
@@ -101,8 +103,9 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'response_code' => 'responseCode',
-        'merchant_account_ref' => 'merchantAccountRef',
+        'card3ds_payment_request_id' => 'card3dsPaymentRequestId',
+        'card3ds_redirection_data' => 'card3dsRedirectionData',
+        'card_enrollment_response_code' => 'cardEnrollmentResponseCode',
         'response_message' => 'responseMessage'
     ];
 
@@ -112,8 +115,9 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'response_code' => 'setResponseCode',
-        'merchant_account_ref' => 'setMerchantAccountRef',
+        'card3ds_payment_request_id' => 'setCard3dsPaymentRequestId',
+        'card3ds_redirection_data' => 'setCard3dsRedirectionData',
+        'card_enrollment_response_code' => 'setCardEnrollmentResponseCode',
         'response_message' => 'setResponseMessage'
     ];
 
@@ -123,8 +127,9 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'response_code' => 'getResponseCode',
-        'merchant_account_ref' => 'getMerchantAccountRef',
+        'card3ds_payment_request_id' => 'getCard3dsPaymentRequestId',
+        'card3ds_redirection_data' => 'getCard3dsRedirectionData',
+        'card_enrollment_response_code' => 'getCardEnrollmentResponseCode',
         'response_message' => 'getResponseMessage'
     ];
 
@@ -169,8 +174,25 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
+    const CARD_ENROLLMENT_RESPONSE_CODE_UNKNOWN = 'unknown';
+    const CARD_ENROLLMENT_RESPONSE_CODE_ENROLLED = 'enrolled';
+    const CARD_ENROLLMENT_RESPONSE_CODE_NOT_ENROLLED = 'notEnrolled';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getCardEnrollmentResponseCodeAllowableValues()
+    {
+        return [
+            self::CARD_ENROLLMENT_RESPONSE_CODE_UNKNOWN,
+            self::CARD_ENROLLMENT_RESPONSE_CODE_ENROLLED,
+            self::CARD_ENROLLMENT_RESPONSE_CODE_NOT_ENROLLED,
+        ];
+    }
     
 
     /**
@@ -188,8 +210,9 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['response_code'] = isset($data['response_code']) ? $data['response_code'] : null;
-        $this->container['merchant_account_ref'] = isset($data['merchant_account_ref']) ? $data['merchant_account_ref'] : null;
+        $this->container['card3ds_payment_request_id'] = isset($data['card3ds_payment_request_id']) ? $data['card3ds_payment_request_id'] : null;
+        $this->container['card3ds_redirection_data'] = isset($data['card3ds_redirection_data']) ? $data['card3ds_redirection_data'] : null;
+        $this->container['card_enrollment_response_code'] = isset($data['card_enrollment_response_code']) ? $data['card_enrollment_response_code'] : null;
         $this->container['response_message'] = isset($data['response_message']) ? $data['response_message'] : null;
     }
 
@@ -201,6 +224,14 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        $allowedValues = $this->getCardEnrollmentResponseCodeAllowableValues();
+        if (!is_null($this->container['card_enrollment_response_code']) && !in_array($this->container['card_enrollment_response_code'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'card_enrollment_response_code', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -218,49 +249,82 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets response_code
+     * Gets card3ds_payment_request_id
      *
      * @return string|null
      */
-    public function getResponseCode()
+    public function getCard3dsPaymentRequestId()
     {
-        return $this->container['response_code'];
+        return $this->container['card3ds_payment_request_id'];
     }
 
     /**
-     * Sets response_code
+     * Sets card3ds_payment_request_id
      *
-     * @param string|null $response_code The response code of the service
+     * @param string|null $card3ds_payment_request_id The paymentRequest identifier (Use to 3DS)
      *
      * @return $this
      */
-    public function setResponseCode($response_code)
+    public function setCard3dsPaymentRequestId($card3ds_payment_request_id)
     {
-        $this->container['response_code'] = $response_code;
+        $this->container['card3ds_payment_request_id'] = $card3ds_payment_request_id;
 
         return $this;
     }
 
     /**
-     * Gets merchant_account_ref
+     * Gets card3ds_redirection_data
      *
-     * @return string|null
+     * @return \CpaymentConnector\Model\RedirectionData|null
      */
-    public function getMerchantAccountRef()
+    public function getCard3dsRedirectionData()
     {
-        return $this->container['merchant_account_ref'];
+        return $this->container['card3ds_redirection_data'];
     }
 
     /**
-     * Sets merchant_account_ref
+     * Sets card3ds_redirection_data
      *
-     * @param string|null $merchant_account_ref The MerchantAccountRef used for the credit
+     * @param \CpaymentConnector\Model\RedirectionData|null $card3ds_redirection_data card3ds_redirection_data
      *
      * @return $this
      */
-    public function setMerchantAccountRef($merchant_account_ref)
+    public function setCard3dsRedirectionData($card3ds_redirection_data)
     {
-        $this->container['merchant_account_ref'] = $merchant_account_ref;
+        $this->container['card3ds_redirection_data'] = $card3ds_redirection_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets card_enrollment_response_code
+     *
+     * @return string|null
+     */
+    public function getCardEnrollmentResponseCode()
+    {
+        return $this->container['card_enrollment_response_code'];
+    }
+
+    /**
+     * Sets card_enrollment_response_code
+     *
+     * @param string|null $card_enrollment_response_code Gets or Sets checkCard3DEnrollmentCode
+     *
+     * @return $this
+     */
+    public function setCardEnrollmentResponseCode($card_enrollment_response_code)
+    {
+        $allowedValues = $this->getCardEnrollmentResponseCodeAllowableValues();
+        if (!is_null($card_enrollment_response_code) && !in_array($card_enrollment_response_code, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'card_enrollment_response_code', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['card_enrollment_response_code'] = $card_enrollment_response_code;
 
         return $this;
     }

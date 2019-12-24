@@ -1,6 +1,6 @@
 <?php
 /**
- * CardPaymentCreditHolderResponse
+ * Card3DsValidateAuthenticationResponse
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \CpaymentConnector\ObjectSerializer;
 
 /**
- * CardPaymentCreditHolderResponse Class Doc Comment
+ * Card3DsValidateAuthenticationResponse Class Doc Comment
  *
  * @category Class
- * @description Response object for CardPaymentCreditHolder
+ * @description The card payment response
  * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
+class Card3DsValidateAuthenticationResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'CardPaymentCreditHolderResponse';
+    protected static $openAPIModelName = 'Card3DsValidateAuthenticationResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,9 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'response_code' => 'string',
-        'merchant_account_ref' => 'string',
+        'authentication_status' => 'string',
+        'liability_shift_status' => 'string',
+        'authentication_data' => 'map[string,string]',
         'response_message' => 'string'
     ];
 
@@ -69,8 +70,9 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'response_code' => null,
-        'merchant_account_ref' => null,
+        'authentication_status' => null,
+        'liability_shift_status' => null,
+        'authentication_data' => null,
         'response_message' => null
     ];
 
@@ -101,8 +103,9 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'response_code' => 'responseCode',
-        'merchant_account_ref' => 'merchantAccountRef',
+        'authentication_status' => 'authenticationStatus',
+        'liability_shift_status' => 'liabilityShiftStatus',
+        'authentication_data' => 'authenticationData',
         'response_message' => 'responseMessage'
     ];
 
@@ -112,8 +115,9 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'response_code' => 'setResponseCode',
-        'merchant_account_ref' => 'setMerchantAccountRef',
+        'authentication_status' => 'setAuthenticationStatus',
+        'liability_shift_status' => 'setLiabilityShiftStatus',
+        'authentication_data' => 'setAuthenticationData',
         'response_message' => 'setResponseMessage'
     ];
 
@@ -123,8 +127,9 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'response_code' => 'getResponseCode',
-        'merchant_account_ref' => 'getMerchantAccountRef',
+        'authentication_status' => 'getAuthenticationStatus',
+        'liability_shift_status' => 'getLiabilityShiftStatus',
+        'authentication_data' => 'getAuthenticationData',
         'response_message' => 'getResponseMessage'
     ];
 
@@ -169,8 +174,42 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
+    const AUTHENTICATION_STATUS_UNDEFINED = 'undefined';
+    const AUTHENTICATION_STATUS_AUTHENTICATED = 'authenticated';
+    const AUTHENTICATION_STATUS_NOT_AUTHENTICATED = 'notAuthenticated';
+    const LIABILITY_SHIFT_STATUS_UNDEFINED = 'undefined';
+    const LIABILITY_SHIFT_STATUS_SHIFT = 'shift';
+    const LIABILITY_SHIFT_STATUS_NO_SHIFT = 'noShift';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getAuthenticationStatusAllowableValues()
+    {
+        return [
+            self::AUTHENTICATION_STATUS_UNDEFINED,
+            self::AUTHENTICATION_STATUS_AUTHENTICATED,
+            self::AUTHENTICATION_STATUS_NOT_AUTHENTICATED,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getLiabilityShiftStatusAllowableValues()
+    {
+        return [
+            self::LIABILITY_SHIFT_STATUS_UNDEFINED,
+            self::LIABILITY_SHIFT_STATUS_SHIFT,
+            self::LIABILITY_SHIFT_STATUS_NO_SHIFT,
+        ];
+    }
     
 
     /**
@@ -188,8 +227,9 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['response_code'] = isset($data['response_code']) ? $data['response_code'] : null;
-        $this->container['merchant_account_ref'] = isset($data['merchant_account_ref']) ? $data['merchant_account_ref'] : null;
+        $this->container['authentication_status'] = isset($data['authentication_status']) ? $data['authentication_status'] : null;
+        $this->container['liability_shift_status'] = isset($data['liability_shift_status']) ? $data['liability_shift_status'] : null;
+        $this->container['authentication_data'] = isset($data['authentication_data']) ? $data['authentication_data'] : null;
         $this->container['response_message'] = isset($data['response_message']) ? $data['response_message'] : null;
     }
 
@@ -201,6 +241,22 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        $allowedValues = $this->getAuthenticationStatusAllowableValues();
+        if (!is_null($this->container['authentication_status']) && !in_array($this->container['authentication_status'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'authentication_status', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getLiabilityShiftStatusAllowableValues();
+        if (!is_null($this->container['liability_shift_status']) && !in_array($this->container['liability_shift_status'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'liability_shift_status', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -218,49 +274,91 @@ class CardPaymentCreditHolderResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets response_code
+     * Gets authentication_status
      *
      * @return string|null
      */
-    public function getResponseCode()
+    public function getAuthenticationStatus()
     {
-        return $this->container['response_code'];
+        return $this->container['authentication_status'];
     }
 
     /**
-     * Sets response_code
+     * Sets authentication_status
      *
-     * @param string|null $response_code The response code of the service
+     * @param string|null $authentication_status The authentication status
      *
      * @return $this
      */
-    public function setResponseCode($response_code)
+    public function setAuthenticationStatus($authentication_status)
     {
-        $this->container['response_code'] = $response_code;
+        $allowedValues = $this->getAuthenticationStatusAllowableValues();
+        if (!is_null($authentication_status) && !in_array($authentication_status, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'authentication_status', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['authentication_status'] = $authentication_status;
 
         return $this;
     }
 
     /**
-     * Gets merchant_account_ref
+     * Gets liability_shift_status
      *
      * @return string|null
      */
-    public function getMerchantAccountRef()
+    public function getLiabilityShiftStatus()
     {
-        return $this->container['merchant_account_ref'];
+        return $this->container['liability_shift_status'];
     }
 
     /**
-     * Sets merchant_account_ref
+     * Sets liability_shift_status
      *
-     * @param string|null $merchant_account_ref The MerchantAccountRef used for the credit
+     * @param string|null $liability_shift_status The liability shift status
      *
      * @return $this
      */
-    public function setMerchantAccountRef($merchant_account_ref)
+    public function setLiabilityShiftStatus($liability_shift_status)
     {
-        $this->container['merchant_account_ref'] = $merchant_account_ref;
+        $allowedValues = $this->getLiabilityShiftStatusAllowableValues();
+        if (!is_null($liability_shift_status) && !in_array($liability_shift_status, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'liability_shift_status', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['liability_shift_status'] = $liability_shift_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets authentication_data
+     *
+     * @return map[string,string]|null
+     */
+    public function getAuthenticationData()
+    {
+        return $this->container['authentication_data'];
+    }
+
+    /**
+     * Sets authentication_data
+     *
+     * @param map[string,string]|null $authentication_data All authentication data, as a dictionary of multiple key/value pairs.
+     *
+     * @return $this
+     */
+    public function setAuthenticationData($authentication_data)
+    {
+        $this->container['authentication_data'] = $authentication_data;
 
         return $this;
     }

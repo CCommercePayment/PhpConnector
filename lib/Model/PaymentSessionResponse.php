@@ -308,7 +308,7 @@ class PaymentSessionResponse implements ModelInterface, ArrayAccess
     /**
      * Sets response_message
      *
-     * @param string|null $response_message The response code of the service
+     * @param string|null $response_message The global response message
      *
      * @return $this
      */

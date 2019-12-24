@@ -67,7 +67,8 @@ class Configuration implements ModelInterface, ArrayAccess
         'payment_option_ref' => 'string',
         'report_delay_in_days' => 'int',
         'user_agent' => 'string',
-        'template' => 'string'
+        'template' => 'string',
+        'authentication_only' => 'bool'
     ];
 
     /**
@@ -85,7 +86,8 @@ class Configuration implements ModelInterface, ArrayAccess
         'payment_option_ref' => null,
         'report_delay_in_days' => 'int32',
         'user_agent' => null,
-        'template' => null
+        'template' => null,
+        'authentication_only' => null
     ];
 
     /**
@@ -124,7 +126,8 @@ class Configuration implements ModelInterface, ArrayAccess
         'payment_option_ref' => 'paymentOptionRef',
         'report_delay_in_days' => 'reportDelayInDays',
         'user_agent' => 'userAgent',
-        'template' => 'template'
+        'template' => 'template',
+        'authentication_only' => 'authenticationOnly'
     ];
 
     /**
@@ -142,7 +145,8 @@ class Configuration implements ModelInterface, ArrayAccess
         'payment_option_ref' => 'setPaymentOptionRef',
         'report_delay_in_days' => 'setReportDelayInDays',
         'user_agent' => 'setUserAgent',
-        'template' => 'setTemplate'
+        'template' => 'setTemplate',
+        'authentication_only' => 'setAuthenticationOnly'
     ];
 
     /**
@@ -160,7 +164,8 @@ class Configuration implements ModelInterface, ArrayAccess
         'payment_option_ref' => 'getPaymentOptionRef',
         'report_delay_in_days' => 'getReportDelayInDays',
         'user_agent' => 'getUserAgent',
-        'template' => 'getTemplate'
+        'template' => 'getTemplate',
+        'authentication_only' => 'getAuthenticationOnly'
     ];
 
     /**
@@ -250,6 +255,7 @@ class Configuration implements ModelInterface, ArrayAccess
         $this->container['report_delay_in_days'] = isset($data['report_delay_in_days']) ? $data['report_delay_in_days'] : null;
         $this->container['user_agent'] = isset($data['user_agent']) ? $data['user_agent'] : null;
         $this->container['template'] = isset($data['template']) ? $data['template'] : null;
+        $this->container['authentication_only'] = isset($data['authentication_only']) ? $data['authentication_only'] : null;
     }
 
     /**
@@ -529,6 +535,30 @@ class Configuration implements ModelInterface, ArrayAccess
     public function setTemplate($template)
     {
         $this->container['template'] = $template;
+
+        return $this;
+    }
+
+    /**
+     * Gets authentication_only
+     *
+     * @return bool|null
+     */
+    public function getAuthenticationOnly()
+    {
+        return $this->container['authentication_only'];
+    }
+
+    /**
+     * Sets authentication_only
+     *
+     * @param bool|null $authentication_only If set to *true*, no authorization will be done. The process ends after the holder authentication.
+     *
+     * @return $this
+     */
+    public function setAuthenticationOnly($authentication_only)
+    {
+        $this->container['authentication_only'] = $authentication_only;
 
         return $this;
     }

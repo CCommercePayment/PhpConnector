@@ -118,7 +118,7 @@ class PaymentOptionsApi
     /**
      * Operation v1PaymentOptionsMerchantsByMerchantIdSitesByMerchantSiteIdGet
      *
-     * Gets the payment options for a specified site.
+     * Gets payment options
      *
      * @param  int $merchant_id The merchant identifier. (required)
      * @param  string $merchant_site_id The merchant site identifier. (required)
@@ -137,7 +137,7 @@ class PaymentOptionsApi
     /**
      * Operation v1PaymentOptionsMerchantsByMerchantIdSitesByMerchantSiteIdGetWithHttpInfo
      *
-     * Gets the payment options for a specified site.
+     * Gets payment options
      *
      * @param  int $merchant_id The merchant identifier. (required)
      * @param  string $merchant_site_id The merchant site identifier. (required)
@@ -227,7 +227,7 @@ class PaymentOptionsApi
     /**
      * Operation v1PaymentOptionsMerchantsByMerchantIdSitesByMerchantSiteIdGetAsync
      *
-     * Gets the payment options for a specified site.
+     * Gets payment options
      *
      * @param  int $merchant_id The merchant identifier. (required)
      * @param  string $merchant_site_id The merchant site identifier. (required)
@@ -249,7 +249,7 @@ class PaymentOptionsApi
     /**
      * Operation v1PaymentOptionsMerchantsByMerchantIdSitesByMerchantSiteIdGetAsyncWithHttpInfo
      *
-     * Gets the payment options for a specified site.
+     * Gets payment options
      *
      * @param  int $merchant_id The merchant identifier. (required)
      * @param  string $merchant_site_id The merchant site identifier. (required)
@@ -424,7 +424,7 @@ class PaymentOptionsApi
     /**
      * Operation v1PaymentOptionsPost
      *
-     * Gets the payment options for a specified context.
+     * Gets payment options for a context
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  \CpaymentConnector\Model\PaymentOptionsRequest $payment_options_request The payment options request. (optional)
@@ -442,7 +442,7 @@ class PaymentOptionsApi
     /**
      * Operation v1PaymentOptionsPostWithHttpInfo
      *
-     * Gets the payment options for a specified context.
+     * Gets payment options for a context
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  \CpaymentConnector\Model\PaymentOptionsRequest $payment_options_request The payment options request. (optional)
@@ -531,7 +531,7 @@ class PaymentOptionsApi
     /**
      * Operation v1PaymentOptionsPostAsync
      *
-     * Gets the payment options for a specified context.
+     * Gets payment options for a context
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  \CpaymentConnector\Model\PaymentOptionsRequest $payment_options_request The payment options request. (optional)
@@ -552,7 +552,7 @@ class PaymentOptionsApi
     /**
      * Operation v1PaymentOptionsPostAsyncWithHttpInfo
      *
-     * Gets the payment options for a specified context.
+     * Gets payment options for a context
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  \CpaymentConnector\Model\PaymentOptionsRequest $payment_options_request The payment options request. (optional)
@@ -700,7 +700,7 @@ class PaymentOptionsApi
     /**
      * Operation v1PaymentOptionsValidateEligibilityPost
      *
-     * Validates the eligibility of the given payment option, according to context.
+     * Validates eligibility
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  object $payment_option_eligibility_request The payment option eligibility request. (optional)
@@ -717,7 +717,7 @@ class PaymentOptionsApi
     /**
      * Operation v1PaymentOptionsValidateEligibilityPostWithHttpInfo
      *
-     * Validates the eligibility of the given payment option, according to context.
+     * Validates eligibility
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  object $payment_option_eligibility_request The payment option eligibility request. (optional)
@@ -770,7 +770,7 @@ class PaymentOptionsApi
     /**
      * Operation v1PaymentOptionsValidateEligibilityPostAsync
      *
-     * Validates the eligibility of the given payment option, according to context.
+     * Validates eligibility
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  object $payment_option_eligibility_request The payment option eligibility request. (optional)
@@ -791,7 +791,7 @@ class PaymentOptionsApi
     /**
      * Operation v1PaymentOptionsValidateEligibilityPostAsyncWithHttpInfo
      *
-     * Validates the eligibility of the given payment option, according to context.
+     * Validates eligibility
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  object $payment_option_eligibility_request The payment option eligibility request. (optional)

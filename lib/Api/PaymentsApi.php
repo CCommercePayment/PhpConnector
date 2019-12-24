@@ -118,7 +118,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsAllByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet
      *
-     * Gets ALL the details for a specified OrderRef.
+     * Gets all payment schedules
      *
      * @param  string $order_ref The order reference. (required)
      * @param  int $merchant_id The merchant identifier. (required)
@@ -138,7 +138,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsAllByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGetWithHttpInfo
      *
-     * Gets ALL the details for a specified OrderRef.
+     * Gets all payment schedules
      *
      * @param  string $order_ref The order reference. (required)
      * @param  int $merchant_id The merchant identifier. (required)
@@ -229,7 +229,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsAllByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGetAsync
      *
-     * Gets ALL the details for a specified OrderRef.
+     * Gets all payment schedules
      *
      * @param  string $order_ref The order reference. (required)
      * @param  int $merchant_id The merchant identifier. (required)
@@ -252,7 +252,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsAllByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGetAsyncWithHttpInfo
      *
-     * Gets ALL the details for a specified OrderRef.
+     * Gets all payment schedules
      *
      * @param  string $order_ref The order reference. (required)
      * @param  int $merchant_id The merchant identifier. (required)
@@ -443,7 +443,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdByOrderTagGet
      *
-     * Gets the details for a specified couple of OrderRef/OrderTag.
+     * Gets payment schedule by tag.
      *
      * @param  string $order_ref The order reference. (required)
      * @param  int $merchant_id The merchant identifier. (required)
@@ -464,7 +464,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdByOrderTagGetWithHttpInfo
      *
-     * Gets the details for a specified couple of OrderRef/OrderTag.
+     * Gets payment schedule by tag.
      *
      * @param  string $order_ref The order reference. (required)
      * @param  int $merchant_id The merchant identifier. (required)
@@ -556,7 +556,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdByOrderTagGetAsync
      *
-     * Gets the details for a specified couple of OrderRef/OrderTag.
+     * Gets payment schedule by tag.
      *
      * @param  string $order_ref The order reference. (required)
      * @param  int $merchant_id The merchant identifier. (required)
@@ -580,7 +580,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdByOrderTagGetAsyncWithHttpInfo
      *
-     * Gets the details for a specified couple of OrderRef/OrderTag.
+     * Gets payment schedule by tag.
      *
      * @param  string $order_ref The order reference. (required)
      * @param  int $merchant_id The merchant identifier. (required)
@@ -787,7 +787,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet
      *
-     * Gets the details for a specified OrderRef.
+     * Gets payment schedule
      *
      * @param  string $order_ref The order reference. (required)
      * @param  int $merchant_id The merchant identifier. (required)
@@ -807,7 +807,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGetWithHttpInfo
      *
-     * Gets the details for a specified OrderRef.
+     * Gets payment schedule
      *
      * @param  string $order_ref The order reference. (required)
      * @param  int $merchant_id The merchant identifier. (required)
@@ -898,7 +898,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGetAsync
      *
-     * Gets the details for a specified OrderRef.
+     * Gets payment schedule
      *
      * @param  string $order_ref The order reference. (required)
      * @param  int $merchant_id The merchant identifier. (required)
@@ -921,7 +921,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGetAsyncWithHttpInfo
      *
-     * Gets the details for a specified OrderRef.
+     * Gets payment schedule
      *
      * @param  string $order_ref The order reference. (required)
      * @param  int $merchant_id The merchant identifier. (required)
@@ -1112,7 +1112,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsByOrderRefOperationsCancelOrRefundPut
      *
-     * Executes a cancel or refund operation on the specified OrderRef.
+     * Cancel or refund
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
@@ -1131,7 +1131,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsByOrderRefOperationsCancelOrRefundPutWithHttpInfo
      *
-     * Executes a cancel or refund operation on the specified OrderRef.
+     * Cancel or refund
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
@@ -1221,7 +1221,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsByOrderRefOperationsCancelOrRefundPutAsync
      *
-     * Executes a cancel or refund operation on the specified OrderRef.
+     * Cancel or refund
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
@@ -1243,7 +1243,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsByOrderRefOperationsCancelOrRefundPutAsyncWithHttpInfo
      *
-     * Executes a cancel or refund operation on the specified OrderRef.
+     * Cancel or refund
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
@@ -1407,7 +1407,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsByOrderRefOperationsCapturePut
      *
-     * Executes a capture operation on the specified OrderRef.
+     * Capture
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
@@ -1426,7 +1426,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsByOrderRefOperationsCapturePutWithHttpInfo
      *
-     * Executes a capture operation on the specified OrderRef.
+     * Capture
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
@@ -1516,7 +1516,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsByOrderRefOperationsCapturePutAsync
      *
-     * Executes a capture operation on the specified OrderRef.
+     * Capture
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
@@ -1538,7 +1538,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsByOrderRefOperationsCapturePutAsyncWithHttpInfo
      *
-     * Executes a capture operation on the specified OrderRef.
+     * Capture
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
@@ -1702,7 +1702,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsByOrderRefOperationsRecomputePut
      *
-     * Executes a recompute operation on the specified OrderRef.
+     * Recompute schedule
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
@@ -1721,7 +1721,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsByOrderRefOperationsRecomputePutWithHttpInfo
      *
-     * Executes a recompute operation on the specified OrderRef.
+     * Recompute schedule
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
@@ -1811,7 +1811,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsByOrderRefOperationsRecomputePutAsync
      *
-     * Executes a recompute operation on the specified OrderRef.
+     * Recompute schedule
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
@@ -1833,7 +1833,7 @@ class PaymentsApi
     /**
      * Operation v1PaymentsByOrderRefOperationsRecomputePutAsyncWithHttpInfo
      *
-     * Executes a recompute operation on the specified OrderRef.
+     * Recompute schedule
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)

@@ -190,6 +190,9 @@ class DuplicatePaymentBatchRequest implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['duplicate_payment_request_list'] === null) {
+            $invalidProperties[] = "'duplicate_payment_request_list' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -208,7 +211,7 @@ class DuplicatePaymentBatchRequest implements ModelInterface, ArrayAccess
     /**
      * Gets duplicate_payment_request_list
      *
-     * @return \CpaymentConnector\Model\DuplicatePaymentRequest[]|null
+     * @return \CpaymentConnector\Model\DuplicatePaymentRequest[]
      */
     public function getDuplicatePaymentRequestList()
     {
@@ -218,7 +221,7 @@ class DuplicatePaymentBatchRequest implements ModelInterface, ArrayAccess
     /**
      * Sets duplicate_payment_request_list
      *
-     * @param \CpaymentConnector\Model\DuplicatePaymentRequest[]|null $duplicate_payment_request_list Gets or Sets ContextData
+     * @param \CpaymentConnector\Model\DuplicatePaymentRequest[] $duplicate_payment_request_list Gets or Sets ContextData
      *
      * @return $this
      */

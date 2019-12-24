@@ -118,7 +118,7 @@ class CardPaymentApi
     /**
      * Operation v1PaymentsCardPaymentPost
      *
-     * Achieve a payment with a card without 3DSecure.  To achieve a 3DS payment (CheckEnrollment), see the /payment/card3ds-payment resource.
+     * Authorization / payment
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  \CpaymentConnector\Model\CardPaymentRequest $card_payment_request All data needed to make card payment (optional)
@@ -136,7 +136,7 @@ class CardPaymentApi
     /**
      * Operation v1PaymentsCardPaymentPostWithHttpInfo
      *
-     * Achieve a payment with a card without 3DSecure.  To achieve a 3DS payment (CheckEnrollment), see the /payment/card3ds-payment resource.
+     * Authorization / payment
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  \CpaymentConnector\Model\CardPaymentRequest $card_payment_request All data needed to make card payment (optional)
@@ -225,7 +225,7 @@ class CardPaymentApi
     /**
      * Operation v1PaymentsCardPaymentPostAsync
      *
-     * Achieve a payment with a card without 3DSecure.  To achieve a 3DS payment (CheckEnrollment), see the /payment/card3ds-payment resource.
+     * Authorization / payment
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  \CpaymentConnector\Model\CardPaymentRequest $card_payment_request All data needed to make card payment (optional)
@@ -246,7 +246,7 @@ class CardPaymentApi
     /**
      * Operation v1PaymentsCardPaymentPostAsyncWithHttpInfo
      *
-     * Achieve a payment with a card without 3DSecure.  To achieve a 3DS payment (CheckEnrollment), see the /payment/card3ds-payment resource.
+     * Authorization / payment
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  \CpaymentConnector\Model\CardPaymentRequest $card_payment_request All data needed to make card payment (optional)

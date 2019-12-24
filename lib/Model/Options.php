@@ -99,8 +99,8 @@ class Options implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'report_delay_in_days' => 'ReportDelayInDays',
-        'allow_card_storage' => 'AllowCardStorage'
+        'report_delay_in_days' => 'reportDelayInDays',
+        'allow_card_storage' => 'allowCardStorage'
     ];
 
     /**

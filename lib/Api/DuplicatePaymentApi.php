@@ -118,7 +118,7 @@ class DuplicatePaymentApi
     /**
      * Operation v1PaymentsDuplicatePaymentBatchPost
      *
-     * Achieve a batch of payments by copy of previously processed payments, with the same payment method.
+     * Duplicate payment batch
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  \CpaymentConnector\Model\DuplicatePaymentBatchRequest $duplicate_payment_batch_request All data needed to make process the payment, with the reference to the previously payment. (optional)
@@ -136,7 +136,7 @@ class DuplicatePaymentApi
     /**
      * Operation v1PaymentsDuplicatePaymentBatchPostWithHttpInfo
      *
-     * Achieve a batch of payments by copy of previously processed payments, with the same payment method.
+     * Duplicate payment batch
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  \CpaymentConnector\Model\DuplicatePaymentBatchRequest $duplicate_payment_batch_request All data needed to make process the payment, with the reference to the previously payment. (optional)
@@ -225,7 +225,7 @@ class DuplicatePaymentApi
     /**
      * Operation v1PaymentsDuplicatePaymentBatchPostAsync
      *
-     * Achieve a batch of payments by copy of previously processed payments, with the same payment method.
+     * Duplicate payment batch
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  \CpaymentConnector\Model\DuplicatePaymentBatchRequest $duplicate_payment_batch_request All data needed to make process the payment, with the reference to the previously payment. (optional)
@@ -246,7 +246,7 @@ class DuplicatePaymentApi
     /**
      * Operation v1PaymentsDuplicatePaymentBatchPostAsyncWithHttpInfo
      *
-     * Achieve a batch of payments by copy of previously processed payments, with the same payment method.
+     * Duplicate payment batch
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  \CpaymentConnector\Model\DuplicatePaymentBatchRequest $duplicate_payment_batch_request All data needed to make process the payment, with the reference to the previously payment. (optional)
@@ -394,7 +394,7 @@ class DuplicatePaymentApi
     /**
      * Operation v1PaymentsDuplicatePaymentPost
      *
-     * Achieve a payment by copy of a previously processed payment, with the same payment method.
+     * Duplicate payment
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  \CpaymentConnector\Model\DuplicatePaymentRequest $duplicate_payment_request All data needed to make process the payment, with the reference to the previously payment. (optional)
@@ -412,7 +412,7 @@ class DuplicatePaymentApi
     /**
      * Operation v1PaymentsDuplicatePaymentPostWithHttpInfo
      *
-     * Achieve a payment by copy of a previously processed payment, with the same payment method.
+     * Duplicate payment
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  \CpaymentConnector\Model\DuplicatePaymentRequest $duplicate_payment_request All data needed to make process the payment, with the reference to the previously payment. (optional)
@@ -501,7 +501,7 @@ class DuplicatePaymentApi
     /**
      * Operation v1PaymentsDuplicatePaymentPostAsync
      *
-     * Achieve a payment by copy of a previously processed payment, with the same payment method.
+     * Duplicate payment
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  \CpaymentConnector\Model\DuplicatePaymentRequest $duplicate_payment_request All data needed to make process the payment, with the reference to the previously payment. (optional)
@@ -522,7 +522,7 @@ class DuplicatePaymentApi
     /**
      * Operation v1PaymentsDuplicatePaymentPostAsyncWithHttpInfo
      *
-     * Achieve a payment by copy of a previously processed payment, with the same payment method.
+     * Duplicate payment
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  \CpaymentConnector\Model\DuplicatePaymentRequest $duplicate_payment_request All data needed to make process the payment, with the reference to the previously payment. (optional)

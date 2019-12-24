@@ -118,7 +118,7 @@ class CardApi
     /**
      * Operation v1CardCreditHolderPost
      *
-     * Credit a card payment
+     * Credit a card.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  \CpaymentConnector\Model\CardPaymentCreditHolderRequest $request request (optional)
@@ -136,7 +136,7 @@ class CardApi
     /**
      * Operation v1CardCreditHolderPostWithHttpInfo
      *
-     * Credit a card payment
+     * Credit a card.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  \CpaymentConnector\Model\CardPaymentCreditHolderRequest $request (optional)
@@ -225,7 +225,7 @@ class CardApi
     /**
      * Operation v1CardCreditHolderPostAsync
      *
-     * Credit a card payment
+     * Credit a card.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  \CpaymentConnector\Model\CardPaymentCreditHolderRequest $request (optional)
@@ -246,7 +246,7 @@ class CardApi
     /**
      * Operation v1CardCreditHolderPostAsyncWithHttpInfo
      *
-     * Credit a card payment
+     * Credit a card.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
      * @param  \CpaymentConnector\Model\CardPaymentCreditHolderRequest $request (optional)

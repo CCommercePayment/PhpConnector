@@ -65,6 +65,9 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
         'payment_result_complementary_code_message' => 'string',
         'stored_payment_method_id' => 'string',
         'stored_payment_method_label' => 'string',
+        'authentication_status' => 'string',
+        'liability_shift_status' => 'string',
+        'authentication_data' => 'map[string,string]',
         'response_message' => 'string'
     ];
 
@@ -81,6 +84,9 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
         'payment_result_complementary_code_message' => null,
         'stored_payment_method_id' => null,
         'stored_payment_method_label' => null,
+        'authentication_status' => null,
+        'liability_shift_status' => null,
+        'authentication_data' => null,
         'response_message' => null
     ];
 
@@ -118,6 +124,9 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
         'payment_result_complementary_code_message' => 'paymentResultComplementaryCodeMessage',
         'stored_payment_method_id' => 'storedPaymentMethodId',
         'stored_payment_method_label' => 'storedPaymentMethodLabel',
+        'authentication_status' => 'authenticationStatus',
+        'liability_shift_status' => 'liabilityShiftStatus',
+        'authentication_data' => 'authenticationData',
         'response_message' => 'responseMessage'
     ];
 
@@ -134,6 +143,9 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
         'payment_result_complementary_code_message' => 'setPaymentResultComplementaryCodeMessage',
         'stored_payment_method_id' => 'setStoredPaymentMethodId',
         'stored_payment_method_label' => 'setStoredPaymentMethodLabel',
+        'authentication_status' => 'setAuthenticationStatus',
+        'liability_shift_status' => 'setLiabilityShiftStatus',
+        'authentication_data' => 'setAuthenticationData',
         'response_message' => 'setResponseMessage'
     ];
 
@@ -150,6 +162,9 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
         'payment_result_complementary_code_message' => 'getPaymentResultComplementaryCodeMessage',
         'stored_payment_method_id' => 'getStoredPaymentMethodId',
         'stored_payment_method_label' => 'getStoredPaymentMethodLabel',
+        'authentication_status' => 'getAuthenticationStatus',
+        'liability_shift_status' => 'getLiabilityShiftStatus',
+        'authentication_data' => 'getAuthenticationData',
         'response_message' => 'getResponseMessage'
     ];
 
@@ -194,6 +209,7 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
+    const PAYMENT_RESULT_CODE_MESSAGE_UNDEFINED = 'undefined';
     const PAYMENT_RESULT_CODE_MESSAGE_SUCCEEDED = 'succeeded';
     const PAYMENT_RESULT_CODE_MESSAGE_REFUSED = 'refused';
     const PAYMENT_RESULT_CODE_MESSAGE_REFUSED_BY_BANK = 'refusedByBank';
@@ -242,6 +258,12 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
     const PAYMENT_RESULT_COMPLEMENTARY_CODE_MESSAGE_PAYMENT_INFORMATION_FILLING_ATTEMPT_LIMIT_EXCEEDED = 'paymentInformationFillingAttemptLimitExceeded';
     const PAYMENT_RESULT_COMPLEMENTARY_CODE_MESSAGE_REFUSED_BY_SCORING2 = 'refusedByScoring2';
     const PAYMENT_RESULT_COMPLEMENTARY_CODE_MESSAGE_NOT_AVAILABLE = 'notAvailable';
+    const AUTHENTICATION_STATUS_UNDEFINED = 'undefined';
+    const AUTHENTICATION_STATUS_AUTHENTICATED = 'authenticated';
+    const AUTHENTICATION_STATUS_NOT_AUTHENTICATED = 'notAuthenticated';
+    const LIABILITY_SHIFT_STATUS_UNDEFINED = 'undefined';
+    const LIABILITY_SHIFT_STATUS_SHIFT = 'shift';
+    const LIABILITY_SHIFT_STATUS_NO_SHIFT = 'noShift';
     
 
     
@@ -253,6 +275,7 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
     public function getPaymentResultCodeMessageAllowableValues()
     {
         return [
+            self::PAYMENT_RESULT_CODE_MESSAGE_UNDEFINED,
             self::PAYMENT_RESULT_CODE_MESSAGE_SUCCEEDED,
             self::PAYMENT_RESULT_CODE_MESSAGE_REFUSED,
             self::PAYMENT_RESULT_CODE_MESSAGE_REFUSED_BY_BANK,
@@ -315,6 +338,34 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
         ];
     }
     
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getAuthenticationStatusAllowableValues()
+    {
+        return [
+            self::AUTHENTICATION_STATUS_UNDEFINED,
+            self::AUTHENTICATION_STATUS_AUTHENTICATED,
+            self::AUTHENTICATION_STATUS_NOT_AUTHENTICATED,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getLiabilityShiftStatusAllowableValues()
+    {
+        return [
+            self::LIABILITY_SHIFT_STATUS_UNDEFINED,
+            self::LIABILITY_SHIFT_STATUS_SHIFT,
+            self::LIABILITY_SHIFT_STATUS_NO_SHIFT,
+        ];
+    }
+    
 
     /**
      * Associative array for storing property values
@@ -338,6 +389,9 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
         $this->container['payment_result_complementary_code_message'] = isset($data['payment_result_complementary_code_message']) ? $data['payment_result_complementary_code_message'] : null;
         $this->container['stored_payment_method_id'] = isset($data['stored_payment_method_id']) ? $data['stored_payment_method_id'] : null;
         $this->container['stored_payment_method_label'] = isset($data['stored_payment_method_label']) ? $data['stored_payment_method_label'] : null;
+        $this->container['authentication_status'] = isset($data['authentication_status']) ? $data['authentication_status'] : null;
+        $this->container['liability_shift_status'] = isset($data['liability_shift_status']) ? $data['liability_shift_status'] : null;
+        $this->container['authentication_data'] = isset($data['authentication_data']) ? $data['authentication_data'] : null;
         $this->container['response_message'] = isset($data['response_message']) ? $data['response_message'] : null;
     }
 
@@ -362,6 +416,22 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
         if (!is_null($this->container['payment_result_complementary_code_message']) && !in_array($this->container['payment_result_complementary_code_message'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'payment_result_complementary_code_message', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getAuthenticationStatusAllowableValues();
+        if (!is_null($this->container['authentication_status']) && !in_array($this->container['authentication_status'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'authentication_status', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getLiabilityShiftStatusAllowableValues();
+        if (!is_null($this->container['liability_shift_status']) && !in_array($this->container['liability_shift_status'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'liability_shift_status', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -568,6 +638,96 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets authentication_status
+     *
+     * @return string|null
+     */
+    public function getAuthenticationStatus()
+    {
+        return $this->container['authentication_status'];
+    }
+
+    /**
+     * Sets authentication_status
+     *
+     * @param string|null $authentication_status The authentication status
+     *
+     * @return $this
+     */
+    public function setAuthenticationStatus($authentication_status)
+    {
+        $allowedValues = $this->getAuthenticationStatusAllowableValues();
+        if (!is_null($authentication_status) && !in_array($authentication_status, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'authentication_status', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['authentication_status'] = $authentication_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets liability_shift_status
+     *
+     * @return string|null
+     */
+    public function getLiabilityShiftStatus()
+    {
+        return $this->container['liability_shift_status'];
+    }
+
+    /**
+     * Sets liability_shift_status
+     *
+     * @param string|null $liability_shift_status The liability shift status
+     *
+     * @return $this
+     */
+    public function setLiabilityShiftStatus($liability_shift_status)
+    {
+        $allowedValues = $this->getLiabilityShiftStatusAllowableValues();
+        if (!is_null($liability_shift_status) && !in_array($liability_shift_status, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'liability_shift_status', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['liability_shift_status'] = $liability_shift_status;
+
+        return $this;
+    }
+
+    /**
+     * Gets authentication_data
+     *
+     * @return map[string,string]|null
+     */
+    public function getAuthenticationData()
+    {
+        return $this->container['authentication_data'];
+    }
+
+    /**
+     * Sets authentication_data
+     *
+     * @param map[string,string]|null $authentication_data All authentication data, as a dictionary of multiple key/value pairs.
+     *
+     * @return $this
+     */
+    public function setAuthenticationData($authentication_data)
+    {
+        $this->container['authentication_data'] = $authentication_data;
+
+        return $this;
+    }
+
+    /**
      * Gets response_message
      *
      * @return string|null
@@ -580,7 +740,7 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
     /**
      * Sets response_message
      *
-     * @param string|null $response_message The response code of the service
+     * @param string|null $response_message The global response message
      *
      * @return $this
      */

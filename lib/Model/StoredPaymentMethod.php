@@ -65,7 +65,8 @@ class StoredPaymentMethod implements ModelInterface, ArrayAccess
         'customer_ref' => 'string',
         'payment_method_ref' => 'string',
         'stored_payment_method_id' => 'string',
-        'truncated_payment_method_number' => 'string'
+        'truncated_payment_method_number' => 'string',
+        'label' => 'string'
     ];
 
     /**
@@ -82,7 +83,8 @@ class StoredPaymentMethod implements ModelInterface, ArrayAccess
         'customer_ref' => null,
         'payment_method_ref' => null,
         'stored_payment_method_id' => null,
-        'truncated_payment_method_number' => null
+        'truncated_payment_method_number' => null,
+        'label' => null
     ];
 
     /**
@@ -120,7 +122,8 @@ class StoredPaymentMethod implements ModelInterface, ArrayAccess
         'customer_ref' => 'customerRef',
         'payment_method_ref' => 'paymentMethodRef',
         'stored_payment_method_id' => 'storedPaymentMethodId',
-        'truncated_payment_method_number' => 'truncatedPaymentMethodNumber'
+        'truncated_payment_method_number' => 'truncatedPaymentMethodNumber',
+        'label' => 'Label'
     ];
 
     /**
@@ -137,7 +140,8 @@ class StoredPaymentMethod implements ModelInterface, ArrayAccess
         'customer_ref' => 'setCustomerRef',
         'payment_method_ref' => 'setPaymentMethodRef',
         'stored_payment_method_id' => 'setStoredPaymentMethodId',
-        'truncated_payment_method_number' => 'setTruncatedPaymentMethodNumber'
+        'truncated_payment_method_number' => 'setTruncatedPaymentMethodNumber',
+        'label' => 'setLabel'
     ];
 
     /**
@@ -154,7 +158,8 @@ class StoredPaymentMethod implements ModelInterface, ArrayAccess
         'customer_ref' => 'getCustomerRef',
         'payment_method_ref' => 'getPaymentMethodRef',
         'stored_payment_method_id' => 'getStoredPaymentMethodId',
-        'truncated_payment_method_number' => 'getTruncatedPaymentMethodNumber'
+        'truncated_payment_method_number' => 'getTruncatedPaymentMethodNumber',
+        'label' => 'getLabel'
     ];
 
     /**
@@ -226,6 +231,7 @@ class StoredPaymentMethod implements ModelInterface, ArrayAccess
         $this->container['payment_method_ref'] = isset($data['payment_method_ref']) ? $data['payment_method_ref'] : null;
         $this->container['stored_payment_method_id'] = isset($data['stored_payment_method_id']) ? $data['stored_payment_method_id'] : null;
         $this->container['truncated_payment_method_number'] = isset($data['truncated_payment_method_number']) ? $data['truncated_payment_method_number'] : null;
+        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
     }
 
     /**
@@ -464,6 +470,30 @@ class StoredPaymentMethod implements ModelInterface, ArrayAccess
     public function setTruncatedPaymentMethodNumber($truncated_payment_method_number)
     {
         $this->container['truncated_payment_method_number'] = $truncated_payment_method_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets label
+     *
+     * @return string|null
+     */
+    public function getLabel()
+    {
+        return $this->container['label'];
+    }
+
+    /**
+     * Sets label
+     *
+     * @param string|null $label The Label
+     *
+     * @return $this
+     */
+    public function setLabel($label)
+    {
+        $this->container['label'] = $label;
 
         return $this;
     }

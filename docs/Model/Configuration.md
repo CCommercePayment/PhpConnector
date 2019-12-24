@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **report_delay_in_days** | **int** | Gets or sets the report delay in days. | [optional] 
 **user_agent** | **string** | Gets or sets the user agent. | [optional] 
 **template** | **string** | Gets or sets the url template. | [optional] 
+**authentication_only** | **bool** | If set to *true*, no authorization will be done. The process ends after the holder authentication. | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

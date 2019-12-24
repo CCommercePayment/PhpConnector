@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentOperationsResponse
+ * Card3DsCheckEnrollmentRequest
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \CpaymentConnector\ObjectSerializer;
 
 /**
- * PaymentOperationsResponse Class Doc Comment
+ * Card3DsCheckEnrollmentRequest Class Doc Comment
  *
  * @category Class
- * @description All payment operation data for the response
+ * @description The Card3DS Payment Request
  * @package  CpaymentConnector
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class PaymentOperationsResponse implements ModelInterface, ArrayAccess
+class Card3DsCheckEnrollmentRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class PaymentOperationsResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'PaymentOperationsResponse';
+    protected static $openAPIModelName = 'Card3DsCheckEnrollmentRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,12 +58,14 @@ class PaymentOperationsResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'order_tag' => 'string',
-        'schedules' => '\CpaymentConnector\Model\Schedule[]',
-        'order_ref' => 'string',
-        'response_code' => 'string',
-        'action_type' => 'string',
-        'response_message' => 'string'
+        'return_url' => 'string',
+        'context' => '\CpaymentConnector\Model\CardPaymentContextData',
+        'options' => '\CpaymentConnector\Model\Options',
+        'order' => '\CpaymentConnector\Model\Order',
+        'card' => '\CpaymentConnector\Model\CardData',
+        'stored_card' => '\CpaymentConnector\Model\StoredCard',
+        'validation_mode' => '\CpaymentConnector\Model\ValidationModeOverride',
+        'notification_url' => 'string'
     ];
 
     /**
@@ -72,12 +74,14 @@ class PaymentOperationsResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'order_tag' => null,
-        'schedules' => null,
-        'order_ref' => null,
-        'response_code' => null,
-        'action_type' => null,
-        'response_message' => null
+        'return_url' => null,
+        'context' => null,
+        'options' => null,
+        'order' => null,
+        'card' => null,
+        'stored_card' => null,
+        'validation_mode' => null,
+        'notification_url' => null
     ];
 
     /**
@@ -107,12 +111,14 @@ class PaymentOperationsResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'order_tag' => 'orderTag',
-        'schedules' => 'schedules',
-        'order_ref' => 'orderRef',
-        'response_code' => 'responseCode',
-        'action_type' => 'actionType',
-        'response_message' => 'responseMessage'
+        'return_url' => 'returnUrl',
+        'context' => 'context',
+        'options' => 'options',
+        'order' => 'order',
+        'card' => 'card',
+        'stored_card' => 'storedCard',
+        'validation_mode' => 'validationMode',
+        'notification_url' => 'notificationUrl'
     ];
 
     /**
@@ -121,12 +127,14 @@ class PaymentOperationsResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'order_tag' => 'setOrderTag',
-        'schedules' => 'setSchedules',
-        'order_ref' => 'setOrderRef',
-        'response_code' => 'setResponseCode',
-        'action_type' => 'setActionType',
-        'response_message' => 'setResponseMessage'
+        'return_url' => 'setReturnUrl',
+        'context' => 'setContext',
+        'options' => 'setOptions',
+        'order' => 'setOrder',
+        'card' => 'setCard',
+        'stored_card' => 'setStoredCard',
+        'validation_mode' => 'setValidationMode',
+        'notification_url' => 'setNotificationUrl'
     ];
 
     /**
@@ -135,12 +143,14 @@ class PaymentOperationsResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'order_tag' => 'getOrderTag',
-        'schedules' => 'getSchedules',
-        'order_ref' => 'getOrderRef',
-        'response_code' => 'getResponseCode',
-        'action_type' => 'getActionType',
-        'response_message' => 'getResponseMessage'
+        'return_url' => 'getReturnUrl',
+        'context' => 'getContext',
+        'options' => 'getOptions',
+        'order' => 'getOrder',
+        'card' => 'getCard',
+        'stored_card' => 'getStoredCard',
+        'validation_mode' => 'getValidationMode',
+        'notification_url' => 'getNotificationUrl'
     ];
 
     /**
@@ -184,33 +194,8 @@ class PaymentOperationsResponse implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    const RESPONSE_CODE_UNDETERMINED = 'undetermined';
-    const RESPONSE_CODE_SUCCESS = 'success';
-    const RESPONSE_CODE_REFUSED = 'refused';
-    const RESPONSE_CODE_REFUSED_BY_BANK = 'refusedByBank';
-    const RESPONSE_CODE_INTERNAL_FAILURE = 'internalFailure';
-    const RESPONSE_CODE_PENDING = 'pending';
-    const RESPONSE_CODE_UNAVAILABLE = 'unavailable';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getResponseCodeAllowableValues()
-    {
-        return [
-            self::RESPONSE_CODE_UNDETERMINED,
-            self::RESPONSE_CODE_SUCCESS,
-            self::RESPONSE_CODE_REFUSED,
-            self::RESPONSE_CODE_REFUSED_BY_BANK,
-            self::RESPONSE_CODE_INTERNAL_FAILURE,
-            self::RESPONSE_CODE_PENDING,
-            self::RESPONSE_CODE_UNAVAILABLE,
-        ];
-    }
     
 
     /**
@@ -228,12 +213,14 @@ class PaymentOperationsResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['order_tag'] = isset($data['order_tag']) ? $data['order_tag'] : null;
-        $this->container['schedules'] = isset($data['schedules']) ? $data['schedules'] : null;
-        $this->container['order_ref'] = isset($data['order_ref']) ? $data['order_ref'] : null;
-        $this->container['response_code'] = isset($data['response_code']) ? $data['response_code'] : null;
-        $this->container['action_type'] = isset($data['action_type']) ? $data['action_type'] : null;
-        $this->container['response_message'] = isset($data['response_message']) ? $data['response_message'] : null;
+        $this->container['return_url'] = isset($data['return_url']) ? $data['return_url'] : null;
+        $this->container['context'] = isset($data['context']) ? $data['context'] : null;
+        $this->container['options'] = isset($data['options']) ? $data['options'] : null;
+        $this->container['order'] = isset($data['order']) ? $data['order'] : null;
+        $this->container['card'] = isset($data['card']) ? $data['card'] : null;
+        $this->container['stored_card'] = isset($data['stored_card']) ? $data['stored_card'] : null;
+        $this->container['validation_mode'] = isset($data['validation_mode']) ? $data['validation_mode'] : null;
+        $this->container['notification_url'] = isset($data['notification_url']) ? $data['notification_url'] : null;
     }
 
     /**
@@ -245,14 +232,15 @@ class PaymentOperationsResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getResponseCodeAllowableValues();
-        if (!is_null($this->container['response_code']) && !in_array($this->container['response_code'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'response_code', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
+        if ($this->container['return_url'] === null) {
+            $invalidProperties[] = "'return_url' can't be null";
         }
-
+        if ($this->container['context'] === null) {
+            $invalidProperties[] = "'context' can't be null";
+        }
+        if ($this->container['order'] === null) {
+            $invalidProperties[] = "'order' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -269,154 +257,193 @@ class PaymentOperationsResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets order_tag
+     * Gets return_url
      *
-     * @return string|null
+     * @return string
      */
-    public function getOrderTag()
+    public function getReturnUrl()
     {
-        return $this->container['order_tag'];
+        return $this->container['return_url'];
     }
 
     /**
-     * Sets order_tag
+     * Sets return_url
      *
-     * @param string|null $order_tag The orderTag
+     * @param string $return_url Url for the return after the payment process
      *
      * @return $this
      */
-    public function setOrderTag($order_tag)
+    public function setReturnUrl($return_url)
     {
-        $this->container['order_tag'] = $order_tag;
+        $this->container['return_url'] = $return_url;
 
         return $this;
     }
 
     /**
-     * Gets schedules
+     * Gets context
      *
-     * @return \CpaymentConnector\Model\Schedule[]|null
+     * @return \CpaymentConnector\Model\CardPaymentContextData
      */
-    public function getSchedules()
+    public function getContext()
     {
-        return $this->container['schedules'];
+        return $this->container['context'];
     }
 
     /**
-     * Sets schedules
+     * Sets context
      *
-     * @param \CpaymentConnector\Model\Schedule[]|null $schedules All schedules data
+     * @param \CpaymentConnector\Model\CardPaymentContextData $context context
      *
      * @return $this
      */
-    public function setSchedules($schedules)
+    public function setContext($context)
     {
-        $this->container['schedules'] = $schedules;
+        $this->container['context'] = $context;
 
         return $this;
     }
 
     /**
-     * Gets order_ref
+     * Gets options
      *
-     * @return string|null
+     * @return \CpaymentConnector\Model\Options|null
      */
-    public function getOrderRef()
+    public function getOptions()
     {
-        return $this->container['order_ref'];
+        return $this->container['options'];
     }
 
     /**
-     * Sets order_ref
+     * Sets options
      *
-     * @param string|null $order_ref The orderRef
+     * @param \CpaymentConnector\Model\Options|null $options options
      *
      * @return $this
      */
-    public function setOrderRef($order_ref)
+    public function setOptions($options)
     {
-        $this->container['order_ref'] = $order_ref;
+        $this->container['options'] = $options;
 
         return $this;
     }
 
     /**
-     * Gets response_code
+     * Gets order
      *
-     * @return string|null
+     * @return \CpaymentConnector\Model\Order
      */
-    public function getResponseCode()
+    public function getOrder()
     {
-        return $this->container['response_code'];
+        return $this->container['order'];
     }
 
     /**
-     * Sets response_code
+     * Sets order
      *
-     * @param string|null $response_code The response code of the service
+     * @param \CpaymentConnector\Model\Order $order order
      *
      * @return $this
      */
-    public function setResponseCode($response_code)
+    public function setOrder($order)
     {
-        $allowedValues = $this->getResponseCodeAllowableValues();
-        if (!is_null($response_code) && !in_array($response_code, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'response_code', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['response_code'] = $response_code;
+        $this->container['order'] = $order;
 
         return $this;
     }
 
     /**
-     * Gets action_type
+     * Gets card
      *
-     * @return string|null
+     * @return \CpaymentConnector\Model\CardData|null
      */
-    public function getActionType()
+    public function getCard()
     {
-        return $this->container['action_type'];
+        return $this->container['card'];
     }
 
     /**
-     * Sets action_type
+     * Sets card
      *
-     * @param string|null $action_type The action type
+     * @param \CpaymentConnector\Model\CardData|null $card card
      *
      * @return $this
      */
-    public function setActionType($action_type)
+    public function setCard($card)
     {
-        $this->container['action_type'] = $action_type;
+        $this->container['card'] = $card;
 
         return $this;
     }
 
     /**
-     * Gets response_message
+     * Gets stored_card
      *
-     * @return string|null
+     * @return \CpaymentConnector\Model\StoredCard|null
      */
-    public function getResponseMessage()
+    public function getStoredCard()
     {
-        return $this->container['response_message'];
+        return $this->container['stored_card'];
     }
 
     /**
-     * Sets response_message
+     * Sets stored_card
      *
-     * @param string|null $response_message The global response message
+     * @param \CpaymentConnector\Model\StoredCard|null $stored_card stored_card
      *
      * @return $this
      */
-    public function setResponseMessage($response_message)
+    public function setStoredCard($stored_card)
     {
-        $this->container['response_message'] = $response_message;
+        $this->container['stored_card'] = $stored_card;
+
+        return $this;
+    }
+
+    /**
+     * Gets validation_mode
+     *
+     * @return \CpaymentConnector\Model\ValidationModeOverride|null
+     */
+    public function getValidationMode()
+    {
+        return $this->container['validation_mode'];
+    }
+
+    /**
+     * Sets validation_mode
+     *
+     * @param \CpaymentConnector\Model\ValidationModeOverride|null $validation_mode validation_mode
+     *
+     * @return $this
+     */
+    public function setValidationMode($validation_mode)
+    {
+        $this->container['validation_mode'] = $validation_mode;
+
+        return $this;
+    }
+
+    /**
+     * Gets notification_url
+     *
+     * @return string|null
+     */
+    public function getNotificationUrl()
+    {
+        return $this->container['notification_url'];
+    }
+
+    /**
+     * Sets notification_url
+     *
+     * @param string|null $notification_url Url for the notification of the payment
+     *
+     * @return $this
+     */
+    public function setNotificationUrl($notification_url)
+    {
+        $this->container['notification_url'] = $notification_url;
 
         return $this;
     }

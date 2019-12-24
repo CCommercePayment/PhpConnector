@@ -118,7 +118,7 @@ class StoredPaymentMethodsApi
     /**
      * Operation v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGet
      *
-     * Gets the stored payment methods by customer reference.
+     * Gets stored payment methods by CustomerRef
      *
      * @param  int $merchant_id The merchant identifier. (required)
      * @param  string $merchant_site_id The merchant site identifier. (required)
@@ -138,7 +138,7 @@ class StoredPaymentMethodsApi
     /**
      * Operation v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGetWithHttpInfo
      *
-     * Gets the stored payment methods by customer reference.
+     * Gets stored payment methods by CustomerRef
      *
      * @param  int $merchant_id The merchant identifier. (required)
      * @param  string $merchant_site_id The merchant site identifier. (required)
@@ -229,7 +229,7 @@ class StoredPaymentMethodsApi
     /**
      * Operation v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGetAsync
      *
-     * Gets the stored payment methods by customer reference.
+     * Gets stored payment methods by CustomerRef
      *
      * @param  int $merchant_id The merchant identifier. (required)
      * @param  string $merchant_site_id The merchant site identifier. (required)
@@ -252,7 +252,7 @@ class StoredPaymentMethodsApi
     /**
      * Operation v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGetAsyncWithHttpInfo
      *
-     * Gets the stored payment methods by customer reference.
+     * Gets stored payment methods by CustomerRef
      *
      * @param  int $merchant_id The merchant identifier. (required)
      * @param  string $merchant_site_id The merchant site identifier. (required)
@@ -443,7 +443,7 @@ class StoredPaymentMethodsApi
     /**
      * Operation v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdDelete
      *
-     * Deletes the specified stored payment method.
+     * Deletes a stored payment method
      *
      * @param  int $merchant_id The merchant identifier (required)
      * @param  string $merchant_site_id The merchant site identifier (required)
@@ -463,7 +463,7 @@ class StoredPaymentMethodsApi
     /**
      * Operation v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdDeleteWithHttpInfo
      *
-     * Deletes the specified stored payment method.
+     * Deletes a stored payment method
      *
      * @param  int $merchant_id The merchant identifier (required)
      * @param  string $merchant_site_id The merchant site identifier (required)
@@ -554,7 +554,7 @@ class StoredPaymentMethodsApi
     /**
      * Operation v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdDeleteAsync
      *
-     * Deletes the specified stored payment method.
+     * Deletes a stored payment method
      *
      * @param  int $merchant_id The merchant identifier (required)
      * @param  string $merchant_site_id The merchant site identifier (required)
@@ -577,7 +577,7 @@ class StoredPaymentMethodsApi
     /**
      * Operation v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdDeleteAsyncWithHttpInfo
      *
-     * Deletes the specified stored payment method.
+     * Deletes a stored payment method
      *
      * @param  int $merchant_id The merchant identifier (required)
      * @param  string $merchant_site_id The merchant site identifier (required)
@@ -768,7 +768,7 @@ class StoredPaymentMethodsApi
     /**
      * Operation v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGet
      *
-     * Gets the stored payment method by identifier.
+     * Gets a stored payment method
      *
      * @param  int $merchant_id merchant_id (required)
      * @param  string $merchant_site_id merchant_site_id (required)
@@ -788,7 +788,7 @@ class StoredPaymentMethodsApi
     /**
      * Operation v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGetWithHttpInfo
      *
-     * Gets the stored payment method by identifier.
+     * Gets a stored payment method
      *
      * @param  int $merchant_id (required)
      * @param  string $merchant_site_id (required)
@@ -879,7 +879,7 @@ class StoredPaymentMethodsApi
     /**
      * Operation v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGetAsync
      *
-     * Gets the stored payment method by identifier.
+     * Gets a stored payment method
      *
      * @param  int $merchant_id (required)
      * @param  string $merchant_site_id (required)
@@ -902,7 +902,7 @@ class StoredPaymentMethodsApi
     /**
      * Operation v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGetAsyncWithHttpInfo
      *
-     * Gets the stored payment method by identifier.
+     * Gets a stored payment method
      *
      * @param  int $merchant_id (required)
      * @param  string $merchant_site_id (required)
@@ -1093,10 +1093,10 @@ class StoredPaymentMethodsApi
     /**
      * Operation v1StoredPaymentMethodsPost
      *
-     * Creates the specified stored payment method.
+     * Stores a new payment method.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\StoredPaymentMethodRequest $stored_payment_method_request The stored payment method (optional)
+     * @param  \CpaymentConnector\Model\StoredPaymentMethodRequest $stored_payment_method_request The payment method to store. (optional)
      *
      * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1111,10 +1111,10 @@ class StoredPaymentMethodsApi
     /**
      * Operation v1StoredPaymentMethodsPostWithHttpInfo
      *
-     * Creates the specified stored payment method.
+     * Stores a new payment method.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\StoredPaymentMethodRequest $stored_payment_method_request The stored payment method (optional)
+     * @param  \CpaymentConnector\Model\StoredPaymentMethodRequest $stored_payment_method_request The payment method to store. (optional)
      *
      * @throws \CpaymentConnector\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1200,10 +1200,10 @@ class StoredPaymentMethodsApi
     /**
      * Operation v1StoredPaymentMethodsPostAsync
      *
-     * Creates the specified stored payment method.
+     * Stores a new payment method.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\StoredPaymentMethodRequest $stored_payment_method_request The stored payment method (optional)
+     * @param  \CpaymentConnector\Model\StoredPaymentMethodRequest $stored_payment_method_request The payment method to store. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1221,10 +1221,10 @@ class StoredPaymentMethodsApi
     /**
      * Operation v1StoredPaymentMethodsPostAsyncWithHttpInfo
      *
-     * Creates the specified stored payment method.
+     * Stores a new payment method.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\StoredPaymentMethodRequest $stored_payment_method_request The stored payment method (optional)
+     * @param  \CpaymentConnector\Model\StoredPaymentMethodRequest $stored_payment_method_request The payment method to store. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1272,7 +1272,7 @@ class StoredPaymentMethodsApi
      * Create request for operation 'v1StoredPaymentMethodsPost'
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\StoredPaymentMethodRequest $stored_payment_method_request The stored payment method (optional)
+     * @param  \CpaymentConnector\Model\StoredPaymentMethodRequest $stored_payment_method_request The payment method to store. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

@@ -4,16 +4,18 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGet**](StoredPaymentMethodsApi.md#v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGet) | **GET** /v1/stored-payment-methods/merchants/{merchantId}/sites/{merchantSiteId}/customerRef/{customerRef} | Gets the stored payment methods by customer reference.
-[**v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdDelete**](StoredPaymentMethodsApi.md#v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdDelete) | **DELETE** /v1/stored-payment-methods/merchants/{merchantId}/sites/{merchantSiteId}/storedPaymentMethodId/{storedPaymentMethodId} | Deletes the specified stored payment method.
-[**v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGet**](StoredPaymentMethodsApi.md#v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGet) | **GET** /v1/stored-payment-methods/merchants/{merchantId}/sites/{merchantSiteId}/storedPaymentMethodId/{storedPaymentMethodId} | Gets the stored payment method by identifier.
-[**v1StoredPaymentMethodsPost**](StoredPaymentMethodsApi.md#v1StoredPaymentMethodsPost) | **POST** /v1/stored-payment-methods | Creates the specified stored payment method.
+[**v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGet**](StoredPaymentMethodsApi.md#v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGet) | **GET** /v1/stored-payment-methods/merchants/{merchantId}/sites/{merchantSiteId}/customerRef/{customerRef} | Gets stored payment methods by CustomerRef
+[**v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdDelete**](StoredPaymentMethodsApi.md#v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdDelete) | **DELETE** /v1/stored-payment-methods/merchants/{merchantId}/sites/{merchantSiteId}/storedPaymentMethodId/{storedPaymentMethodId} | Deletes a stored payment method
+[**v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGet**](StoredPaymentMethodsApi.md#v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGet) | **GET** /v1/stored-payment-methods/merchants/{merchantId}/sites/{merchantSiteId}/storedPaymentMethodId/{storedPaymentMethodId} | Gets a stored payment method
+[**v1StoredPaymentMethodsPost**](StoredPaymentMethodsApi.md#v1StoredPaymentMethodsPost) | **POST** /v1/stored-payment-methods | Stores a new payment method.
 
 
 
 ## v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGet
 
 > \CpaymentConnector\Model\StoredPaymentMethodResponse v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGet($merchant_id, $merchant_site_id, $customer_ref, $auth_token)
+
+Gets stored payment methods by CustomerRef
 
 Gets the stored payment methods by customer reference.
 
@@ -75,6 +77,8 @@ No authorization required
 
 > string v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdDelete($merchant_id, $merchant_site_id, $stored_payment_method_id, $auth_token)
 
+Deletes a stored payment method
+
 Deletes the specified stored payment method.
 
 ### Example
@@ -135,7 +139,9 @@ No authorization required
 
 > \CpaymentConnector\Model\StoredPaymentMethodResponse v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGet($merchant_id, $merchant_site_id, $stored_payment_method_id, $auth_token)
 
-Gets the stored payment method by identifier.
+Gets a stored payment method
+
+Gets the stored payment method by its unique identifier.
 
 ### Example
 
@@ -195,7 +201,7 @@ No authorization required
 
 > string v1StoredPaymentMethodsPost($auth_token, $stored_payment_method_request)
 
-Creates the specified stored payment method.
+Stores a new payment method.
 
 ### Example
 
@@ -210,7 +216,7 @@ $apiInstance = new CpaymentConnector\Api\StoredPaymentMethodsApi(
     new GuzzleHttp\Client()
 );
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$stored_payment_method_request = new \CpaymentConnector\Model\StoredPaymentMethodRequest(); // \CpaymentConnector\Model\StoredPaymentMethodRequest | The stored payment method
+$stored_payment_method_request = new \CpaymentConnector\Model\StoredPaymentMethodRequest(); // \CpaymentConnector\Model\StoredPaymentMethodRequest | The payment method to store.
 
 try {
     $result = $apiInstance->v1StoredPaymentMethodsPost($auth_token, $stored_payment_method_request);
@@ -227,7 +233,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_token** | **string**| Gets or sets the authentication token. |
- **stored_payment_method_request** | [**\CpaymentConnector\Model\StoredPaymentMethodRequest**](../Model/StoredPaymentMethodRequest.md)| The stored payment method | [optional]
+ **stored_payment_method_request** | [**\CpaymentConnector\Model\StoredPaymentMethodRequest**](../Model/StoredPaymentMethodRequest.md)| The payment method to store. | [optional]
 
 ### Return type
 
