@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace CpaymentConnector\Model;
+namespace pachirapay\Model;
 
 use \ArrayAccess;
-use \CpaymentConnector\ObjectSerializer;
+use \pachirapay\ObjectSerializer;
 
 /**
  * OrderData Class Doc Comment
  *
  * @category Class
  * @description 
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -64,14 +64,15 @@ class OrderData implements ModelInterface, ArrayAccess
         'order_shipping_amount' => 'int',
         'tax_amount' => 'int',
         'free_text' => 'string',
-        'orders' => '\CpaymentConnector\Model\SubOrder[]',
+        'orders' => '\pachirapay\Model\SubOrder[]',
         'order_summary_ref' => 'string',
-        'shipping_address' => '\CpaymentConnector\Model\ShippingAddress',
+        'shipping_address' => '\pachirapay\Model\ShippingAddress',
         'order_ref' => 'string',
         'invoice_id' => 'int',
         'order_tag' => 'string',
         'order_date' => '\DateTime',
-        'amount' => 'int'
+        'amount' => 'int',
+        'scoring_token' => 'string'
     ];
 
     /**
@@ -93,7 +94,8 @@ class OrderData implements ModelInterface, ArrayAccess
         'invoice_id' => 'int64',
         'order_tag' => null,
         'order_date' => 'date-time',
-        'amount' => 'int64'
+        'amount' => 'int64',
+        'scoring_token' => null
     ];
 
     /**
@@ -136,7 +138,8 @@ class OrderData implements ModelInterface, ArrayAccess
         'invoice_id' => 'invoiceId',
         'order_tag' => 'orderTag',
         'order_date' => 'orderDate',
-        'amount' => 'amount'
+        'amount' => 'amount',
+        'scoring_token' => 'scoringToken'
     ];
 
     /**
@@ -158,7 +161,8 @@ class OrderData implements ModelInterface, ArrayAccess
         'invoice_id' => 'setInvoiceId',
         'order_tag' => 'setOrderTag',
         'order_date' => 'setOrderDate',
-        'amount' => 'setAmount'
+        'amount' => 'setAmount',
+        'scoring_token' => 'setScoringToken'
     ];
 
     /**
@@ -180,7 +184,8 @@ class OrderData implements ModelInterface, ArrayAccess
         'invoice_id' => 'getInvoiceId',
         'order_tag' => 'getOrderTag',
         'order_date' => 'getOrderDate',
-        'amount' => 'getAmount'
+        'amount' => 'getAmount',
+        'scoring_token' => 'getScoringToken'
     ];
 
     /**
@@ -257,6 +262,7 @@ class OrderData implements ModelInterface, ArrayAccess
         $this->container['order_tag'] = isset($data['order_tag']) ? $data['order_tag'] : null;
         $this->container['order_date'] = isset($data['order_date']) ? $data['order_date'] : null;
         $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
+        $this->container['scoring_token'] = isset($data['scoring_token']) ? $data['scoring_token'] : null;
     }
 
     /**
@@ -268,11 +274,11 @@ class OrderData implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['order_summary_ref'] === null) {
+            $invalidProperties[] = "'order_summary_ref' can't be null";
+        }
         if ($this->container['order_ref'] === null) {
             $invalidProperties[] = "'order_ref' can't be null";
-        }
-        if ($this->container['order_date'] === null) {
-            $invalidProperties[] = "'order_date' can't be null";
         }
         if ($this->container['amount'] === null) {
             $invalidProperties[] = "'amount' can't be null";
@@ -305,7 +311,7 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Sets order_discount_amount
      *
-     * @param int|null $order_discount_amount Gets or sets the order discount amount.
+     * @param int|null $order_discount_amount The order discount amount.  Optional, useful in case of hosted pages, to show an order summary. Useless for iframe integration.
      *
      * @return $this
      */
@@ -329,7 +335,7 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Sets order_fees_amount
      *
-     * @param int|null $order_fees_amount <para>               Gets or sets the order fees amount.              </para>
+     * @param int|null $order_fees_amount The order fees amount.  Optional, useful in case of hosted pages, to show an order summary. Useless for iframe integration.
      *
      * @return $this
      */
@@ -353,7 +359,7 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Sets order_rows_amount
      *
-     * @param int|null $order_rows_amount Gets or sets the order rows amount.
+     * @param int|null $order_rows_amount The order rows amount.  Optional, useful in case of hosted pages, to show an order summary. Useless for iframe integration.
      *
      * @return $this
      */
@@ -377,7 +383,7 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Sets order_shipping_amount
      *
-     * @param int|null $order_shipping_amount Gets or sets the order shipping amount.
+     * @param int|null $order_shipping_amount The order shipping amount.  Optional, useful in case of hosted pages, to show an order summary. Useless for iframe integration.
      *
      * @return $this
      */
@@ -401,7 +407,7 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Sets tax_amount
      *
-     * @param int|null $tax_amount Gets or sets the tax amount.
+     * @param int|null $tax_amount The tax amount.  Optional, useful in case payment without VAT (PRO...)
      *
      * @return $this
      */
@@ -425,7 +431,7 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Sets free_text
      *
-     * @param string|null $free_text Gets or sets the free text.
+     * @param string|null $free_text The free text.  Optional, it's a merchant dedicated field, if needed to passes some correlation data. This data will be returned without any transformation at the end of the payment process.
      *
      * @return $this
      */
@@ -439,7 +445,7 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Gets orders
      *
-     * @return \CpaymentConnector\Model\SubOrder[]|null
+     * @return \pachirapay\Model\SubOrder[]|null
      */
     public function getOrders()
     {
@@ -449,7 +455,7 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Sets orders
      *
-     * @param \CpaymentConnector\Model\SubOrder[]|null $orders Gets or sets the orders.
+     * @param \pachirapay\Model\SubOrder[]|null $orders The orders.  This order list can be used in case of multiple transaction at the same time (example: for multiple marketplace's sellers).  If so, a different authorization will be done for each of the orders.
      *
      * @return $this
      */
@@ -463,7 +469,7 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Gets order_summary_ref
      *
-     * @return string|null
+     * @return string
      */
     public function getOrderSummaryRef()
     {
@@ -473,7 +479,7 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Sets order_summary_ref
      *
-     * @param string|null $order_summary_ref Gets or sets the order summary reference.
+     * @param string $order_summary_ref The order summary reference.  For multiple orders, this field is a top level \"orderRef\", in order to identify a package of orders.  For simple order, this field can be used as \"orderRef\".
      *
      * @return $this
      */
@@ -487,7 +493,7 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Gets shipping_address
      *
-     * @return \CpaymentConnector\Model\ShippingAddress|null
+     * @return \pachirapay\Model\ShippingAddress|null
      */
     public function getShippingAddress()
     {
@@ -497,7 +503,7 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Sets shipping_address
      *
-     * @param \CpaymentConnector\Model\ShippingAddress|null $shipping_address shipping_address
+     * @param \pachirapay\Model\ShippingAddress|null $shipping_address shipping_address
      *
      * @return $this
      */
@@ -521,7 +527,7 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Sets order_ref
      *
-     * @param string $order_ref The order reference linked to the schedule and transaction
+     * @param string $order_ref The order reference.  You should set the same value as the *orderSummaryRef*.
      *
      * @return $this
      */
@@ -545,7 +551,7 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Sets invoice_id
      *
-     * @param int|null $invoice_id The invoice identifier
+     * @param int|null $invoice_id The invoice identifier.
      *
      * @return $this
      */
@@ -569,7 +575,7 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Sets order_tag
      *
-     * @param string|null $order_tag The order tag is a label for the schedule
+     * @param string|null $order_tag The order tag is a label.  Having a different order tag allow to passes a new authorization for a same *orderSummaryRef*
      *
      * @return $this
      */
@@ -583,7 +589,7 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Gets order_date
      *
-     * @return \DateTime
+     * @return \DateTime|null
      */
     public function getOrderDate()
     {
@@ -593,7 +599,7 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Sets order_date
      *
-     * @param \DateTime $order_date Date of the order
+     * @param \DateTime|null $order_date The order's date.  Optional, if not set it will defaults to the current date and time.
      *
      * @return $this
      */
@@ -617,13 +623,37 @@ class OrderData implements ModelInterface, ArrayAccess
     /**
      * Sets amount
      *
-     * @param int $amount The amount of the payment
+     * @param int $amount The *total amount* of the payment (in case of multiple orders, this field should be equals to the sum of all order's amount)
      *
      * @return $this
      */
     public function setAmount($amount)
     {
         $this->container['amount'] = $amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets scoring_token
+     *
+     * @return string|null
+     */
+    public function getScoringToken()
+    {
+        return $this->container['scoring_token'];
+    }
+
+    /**
+     * Sets scoring_token
+     *
+     * @param string|null $scoring_token In case of 3X or 4X payment (CB4X for example), this value should be filled with a valid scoring token.
+     *
+     * @return $this
+     */
+    public function setScoringToken($scoring_token)
+    {
+        $this->container['scoring_token'] = $scoring_token;
 
         return $this;
     }

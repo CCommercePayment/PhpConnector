@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,18 +26,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace OpenAPI\Client;
+namespace pachirapay;
 
-use \OpenAPI\Client\Configuration;
-use \OpenAPI\Client\ApiException;
-use \OpenAPI\Client\ObjectSerializer;
+use \pachirapay\Configuration;
+use \pachirapay\ApiException;
+use \pachirapay\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Card3DsPaymentApiTest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -73,9 +73,19 @@ class Card3DsPaymentApiTest extends TestCase
     }
 
     /**
+     * Test case for v1PaymentsCard3dsPaymentAuthenticationPost
+     *
+     * Validate authentication..
+     *
+     */
+    public function testV1PaymentsCard3dsPaymentAuthenticationPost()
+    {
+    }
+
+    /**
      * Test case for v1PaymentsCard3dsPaymentPost
      *
-     * Achieve a 3DS payment (CheckEnrollment).
+     * Check enrollment.
      *
      */
     public function testV1PaymentsCard3dsPaymentPost()
@@ -85,10 +95,20 @@ class Card3DsPaymentApiTest extends TestCase
     /**
      * Test case for v1PaymentsCard3dsPaymentPut
      *
-     * Finish the 3DS payment.  Reuse the order references and the paymentRequestId (returned from the POST)..
+     * Validate authentication AND authorize / payment.
      *
      */
     public function testV1PaymentsCard3dsPaymentPut()
+    {
+    }
+
+    /**
+     * Test case for v1PaymentsCard3dsPaymentWithAuthenticationDataPost
+     *
+     * Authorization / payment -with- authentication data.
+     *
+     */
+    public function testV1PaymentsCard3dsPaymentWithAuthenticationDataPost()
     {
     }
 }

@@ -1,4 +1,4 @@
-# CpaymentConnector\PaymentOptionsApi
+# pachirapay\PaymentOptionsApi
 
 All URIs are relative to *http://localhost*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## v1PaymentOptionsMerchantsByMerchantIdSitesByMerchantSiteIdGet
 
-> \CpaymentConnector\Model\PaymentOptionsResponse v1PaymentOptionsMerchantsByMerchantIdSitesByMerchantSiteIdGet($merchant_id, $merchant_site_id, $auth_token)
+> \pachirapay\Model\PaymentOptionsResponse v1PaymentOptionsMerchantsByMerchantIdSitesByMerchantSiteIdGet($merchant_id, $merchant_site_id, $auth_token)
 
 Gets payment options
 
@@ -23,7 +23,7 @@ Gets payment options
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\PaymentOptionsApi(
+$apiInstance = new pachirapay\Api\PaymentOptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CpaymentConnector\Model\PaymentOptionsResponse**](../Model/PaymentOptionsResponse.md)
+[**\pachirapay\Model\PaymentOptionsResponse**](../Model/PaymentOptionsResponse.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ No authorization required
 
 ## v1PaymentOptionsPost
 
-> \CpaymentConnector\Model\PaymentOptionsResponse v1PaymentOptionsPost($auth_token, $payment_options_request)
+> \pachirapay\Model\PaymentOptionsResponse v1PaymentOptionsPost($auth_token, $payment_options_request)
 
 Gets payment options for a context
 
@@ -81,13 +81,13 @@ Gets payment options for a context
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\PaymentOptionsApi(
+$apiInstance = new pachirapay\Api\PaymentOptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$payment_options_request = new \CpaymentConnector\Model\PaymentOptionsRequest(); // \CpaymentConnector\Model\PaymentOptionsRequest | The payment options request.
+$payment_options_request = new \pachirapay\Model\PaymentOptionsRequest(); // \pachirapay\Model\PaymentOptionsRequest | The payment options request.
 
 try {
     $result = $apiInstance->v1PaymentOptionsPost($auth_token, $payment_options_request);
@@ -104,11 +104,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_token** | **string**| Gets or sets the authentication token. |
- **payment_options_request** | [**\CpaymentConnector\Model\PaymentOptionsRequest**](../Model/PaymentOptionsRequest.md)| The payment options request. | [optional]
+ **payment_options_request** | [**\pachirapay\Model\PaymentOptionsRequest**](../Model/PaymentOptionsRequest.md)| The payment options request. | [optional]
 
 ### Return type
 
-[**\CpaymentConnector\Model\PaymentOptionsResponse**](../Model/PaymentOptionsResponse.md)
+[**\pachirapay\Model\PaymentOptionsResponse**](../Model/PaymentOptionsResponse.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ WARNING : NOT IMPLEMENTED YET.     Validates the eligibility of the given paymen
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\PaymentOptionsApi(
+$apiInstance = new pachirapay\Api\PaymentOptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

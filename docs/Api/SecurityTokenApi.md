@@ -1,4 +1,4 @@
-# CpaymentConnector\SecurityTokenApi
+# pachirapay\SecurityTokenApi
 
 All URIs are relative to *http://localhost*
 
@@ -23,7 +23,7 @@ Get the token provided by the Security Token Service (STS).  The authentication 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\SecurityTokenApi(
+$apiInstance = new pachirapay\Api\SecurityTokenApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,18 +26,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace OpenAPI\Client;
+namespace pachirapay;
 
-use \OpenAPI\Client\Configuration;
-use \OpenAPI\Client\ApiException;
-use \OpenAPI\Client\ObjectSerializer;
+use \pachirapay\Configuration;
+use \pachirapay\ApiException;
+use \pachirapay\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * PaymentOptionsApiTest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -75,7 +75,7 @@ class PaymentOptionsApiTest extends TestCase
     /**
      * Test case for v1PaymentOptionsMerchantsByMerchantIdSitesByMerchantSiteIdGet
      *
-     * Gets the payment options for a specified site..
+     * Gets payment options.
      *
      */
     public function testV1PaymentOptionsMerchantsByMerchantIdSitesByMerchantSiteIdGet()
@@ -85,7 +85,7 @@ class PaymentOptionsApiTest extends TestCase
     /**
      * Test case for v1PaymentOptionsPost
      *
-     * Gets the payment options for a specified context..
+     * Gets payment options for a context.
      *
      */
     public function testV1PaymentOptionsPost()
@@ -95,7 +95,7 @@ class PaymentOptionsApiTest extends TestCase
     /**
      * Test case for v1PaymentOptionsValidateEligibilityPost
      *
-     * Validates the eligibility of the given payment option, according to context..
+     * Validates eligibility.
      *
      */
     public function testV1PaymentOptionsValidateEligibilityPost()

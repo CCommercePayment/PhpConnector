@@ -10,11 +10,11 @@ Name | Type | Description | Notes
 **min_amount** | **int** | The minimum amount allowed | [optional] 
 **max_amount** | **int** | The maximum amount allowed | [optional] 
 **stored_cards_enabled** | **bool** | Indicates if stored cards are enabled or not | [optional] 
-**payment_schedule_rules** | [**\CpaymentConnector\Model\PaymentScheduleRule[]**](PaymentScheduleRule.md) | All payment schedule rules data | [optional] 
-**payment_fees** | [**\CpaymentConnector\Model\PaymentFee[]**](PaymentFee.md) | All payment fees data | [optional] 
-**payment_cards** | [**\CpaymentConnector\Model\PaymentCard[]**](PaymentCard.md) | All payment cards data | [optional] 
-**loan_offers** | [**\CpaymentConnector\Model\LoanOffer[]**](LoanOffer.md) | All loan offers data | [optional] 
-**acquiring_banks** | [**\CpaymentConnector\Model\AcquiringBank[]**](AcquiringBank.md) | All acquiring banks data | [optional] 
+**payment_schedule_rules** | [**\pachirapay\Model\PaymentScheduleRule[]**](PaymentScheduleRule.md) | All payment schedule rules data | [optional] 
+**payment_fees** | [**\pachirapay\Model\PaymentFee[]**](PaymentFee.md) | All payment fees data | [optional] 
+**payment_cards** | [**\pachirapay\Model\PaymentCard[]**](PaymentCard.md) | All payment cards data | [optional] 
+**loan_offers** | [**\pachirapay\Model\LoanOffer[]**](LoanOffer.md) | All loan offers data | [optional] 
+**acquiring_banks** | [**\pachirapay\Model\AcquiringBank[]**](AcquiringBank.md) | All acquiring banks data | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

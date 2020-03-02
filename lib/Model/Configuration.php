@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace CpaymentConnector\Model;
+namespace pachirapay\Model;
 
 use \ArrayAccess;
-use \CpaymentConnector\ObjectSerializer;
+use \pachirapay\ObjectSerializer;
 
 /**
  * Configuration Class Doc Comment
  *
  * @category Class
  * @description 
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -275,6 +275,9 @@ class Configuration implements ModelInterface, ArrayAccess
             );
         }
 
+        if ($this->container['payment_option_ref'] === null) {
+            $invalidProperties[] = "'payment_option_ref' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -303,7 +306,7 @@ class Configuration implements ModelInterface, ArrayAccess
     /**
      * Sets culture
      *
-     * @param string|null $culture Gets or sets the culture.
+     * @param string|null $culture Specify the culture to use on the payment form (ex: \"fr-FR\", \"en-GB\", \"en-US\", \"es-CO\")
      *
      * @return $this
      */
@@ -327,7 +330,7 @@ class Configuration implements ModelInterface, ArrayAccess
     /**
      * Sets form_type
      *
-     * @param string|null $form_type Gets or sets the type of the form.
+     * @param string|null $form_type Specify the payment form type.  - Default is a full page payment form and should be used is you plan to redirect the customer to the payment page.  - Iframe should be used if you plan to integrate the payment form into your checkout (without external redirection).
      *
      * @return $this
      */
@@ -360,7 +363,7 @@ class Configuration implements ModelInterface, ArrayAccess
     /**
      * Sets merchant_back_url
      *
-     * @param string|null $merchant_back_url Gets or sets the merchant back URL.
+     * @param string|null $merchant_back_url Defines the URL to use if we need to redirect the customer back to your website.
      *
      * @return $this
      */
@@ -384,7 +387,7 @@ class Configuration implements ModelInterface, ArrayAccess
     /**
      * Sets merchant_home_url
      *
-     * @param string|null $merchant_home_url Gets or sets the merchant home URL.
+     * @param string|null $merchant_home_url Defines the URL to use if we need to redirect the customer to the homepage of your website.
      *
      * @return $this
      */
@@ -408,7 +411,7 @@ class Configuration implements ModelInterface, ArrayAccess
     /**
      * Sets merchant_notify_url
      *
-     * @param string|null $merchant_notify_url Gets or sets the merchant notify URL.
+     * @param string|null $merchant_notify_url Defines the URL to use to notify you at the end of the payment process.  The notification is a POST request, which includes the payment result code.  NOTE: this URL is optional, if not specified, no notification will be posted.
      *
      * @return $this
      */
@@ -432,7 +435,7 @@ class Configuration implements ModelInterface, ArrayAccess
     /**
      * Sets merchant_return_url
      *
-     * @param string|null $merchant_return_url Gets or sets the merchant return URL.
+     * @param string|null $merchant_return_url Defines the URL to use to redirect the customer at the end of the payment process.  The redirection is a POST request, using the customer browser, which includes the payment result code.
      *
      * @return $this
      */
@@ -446,7 +449,7 @@ class Configuration implements ModelInterface, ArrayAccess
     /**
      * Gets payment_option_ref
      *
-     * @return string|null
+     * @return string
      */
     public function getPaymentOptionRef()
     {
@@ -456,7 +459,7 @@ class Configuration implements ModelInterface, ArrayAccess
     /**
      * Sets payment_option_ref
      *
-     * @param string|null $payment_option_ref Gets or sets the payment option reference.
+     * @param string $payment_option_ref Defines the payment option to use (1 for card payment, 21 for card payment with 3DS, 17 for paypal, ...).  Please refer to the full documentation for the exhaustive list.
      *
      * @return $this
      */
@@ -480,7 +483,7 @@ class Configuration implements ModelInterface, ArrayAccess
     /**
      * Sets report_delay_in_days
      *
-     * @param int|null $report_delay_in_days Gets or sets the report delay in days.
+     * @param int|null $report_delay_in_days The report delay in days. Can be used to postpone a payment.
      *
      * @return $this
      */
@@ -504,7 +507,7 @@ class Configuration implements ModelInterface, ArrayAccess
     /**
      * Sets user_agent
      *
-     * @param string|null $user_agent Gets or sets the user agent.
+     * @param string|null $user_agent The user agent.  Optional, if not set it will be retrieved during the first load of the payment session into the customer browser.
      *
      * @return $this
      */
@@ -528,7 +531,7 @@ class Configuration implements ModelInterface, ArrayAccess
     /**
      * Sets template
      *
-     * @param string|null $template Gets or sets the url template.
+     * @param string|null $template The template to use for the payment form.  Optional, it should be set only if a specific UI has been implemented (custom UI style).  By default, it will defaulting to the \"Generic\" template.
      *
      * @return $this
      */

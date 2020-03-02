@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace CpaymentConnector\Model;
+namespace pachirapay\Model;
 
 use \ArrayAccess;
-use \CpaymentConnector\ObjectSerializer;
+use \pachirapay\ObjectSerializer;
 
 /**
  * PaymentSessionRequest Class Doc Comment
  *
  * @category Class
  * @description 
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -60,14 +60,14 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'merchant_id' => 'int',
         'merchant_site_id' => 'string',
-        'customer' => '\CpaymentConnector\Model\Customer',
-        'order_data' => '\CpaymentConnector\Model\OrderData',
-        'stored_card_data' => '\CpaymentConnector\Model\StoredCard[]',
+        'customer' => '\pachirapay\Model\Customer',
+        'order_data' => '\pachirapay\Model\OrderData',
+        'stored_card_data' => '\pachirapay\Model\StoredCard[]',
         'allow_card_storage' => 'bool',
         'forced_card_option_ref' => 'string',
         'force_card_storage' => 'bool',
         'force_immediate_stored_card_payment' => 'bool',
-        'configuration' => '\CpaymentConnector\Model\Configuration'
+        'configuration' => '\pachirapay\Model\Configuration'
     ];
 
     /**
@@ -244,6 +244,21 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['merchant_id'] === null) {
+            $invalidProperties[] = "'merchant_id' can't be null";
+        }
+        if ($this->container['merchant_site_id'] === null) {
+            $invalidProperties[] = "'merchant_site_id' can't be null";
+        }
+        if ($this->container['customer'] === null) {
+            $invalidProperties[] = "'customer' can't be null";
+        }
+        if ($this->container['order_data'] === null) {
+            $invalidProperties[] = "'order_data' can't be null";
+        }
+        if ($this->container['configuration'] === null) {
+            $invalidProperties[] = "'configuration' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -262,7 +277,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Gets merchant_id
      *
-     * @return int|null
+     * @return int
      */
     public function getMerchantId()
     {
@@ -272,7 +287,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets merchant_id
      *
-     * @param int|null $merchant_id MerchantId
+     * @param int $merchant_id Your merchant identifier.
      *
      * @return $this
      */
@@ -286,7 +301,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Gets merchant_site_id
      *
-     * @return string|null
+     * @return string
      */
     public function getMerchantSiteId()
     {
@@ -296,7 +311,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets merchant_site_id
      *
-     * @param string|null $merchant_site_id MerchantSiteId
+     * @param string $merchant_site_id Your merchant site identifier. It can very if you have separate website for phone and desktop for example.
      *
      * @return $this
      */
@@ -310,7 +325,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Gets customer
      *
-     * @return \CpaymentConnector\Model\Customer|null
+     * @return \pachirapay\Model\Customer
      */
     public function getCustomer()
     {
@@ -320,7 +335,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets customer
      *
-     * @param \CpaymentConnector\Model\Customer|null $customer customer
+     * @param \pachirapay\Model\Customer $customer customer
      *
      * @return $this
      */
@@ -334,7 +349,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Gets order_data
      *
-     * @return \CpaymentConnector\Model\OrderData|null
+     * @return \pachirapay\Model\OrderData
      */
     public function getOrderData()
     {
@@ -344,7 +359,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets order_data
      *
-     * @param \CpaymentConnector\Model\OrderData|null $order_data order_data
+     * @param \pachirapay\Model\OrderData $order_data order_data
      *
      * @return $this
      */
@@ -358,7 +373,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Gets stored_card_data
      *
-     * @return \CpaymentConnector\Model\StoredCard[]|null
+     * @return \pachirapay\Model\StoredCard[]|null
      */
     public function getStoredCardData()
     {
@@ -368,7 +383,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets stored_card_data
      *
-     * @param \CpaymentConnector\Model\StoredCard[]|null $stored_card_data StoredCardData
+     * @param \pachirapay\Model\StoredCard[]|null $stored_card_data The stored payment methods that you want to display to the customer.
      *
      * @return $this
      */
@@ -392,7 +407,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets allow_card_storage
      *
-     * @param bool|null $allow_card_storage Gets or sets a value indicating whether [allow card storage].
+     * @param bool|null $allow_card_storage Specify if you allow the customer to save his payment method.   By default, the customer will have the choice (save my card : yes/no).   If you want to force the storage (without asking the customer), you can specify the field *forceCardStorage* to *TRUE*
      *
      * @return $this
      */
@@ -416,7 +431,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets forced_card_option_ref
      *
-     * @param string|null $forced_card_option_ref Gets or sets a value indicating whether [forced card option reference].
+     * @param string|null $forced_card_option_ref This field should only be used in case of an immediate stored payment card payment (available only for non-3DS flow).   And it is only needed for specifics payment methods (credit cards like Cofinoga, or Cetelem), which allows a card option (debit, credit, 3x, 4x, 5x, ...).  For most of card types (VISA, MasterCard, CB), you don't have to specify anything.
      *
      * @return $this
      */
@@ -440,7 +455,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets force_card_storage
      *
-     * @param bool|null $force_card_storage Gets or sets a value indicating whether [forced card storage].
+     * @param bool|null $force_card_storage In a card storage scenario (*allowCardStorage* set to *TRUE*), setting this field to *TRUE* will disable the customer choice (card will always be stored)
      *
      * @return $this
      */
@@ -464,7 +479,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets force_immediate_stored_card_payment
      *
-     * @param bool|null $force_immediate_stored_card_payment Gets or sets a value indicating whether [forced immediate stored card].
+     * @param bool|null $force_immediate_stored_card_payment If set to *TRUE*, the payment form will be skipped and the payment will start immediately using the first stored payment method from *storedCardData* field.   This is available only for non-3DS flow, and need at least one valid stored payment method.
      *
      * @return $this
      */
@@ -478,7 +493,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Gets configuration
      *
-     * @return \CpaymentConnector\Model\Configuration|null
+     * @return \pachirapay\Model\Configuration
      */
     public function getConfiguration()
     {
@@ -488,7 +503,7 @@ class PaymentSessionRequest implements ModelInterface, ArrayAccess
     /**
      * Sets configuration
      *
-     * @param \CpaymentConnector\Model\Configuration|null $configuration configuration
+     * @param \pachirapay\Model\Configuration $configuration configuration
      *
      * @return $this
      */

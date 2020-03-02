@@ -1,4 +1,4 @@
-# CpaymentConnector\CardPaymentApi
+# pachirapay\CardPaymentApi
 
 All URIs are relative to *http://localhost*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## v1PaymentsCardPaymentPost
 
-> \CpaymentConnector\Model\CardPaymentResponse v1PaymentsCardPaymentPost($auth_token, $card_payment_request)
+> \pachirapay\Model\CardPaymentResponse v1PaymentsCardPaymentPost($auth_token, $card_payment_request)
 
 Authorization / payment
 
@@ -23,13 +23,13 @@ Achieve a payment with a card without 3DSecure.  To achieve a 3DS payment (Check
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\CardPaymentApi(
+$apiInstance = new pachirapay\Api\CardPaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$card_payment_request = new \CpaymentConnector\Model\CardPaymentRequest(); // \CpaymentConnector\Model\CardPaymentRequest | All data needed to make card payment
+$card_payment_request = new \pachirapay\Model\CardPaymentRequest(); // \pachirapay\Model\CardPaymentRequest | All data needed to make card payment
 
 try {
     $result = $apiInstance->v1PaymentsCardPaymentPost($auth_token, $card_payment_request);
@@ -46,11 +46,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_token** | **string**| Gets or sets the authentication token. |
- **card_payment_request** | [**\CpaymentConnector\Model\CardPaymentRequest**](../Model/CardPaymentRequest.md)| All data needed to make card payment | [optional]
+ **card_payment_request** | [**\pachirapay\Model\CardPaymentRequest**](../Model/CardPaymentRequest.md)| All data needed to make card payment | [optional]
 
 ### Return type
 
-[**\CpaymentConnector\Model\CardPaymentResponse**](../Model/CardPaymentResponse.md)
+[**\pachirapay\Model\CardPaymentResponse**](../Model/CardPaymentResponse.md)
 
 ### Authorization
 

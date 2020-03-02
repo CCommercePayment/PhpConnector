@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,18 +26,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace OpenAPI\Client;
+namespace pachirapay;
 
-use \OpenAPI\Client\Configuration;
-use \OpenAPI\Client\ApiException;
-use \OpenAPI\Client\ObjectSerializer;
+use \pachirapay\Configuration;
+use \pachirapay\ApiException;
+use \pachirapay\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * CardPaymentApiTest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -75,7 +75,7 @@ class CardPaymentApiTest extends TestCase
     /**
      * Test case for v1PaymentsCardPaymentPost
      *
-     * Achieve a payment with a card without 3DSecure.  To achieve a 3DS payment (CheckEnrollment), see the /payment/card3ds-payment resource..
+     * Authorization / payment.
      *
      */
     public function testV1PaymentsCardPaymentPost()

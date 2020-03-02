@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,18 +26,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace OpenAPI\Client;
+namespace pachirapay;
 
-use \OpenAPI\Client\Configuration;
-use \OpenAPI\Client\ApiException;
-use \OpenAPI\Client\ObjectSerializer;
+use \pachirapay\Configuration;
+use \pachirapay\ApiException;
+use \pachirapay\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * DuplicatePaymentApiTest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -75,7 +75,7 @@ class DuplicatePaymentApiTest extends TestCase
     /**
      * Test case for v1PaymentsDuplicatePaymentBatchPost
      *
-     * Achieve a batch of payments by copy of previously processed payments, with the same payment method..
+     * Duplicate payment batch.
      *
      */
     public function testV1PaymentsDuplicatePaymentBatchPost()
@@ -85,7 +85,7 @@ class DuplicatePaymentApiTest extends TestCase
     /**
      * Test case for v1PaymentsDuplicatePaymentPost
      *
-     * Achieve a payment by copy of a previously processed payment, with the same payment method..
+     * Duplicate payment.
      *
      */
     public function testV1PaymentsDuplicatePaymentPost()

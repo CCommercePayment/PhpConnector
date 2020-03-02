@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,18 +26,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace OpenAPI\Client;
+namespace pachirapay;
 
-use \OpenAPI\Client\Configuration;
-use \OpenAPI\Client\ApiException;
-use \OpenAPI\Client\ObjectSerializer;
+use \pachirapay\Configuration;
+use \pachirapay\ApiException;
+use \pachirapay\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * SecurityTokenApiTest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -75,7 +75,7 @@ class SecurityTokenApiTest extends TestCase
     /**
      * Test case for v1AuthTokenGet
      *
-     * Get the token provided by the Security Token Service (STS).  The authentication token is mandatory for the others api calls.  It's expire after 48h by default..
+     * Authenticate.
      *
      */
     public function testV1AuthTokenGet()

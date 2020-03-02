@@ -1,4 +1,4 @@
-# CpaymentConnector\CardApi
+# pachirapay\CardApi
 
 All URIs are relative to *http://localhost*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## v1CardCreditHolderPost
 
-> \CpaymentConnector\Model\CardPaymentCreditHolderResponse v1CardCreditHolderPost($auth_token, $request)
+> \pachirapay\Model\CardPaymentCreditHolderResponse v1CardCreditHolderPost($auth_token, $request)
 
 Credit a card.
 
@@ -21,13 +21,13 @@ Credit a card.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\CardApi(
+$apiInstance = new pachirapay\Api\CardApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$request = new \CpaymentConnector\Model\CardPaymentCreditHolderRequest(); // \CpaymentConnector\Model\CardPaymentCreditHolderRequest | 
+$request = new \pachirapay\Model\CardPaymentCreditHolderRequest(); // \pachirapay\Model\CardPaymentCreditHolderRequest | 
 
 try {
     $result = $apiInstance->v1CardCreditHolderPost($auth_token, $request);
@@ -44,11 +44,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_token** | **string**| Gets or sets the authentication token. |
- **request** | [**\CpaymentConnector\Model\CardPaymentCreditHolderRequest**](../Model/CardPaymentCreditHolderRequest.md)|  | [optional]
+ **request** | [**\pachirapay\Model\CardPaymentCreditHolderRequest**](../Model/CardPaymentCreditHolderRequest.md)|  | [optional]
 
 ### Return type
 
-[**\CpaymentConnector\Model\CardPaymentCreditHolderResponse**](../Model/CardPaymentCreditHolderResponse.md)
+[**\pachirapay\Model\CardPaymentCreditHolderResponse**](../Model/CardPaymentCreditHolderResponse.md)
 
 ### Authorization
 

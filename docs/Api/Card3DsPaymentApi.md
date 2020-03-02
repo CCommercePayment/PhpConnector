@@ -1,4 +1,4 @@
-# CpaymentConnector\Card3DsPaymentApi
+# pachirapay\Card3DsPaymentApi
 
 All URIs are relative to *http://localhost*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## v1PaymentsCard3dsPaymentAuthenticationPost
 
-> \CpaymentConnector\Model\Card3DsValidateAuthenticationResponse v1PaymentsCard3dsPaymentAuthenticationPost($auth_token, $card3_ds_validate_authentication_request)
+> \pachirapay\Model\Card3DsValidateAuthenticationResponse v1PaymentsCard3dsPaymentAuthenticationPost($auth_token, $card3_ds_validate_authentication_request)
 
 Validate authentication.
 
@@ -26,13 +26,13 @@ To process a payment authorization linked to this authentication, you should pas
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\Card3DsPaymentApi(
+$apiInstance = new pachirapay\Api\Card3DsPaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$card3_ds_validate_authentication_request = new \CpaymentConnector\Model\Card3DsValidateAuthenticationRequest(); // \CpaymentConnector\Model\Card3DsValidateAuthenticationRequest | The validate authentication request.
+$card3_ds_validate_authentication_request = new \pachirapay\Model\Card3DsValidateAuthenticationRequest(); // \pachirapay\Model\Card3DsValidateAuthenticationRequest | The validate authentication request.
 
 try {
     $result = $apiInstance->v1PaymentsCard3dsPaymentAuthenticationPost($auth_token, $card3_ds_validate_authentication_request);
@@ -49,11 +49,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_token** | **string**| Gets or sets the authentication token. |
- **card3_ds_validate_authentication_request** | [**\CpaymentConnector\Model\Card3DsValidateAuthenticationRequest**](../Model/Card3DsValidateAuthenticationRequest.md)| The validate authentication request. | [optional]
+ **card3_ds_validate_authentication_request** | [**\pachirapay\Model\Card3DsValidateAuthenticationRequest**](../Model/Card3DsValidateAuthenticationRequest.md)| The validate authentication request. | [optional]
 
 ### Return type
 
-[**\CpaymentConnector\Model\Card3DsValidateAuthenticationResponse**](../Model/Card3DsValidateAuthenticationResponse.md)
+[**\pachirapay\Model\Card3DsValidateAuthenticationResponse**](../Model/Card3DsValidateAuthenticationResponse.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ No authorization required
 
 ## v1PaymentsCard3dsPaymentPost
 
-> \CpaymentConnector\Model\Card3DsCheckEnrollmentResponse v1PaymentsCard3dsPaymentPost($auth_token, $card3_ds_check_enrollment_request)
+> \pachirapay\Model\Card3DsCheckEnrollmentResponse v1PaymentsCard3dsPaymentPost($auth_token, $card3_ds_check_enrollment_request)
 
 Check enrollment
 
@@ -82,13 +82,13 @@ Check enrollment
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\Card3DsPaymentApi(
+$apiInstance = new pachirapay\Api\Card3DsPaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$card3_ds_check_enrollment_request = new \CpaymentConnector\Model\Card3DsCheckEnrollmentRequest(); // \CpaymentConnector\Model\Card3DsCheckEnrollmentRequest | All data needed to make a 3DS card payment
+$card3_ds_check_enrollment_request = new \pachirapay\Model\Card3DsCheckEnrollmentRequest(); // \pachirapay\Model\Card3DsCheckEnrollmentRequest | All data needed to make a 3DS card payment
 
 try {
     $result = $apiInstance->v1PaymentsCard3dsPaymentPost($auth_token, $card3_ds_check_enrollment_request);
@@ -105,11 +105,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_token** | **string**| Gets or sets the authentication token. |
- **card3_ds_check_enrollment_request** | [**\CpaymentConnector\Model\Card3DsCheckEnrollmentRequest**](../Model/Card3DsCheckEnrollmentRequest.md)| All data needed to make a 3DS card payment | [optional]
+ **card3_ds_check_enrollment_request** | [**\pachirapay\Model\Card3DsCheckEnrollmentRequest**](../Model/Card3DsCheckEnrollmentRequest.md)| All data needed to make a 3DS card payment | [optional]
 
 ### Return type
 
-[**\CpaymentConnector\Model\Card3DsCheckEnrollmentResponse**](../Model/Card3DsCheckEnrollmentResponse.md)
+[**\pachirapay\Model\Card3DsCheckEnrollmentResponse**](../Model/Card3DsCheckEnrollmentResponse.md)
 
 ### Authorization
 
@@ -127,7 +127,7 @@ No authorization required
 
 ## v1PaymentsCard3dsPaymentPut
 
-> \CpaymentConnector\Model\CardPaymentResponse v1PaymentsCard3dsPaymentPut($auth_token, $card3_ds_validate_and_authorize_request)
+> \pachirapay\Model\CardPaymentResponse v1PaymentsCard3dsPaymentPut($auth_token, $card3_ds_validate_and_authorize_request)
 
 Validate authentication AND authorize / payment
 
@@ -140,13 +140,13 @@ The payment3DSecure is done in three steps.    <para>  **Step 1**  Using the POS
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\Card3DsPaymentApi(
+$apiInstance = new pachirapay\Api\Card3DsPaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$card3_ds_validate_and_authorize_request = new \CpaymentConnector\Model\Card3DsValidateAuthenticationAndAuthorizeRequest(); // \CpaymentConnector\Model\Card3DsValidateAuthenticationAndAuthorizeRequest | The card payment put request.
+$card3_ds_validate_and_authorize_request = new \pachirapay\Model\Card3DsValidateAuthenticationAndAuthorizeRequest(); // \pachirapay\Model\Card3DsValidateAuthenticationAndAuthorizeRequest | The card payment put request.
 
 try {
     $result = $apiInstance->v1PaymentsCard3dsPaymentPut($auth_token, $card3_ds_validate_and_authorize_request);
@@ -163,11 +163,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_token** | **string**| Gets or sets the authentication token. |
- **card3_ds_validate_and_authorize_request** | [**\CpaymentConnector\Model\Card3DsValidateAuthenticationAndAuthorizeRequest**](../Model/Card3DsValidateAuthenticationAndAuthorizeRequest.md)| The card payment put request. | [optional]
+ **card3_ds_validate_and_authorize_request** | [**\pachirapay\Model\Card3DsValidateAuthenticationAndAuthorizeRequest**](../Model/Card3DsValidateAuthenticationAndAuthorizeRequest.md)| The card payment put request. | [optional]
 
 ### Return type
 
-[**\CpaymentConnector\Model\CardPaymentResponse**](../Model/CardPaymentResponse.md)
+[**\pachirapay\Model\CardPaymentResponse**](../Model/CardPaymentResponse.md)
 
 ### Authorization
 
@@ -185,7 +185,7 @@ No authorization required
 
 ## v1PaymentsCard3dsPaymentWithAuthenticationDataPost
 
-> \CpaymentConnector\Model\CardPaymentResponse v1PaymentsCard3dsPaymentWithAuthenticationDataPost($auth_token, $card3_ds_authorize_with_auth_data_request)
+> \pachirapay\Model\CardPaymentResponse v1PaymentsCard3dsPaymentWithAuthenticationDataPost($auth_token, $card3_ds_authorize_with_auth_data_request)
 
 Authorization / payment -with- authentication data
 
@@ -198,13 +198,13 @@ To reuse the previously stored authenticationData in order to trigger a 3DS auth
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\Card3DsPaymentApi(
+$apiInstance = new pachirapay\Api\Card3DsPaymentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$card3_ds_authorize_with_auth_data_request = new \CpaymentConnector\Model\Card3DsAuthorizeWithAuthDataRequest(); // \CpaymentConnector\Model\Card3DsAuthorizeWithAuthDataRequest | The authorize with authentication data request.
+$card3_ds_authorize_with_auth_data_request = new \pachirapay\Model\Card3DsAuthorizeWithAuthDataRequest(); // \pachirapay\Model\Card3DsAuthorizeWithAuthDataRequest | The authorize with authentication data request.
 
 try {
     $result = $apiInstance->v1PaymentsCard3dsPaymentWithAuthenticationDataPost($auth_token, $card3_ds_authorize_with_auth_data_request);
@@ -221,11 +221,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_token** | **string**| Gets or sets the authentication token. |
- **card3_ds_authorize_with_auth_data_request** | [**\CpaymentConnector\Model\Card3DsAuthorizeWithAuthDataRequest**](../Model/Card3DsAuthorizeWithAuthDataRequest.md)| The authorize with authentication data request. | [optional]
+ **card3_ds_authorize_with_auth_data_request** | [**\pachirapay\Model\Card3DsAuthorizeWithAuthDataRequest**](../Model/Card3DsAuthorizeWithAuthDataRequest.md)| The authorize with authentication data request. | [optional]
 
 ### Return type
 
-[**\CpaymentConnector\Model\CardPaymentResponse**](../Model/CardPaymentResponse.md)
+[**\pachirapay\Model\CardPaymentResponse**](../Model/CardPaymentResponse.md)
 
 ### Authorization
 

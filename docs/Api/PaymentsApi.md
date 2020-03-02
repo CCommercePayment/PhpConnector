@@ -1,4 +1,4 @@
-# CpaymentConnector\PaymentsApi
+# pachirapay\PaymentsApi
 
 All URIs are relative to *http://localhost*
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## v1PaymentsAllByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet
 
-> \CpaymentConnector\Model\PaymentOperationsResponse v1PaymentsAllByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet($order_ref, $merchant_id, $merchant_site_id, $auth_token)
+> \pachirapay\Model\PaymentOperationsResponse v1PaymentsAllByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet($order_ref, $merchant_id, $merchant_site_id, $auth_token)
 
 Gets all payment schedules
 
@@ -28,7 +28,7 @@ This operation allows the merchant to retrieve some details about a payment givi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\PaymentsApi(
+$apiInstance = new pachirapay\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CpaymentConnector\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
+[**\pachirapay\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ No authorization required
 
 ## v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdByOrderTagGet
 
-> \CpaymentConnector\Model\PaymentOperationsResponse v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdByOrderTagGet($order_ref, $merchant_id, $merchant_site_id, $order_tag, $auth_token)
+> \pachirapay\Model\PaymentOperationsResponse v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdByOrderTagGet($order_ref, $merchant_id, $merchant_site_id, $order_tag, $auth_token)
 
 Gets payment schedule by tag.
 
@@ -90,7 +90,7 @@ This operation allows the merchant to retrieve some details about a payment givi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\PaymentsApi(
+$apiInstance = new pachirapay\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CpaymentConnector\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
+[**\pachirapay\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
 
 ### Authorization
 
@@ -141,7 +141,7 @@ No authorization required
 
 ## v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet
 
-> \CpaymentConnector\Model\PaymentOperationsResponse v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet($order_ref, $merchant_id, $merchant_site_id, $auth_token)
+> \pachirapay\Model\PaymentOperationsResponse v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet($order_ref, $merchant_id, $merchant_site_id, $auth_token)
 
 Gets payment schedule
 
@@ -154,7 +154,7 @@ This operation allows the merchant to retrieve some details about a payment givi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\PaymentsApi(
+$apiInstance = new pachirapay\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CpaymentConnector\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
+[**\pachirapay\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
 
 ### Authorization
 
@@ -203,7 +203,7 @@ No authorization required
 
 ## v1PaymentsByOrderRefOperationsCancelOrRefundPut
 
-> \CpaymentConnector\Model\PaymentOperationsResponse v1PaymentsByOrderRefOperationsCancelOrRefundPut($order_ref, $auth_token, $payment_operation_request)
+> \pachirapay\Model\PaymentOperationsResponse v1PaymentsByOrderRefOperationsCancelOrRefundPut($order_ref, $auth_token, $payment_operation_request)
 
 Cancel or refund
 
@@ -216,14 +216,14 @@ Cancel or refund
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\PaymentsApi(
+$apiInstance = new pachirapay\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $order_ref = 'order_ref_example'; // string | The OrderRef.
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$payment_operation_request = new \CpaymentConnector\Model\PaymentOperationsRequest(); // \CpaymentConnector\Model\PaymentOperationsRequest | The payment operation request. Materialized by the Body of the PUT request
+$payment_operation_request = new \pachirapay\Model\PaymentOperationsRequest(); // \pachirapay\Model\PaymentOperationsRequest | The payment operation request. Materialized by the Body of the PUT request
 
 try {
     $result = $apiInstance->v1PaymentsByOrderRefOperationsCancelOrRefundPut($order_ref, $auth_token, $payment_operation_request);
@@ -241,11 +241,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order_ref** | **string**| The OrderRef. |
  **auth_token** | **string**| Gets or sets the authentication token. |
- **payment_operation_request** | [**\CpaymentConnector\Model\PaymentOperationsRequest**](../Model/PaymentOperationsRequest.md)| The payment operation request. Materialized by the Body of the PUT request | [optional]
+ **payment_operation_request** | [**\pachirapay\Model\PaymentOperationsRequest**](../Model/PaymentOperationsRequest.md)| The payment operation request. Materialized by the Body of the PUT request | [optional]
 
 ### Return type
 
-[**\CpaymentConnector\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
+[**\pachirapay\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ No authorization required
 
 ## v1PaymentsByOrderRefOperationsCapturePut
 
-> \CpaymentConnector\Model\PaymentOperationsResponse v1PaymentsByOrderRefOperationsCapturePut($order_ref, $auth_token, $payment_operation_request)
+> \pachirapay\Model\PaymentOperationsResponse v1PaymentsByOrderRefOperationsCapturePut($order_ref, $auth_token, $payment_operation_request)
 
 Capture
 
@@ -276,14 +276,14 @@ This operation charges the bank account of the customer, following a valid autho
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\PaymentsApi(
+$apiInstance = new pachirapay\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $order_ref = 'order_ref_example'; // string | The OrderRef.
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$payment_operation_request = new \CpaymentConnector\Model\PaymentOperationsRequest(); // \CpaymentConnector\Model\PaymentOperationsRequest | The payment operation request. Materialized by the Body of the PUT request
+$payment_operation_request = new \pachirapay\Model\PaymentOperationsRequest(); // \pachirapay\Model\PaymentOperationsRequest | The payment operation request. Materialized by the Body of the PUT request
 
 try {
     $result = $apiInstance->v1PaymentsByOrderRefOperationsCapturePut($order_ref, $auth_token, $payment_operation_request);
@@ -301,11 +301,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order_ref** | **string**| The OrderRef. |
  **auth_token** | **string**| Gets or sets the authentication token. |
- **payment_operation_request** | [**\CpaymentConnector\Model\PaymentOperationsRequest**](../Model/PaymentOperationsRequest.md)| The payment operation request. Materialized by the Body of the PUT request | [optional]
+ **payment_operation_request** | [**\pachirapay\Model\PaymentOperationsRequest**](../Model/PaymentOperationsRequest.md)| The payment operation request. Materialized by the Body of the PUT request | [optional]
 
 ### Return type
 
-[**\CpaymentConnector\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
+[**\pachirapay\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
 
 ### Authorization
 
@@ -323,7 +323,7 @@ No authorization required
 
 ## v1PaymentsByOrderRefOperationsRecomputePut
 
-> \CpaymentConnector\Model\PaymentOperationsResponse v1PaymentsByOrderRefOperationsRecomputePut($order_ref, $auth_token, $payment_operation_request)
+> \pachirapay\Model\PaymentOperationsResponse v1PaymentsByOrderRefOperationsRecomputePut($order_ref, $auth_token, $payment_operation_request)
 
 Recompute schedule
 
@@ -336,14 +336,14 @@ This operation forces the recomputation of the payment schedule, using the defau
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\PaymentsApi(
+$apiInstance = new pachirapay\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $order_ref = 'order_ref_example'; // string | The OrderRef.
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$payment_operation_request = new \CpaymentConnector\Model\PaymentOperationsRequest(); // \CpaymentConnector\Model\PaymentOperationsRequest | The payment operation request. Materialized by the Body of the PUT request
+$payment_operation_request = new \pachirapay\Model\PaymentOperationsRequest(); // \pachirapay\Model\PaymentOperationsRequest | The payment operation request. Materialized by the Body of the PUT request
 
 try {
     $result = $apiInstance->v1PaymentsByOrderRefOperationsRecomputePut($order_ref, $auth_token, $payment_operation_request);
@@ -361,11 +361,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **order_ref** | **string**| The OrderRef. |
  **auth_token** | **string**| Gets or sets the authentication token. |
- **payment_operation_request** | [**\CpaymentConnector\Model\PaymentOperationsRequest**](../Model/PaymentOperationsRequest.md)| The payment operation request. Materialized by the Body of the PUT request | [optional]
+ **payment_operation_request** | [**\pachirapay\Model\PaymentOperationsRequest**](../Model/PaymentOperationsRequest.md)| The payment operation request. Materialized by the Body of the PUT request | [optional]
 
 ### Return type
 
-[**\CpaymentConnector\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
+[**\pachirapay\Model\PaymentOperationsResponse**](../Model/PaymentOperationsResponse.md)
 
 ### Authorization
 

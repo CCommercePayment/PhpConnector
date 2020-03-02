@@ -31,9 +31,9 @@
         "friendsofphp/php-cs-fixer": "~2.12"
     },
     "autoload": {
-        "psr-4": { "CpaymentConnector\\" : "lib/" }
+        "psr-4": { "pachirapay\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "CpaymentConnector\\" : "test/" }
+        "psr-4": { "pachirapay\\" : "test/" }
     }
 }

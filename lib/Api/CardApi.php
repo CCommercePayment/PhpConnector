@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace CpaymentConnector\Api;
+namespace pachirapay\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use CpaymentConnector\ApiException;
-use CpaymentConnector\Configuration;
-use CpaymentConnector\HeaderSelector;
-use CpaymentConnector\ObjectSerializer;
+use pachirapay\ApiException;
+use pachirapay\Configuration;
+use pachirapay\HeaderSelector;
+use pachirapay\ObjectSerializer;
 
 /**
  * CardApi Class Doc Comment
  *
  * @category Class
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -121,11 +121,11 @@ class CardApi
      * Credit a card.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\CardPaymentCreditHolderRequest $request request (optional)
+     * @param  \pachirapay\Model\CardPaymentCreditHolderRequest $request request (optional)
      *
-     * @throws \CpaymentConnector\ApiException on non-2xx response
+     * @throws \pachirapay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CpaymentConnector\Model\CardPaymentCreditHolderResponse
+     * @return \pachirapay\Model\CardPaymentCreditHolderResponse
      */
     public function v1CardCreditHolderPost($auth_token, $request = null)
     {
@@ -139,11 +139,11 @@ class CardApi
      * Credit a card.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\CardPaymentCreditHolderRequest $request (optional)
+     * @param  \pachirapay\Model\CardPaymentCreditHolderRequest $request (optional)
      *
-     * @throws \CpaymentConnector\ApiException on non-2xx response
+     * @throws \pachirapay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CpaymentConnector\Model\CardPaymentCreditHolderResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \pachirapay\Model\CardPaymentCreditHolderResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1CardCreditHolderPostWithHttpInfo($auth_token, $request = null)
     {
@@ -180,20 +180,20 @@ class CardApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\CpaymentConnector\Model\CardPaymentCreditHolderResponse' === '\SplFileObject') {
+                    if ('\pachirapay\Model\CardPaymentCreditHolderResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CpaymentConnector\Model\CardPaymentCreditHolderResponse', []),
+                        ObjectSerializer::deserialize($content, '\pachirapay\Model\CardPaymentCreditHolderResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\CpaymentConnector\Model\CardPaymentCreditHolderResponse';
+            $returnType = '\pachirapay\Model\CardPaymentCreditHolderResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -212,7 +212,7 @@ class CardApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CpaymentConnector\Model\CardPaymentCreditHolderResponse',
+                        '\pachirapay\Model\CardPaymentCreditHolderResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -228,7 +228,7 @@ class CardApi
      * Credit a card.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\CardPaymentCreditHolderRequest $request (optional)
+     * @param  \pachirapay\Model\CardPaymentCreditHolderRequest $request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -249,14 +249,14 @@ class CardApi
      * Credit a card.
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\CardPaymentCreditHolderRequest $request (optional)
+     * @param  \pachirapay\Model\CardPaymentCreditHolderRequest $request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function v1CardCreditHolderPostAsyncWithHttpInfo($auth_token, $request = null)
     {
-        $returnType = '\CpaymentConnector\Model\CardPaymentCreditHolderResponse';
+        $returnType = '\pachirapay\Model\CardPaymentCreditHolderResponse';
         $request = $this->v1CardCreditHolderPostRequest($auth_token, $request);
 
         return $this->client
@@ -297,7 +297,7 @@ class CardApi
      * Create request for operation 'v1CardCreditHolderPost'
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\CardPaymentCreditHolderRequest $request (optional)
+     * @param  \pachirapay\Model\CardPaymentCreditHolderRequest $request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

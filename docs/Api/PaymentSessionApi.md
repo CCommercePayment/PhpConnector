@@ -1,4 +1,4 @@
-# CpaymentConnector\PaymentSessionApi
+# pachirapay\PaymentSessionApi
 
 All URIs are relative to *http://localhost*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## v1PaymentSessionsByPaymentSessionIdPaymentResultGet
 
-> \CpaymentConnector\Model\GetPaymentSessionResult v1PaymentSessionsByPaymentSessionIdPaymentResultGet($payment_session_id, $auth_token)
+> \pachirapay\Model\GetPaymentSessionResult v1PaymentSessionsByPaymentSessionIdPaymentResultGet($payment_session_id, $auth_token)
 
 Gets the payment result from its session id.
 
@@ -22,7 +22,7 @@ Gets the payment result from its session id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\PaymentSessionApi(
+$apiInstance = new pachirapay\Api\PaymentSessionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CpaymentConnector\Model\GetPaymentSessionResult**](../Model/GetPaymentSessionResult.md)
+[**\pachirapay\Model\GetPaymentSessionResult**](../Model/GetPaymentSessionResult.md)
 
 ### Authorization
 
@@ -67,11 +67,11 @@ No authorization required
 
 ## v1PaymentSessionsPost
 
-> \CpaymentConnector\Model\PaymentSessionResponse v1PaymentSessionsPost($auth_token, $payment_session_request)
+> \pachirapay\Model\PaymentSessionResponse v1PaymentSessionsPost($auth_token, $payment_session_request)
 
 Creates a payment session.
 
-Initializes a hosted form payment session with all the necessary data (order informations, customer informations, payment method...).  This API route can be used for classic hosted form. In that case, this operation is a alternative to the \"client redirection POST\" method (with HMAC).  It's also the standard way for initializing a payment session for \"iframe integration\".            You will get an URL pointing to a paymentform, so the customer will be able to complete the payment form with his card details.  You will also get a PaymentSessionId. It will be useful for calling the GetPaymentResult API when the payment will complete.
+Initializes a hosted form payment session with all the necessary data (order information, customer information, payment method...).  This API route can be used for classic hosted form. In that case, this operation is an alternative to the \"client redirection POST\" method (with HMAC).  It's also the standard way for initializing a payment session for \"iframe integration\".            You will get an URL pointing to a paymentform, so that the customer is able to complete the payment form with his card details.  You will also get a PaymentSessionId, useful for calling the GetPaymentResult API when the payment is completed.
 
 ### Example
 
@@ -80,13 +80,13 @@ Initializes a hosted form payment session with all the necessary data (order inf
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\PaymentSessionApi(
+$apiInstance = new pachirapay\Api\PaymentSessionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$payment_session_request = new \CpaymentConnector\Model\PaymentSessionRequest(); // \CpaymentConnector\Model\PaymentSessionRequest | The payment session request.
+$payment_session_request = new \pachirapay\Model\PaymentSessionRequest(); // \pachirapay\Model\PaymentSessionRequest | The payment session request.
 
 try {
     $result = $apiInstance->v1PaymentSessionsPost($auth_token, $payment_session_request);
@@ -103,11 +103,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_token** | **string**| Gets or sets the authentication token. |
- **payment_session_request** | [**\CpaymentConnector\Model\PaymentSessionRequest**](../Model/PaymentSessionRequest.md)| The payment session request. | [optional]
+ **payment_session_request** | [**\pachirapay\Model\PaymentSessionRequest**](../Model/PaymentSessionRequest.md)| The payment session request. | [optional]
 
 ### Return type
 
-[**\CpaymentConnector\Model\PaymentSessionResponse**](../Model/PaymentSessionResponse.md)
+[**\pachirapay\Model\PaymentSessionResponse**](../Model/PaymentSessionResponse.md)
 
 ### Authorization
 

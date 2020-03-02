@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace CpaymentConnector\Model;
+namespace pachirapay\Model;
 
 use \ArrayAccess;
-use \CpaymentConnector\ObjectSerializer;
+use \pachirapay\ObjectSerializer;
 
 /**
  * Customer Class Doc Comment
  *
  * @category Class
  * @description Customer
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -58,13 +58,13 @@ class Customer implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'billing_address' => '\CpaymentConnector\Model\ShippingAddress',
+        'billing_address' => '\pachirapay\Model\ShippingAddress',
         'birth_date' => '\DateTime',
         'civility' => 'string',
         'country' => 'string',
         'customer_ip' => 'string',
         'customer_ref' => 'string',
-        'delivery_address' => '\CpaymentConnector\Model\ShippingAddress',
+        'delivery_address' => '\pachirapay\Model\ShippingAddress',
         'email' => 'string',
         'first_name' => 'string',
         'last_name' => 'string',
@@ -776,6 +776,9 @@ class Customer implements ModelInterface, ArrayAccess
             );
         }
 
+        if ($this->container['customer_ref'] === null) {
+            $invalidProperties[] = "'customer_ref' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -794,7 +797,7 @@ class Customer implements ModelInterface, ArrayAccess
     /**
      * Gets billing_address
      *
-     * @return \CpaymentConnector\Model\ShippingAddress|null
+     * @return \pachirapay\Model\ShippingAddress|null
      */
     public function getBillingAddress()
     {
@@ -804,7 +807,7 @@ class Customer implements ModelInterface, ArrayAccess
     /**
      * Sets billing_address
      *
-     * @param \CpaymentConnector\Model\ShippingAddress|null $billing_address billing_address
+     * @param \pachirapay\Model\ShippingAddress|null $billing_address billing_address
      *
      * @return $this
      */
@@ -828,7 +831,7 @@ class Customer implements ModelInterface, ArrayAccess
     /**
      * Sets birth_date
      *
-     * @param \DateTime|null $birth_date Gets or sets the birth date.
+     * @param \DateTime|null $birth_date The customer birth date.
      *
      * @return $this
      */
@@ -852,7 +855,7 @@ class Customer implements ModelInterface, ArrayAccess
     /**
      * Sets civility
      *
-     * @param string|null $civility Gets or sets the civility.
+     * @param string|null $civility The customer civility.
      *
      * @return $this
      */
@@ -885,7 +888,7 @@ class Customer implements ModelInterface, ArrayAccess
     /**
      * Sets country
      *
-     * @param string|null $country Gets or sets the country field.
+     * @param string|null $country The customer country code.
      *
      * @return $this
      */
@@ -918,7 +921,7 @@ class Customer implements ModelInterface, ArrayAccess
     /**
      * Sets customer_ip
      *
-     * @param string|null $customer_ip Gets or sets the customer ip field.
+     * @param string|null $customer_ip The customer IP.   Optional, if not set it will be retrieved during the first load of the payment session into the customer browser.
      *
      * @return $this
      */
@@ -932,7 +935,7 @@ class Customer implements ModelInterface, ArrayAccess
     /**
      * Gets customer_ref
      *
-     * @return string|null
+     * @return string
      */
     public function getCustomerRef()
     {
@@ -942,7 +945,7 @@ class Customer implements ModelInterface, ArrayAccess
     /**
      * Sets customer_ref
      *
-     * @param string|null $customer_ref Gets or sets the customer reference field.
+     * @param string $customer_ref The merchant's customer reference (external identifier).  This field is mandatory, especially if you want store payment method. If so, stored payment methods will be linked to this customer reference.
      *
      * @return $this
      */
@@ -956,7 +959,7 @@ class Customer implements ModelInterface, ArrayAccess
     /**
      * Gets delivery_address
      *
-     * @return \CpaymentConnector\Model\ShippingAddress|null
+     * @return \pachirapay\Model\ShippingAddress|null
      */
     public function getDeliveryAddress()
     {
@@ -966,7 +969,7 @@ class Customer implements ModelInterface, ArrayAccess
     /**
      * Sets delivery_address
      *
-     * @param \CpaymentConnector\Model\ShippingAddress|null $delivery_address delivery_address
+     * @param \pachirapay\Model\ShippingAddress|null $delivery_address delivery_address
      *
      * @return $this
      */
@@ -990,7 +993,7 @@ class Customer implements ModelInterface, ArrayAccess
     /**
      * Sets email
      *
-     * @param string|null $email Gets or sets the email.
+     * @param string|null $email The customer email.  Useful for specifics payment methods like PayPal.
      *
      * @return $this
      */
@@ -1014,7 +1017,7 @@ class Customer implements ModelInterface, ArrayAccess
     /**
      * Sets first_name
      *
-     * @param string|null $first_name Gets or sets the first name.
+     * @param string|null $first_name The customer first name.
      *
      * @return $this
      */
@@ -1038,7 +1041,7 @@ class Customer implements ModelInterface, ArrayAccess
     /**
      * Sets last_name
      *
-     * @param string|null $last_name Gets or sets the last name.
+     * @param string|null $last_name The customer last name.
      *
      * @return $this
      */
@@ -1062,7 +1065,7 @@ class Customer implements ModelInterface, ArrayAccess
     /**
      * Sets mobile_phone
      *
-     * @param string|null $mobile_phone Gets or sets the mobile phone.
+     * @param string|null $mobile_phone The customer mobile phone number.
      *
      * @return $this
      */
@@ -1086,7 +1089,7 @@ class Customer implements ModelInterface, ArrayAccess
     /**
      * Sets phone
      *
-     * @param string|null $phone Gets or sets the phone.
+     * @param string|null $phone The customer phone number.
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace CpaymentConnector;
+namespace pachirapay;
 
 use PHPUnit\Framework\TestCase;
 
@@ -36,7 +36,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description The Card3DS Payment Request
- * @package     CpaymentConnector
+ * @package     pachirapay
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

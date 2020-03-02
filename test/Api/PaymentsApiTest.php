@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,18 +26,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace OpenAPI\Client;
+namespace pachirapay;
 
-use \OpenAPI\Client\Configuration;
-use \OpenAPI\Client\ApiException;
-use \OpenAPI\Client\ObjectSerializer;
+use \pachirapay\Configuration;
+use \pachirapay\ApiException;
+use \pachirapay\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * PaymentsApiTest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -75,7 +75,7 @@ class PaymentsApiTest extends TestCase
     /**
      * Test case for v1PaymentsAllByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet
      *
-     * Gets ALL the details for a specified OrderRef..
+     * Gets all payment schedules.
      *
      */
     public function testV1PaymentsAllByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet()
@@ -85,7 +85,7 @@ class PaymentsApiTest extends TestCase
     /**
      * Test case for v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdByOrderTagGet
      *
-     * Gets the details for a specified couple of OrderRef/OrderTag..
+     * Gets payment schedule by tag..
      *
      */
     public function testV1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdByOrderTagGet()
@@ -95,7 +95,7 @@ class PaymentsApiTest extends TestCase
     /**
      * Test case for v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet
      *
-     * Gets the details for a specified OrderRef..
+     * Gets payment schedule.
      *
      */
     public function testV1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet()
@@ -105,7 +105,7 @@ class PaymentsApiTest extends TestCase
     /**
      * Test case for v1PaymentsByOrderRefOperationsCancelOrRefundPut
      *
-     * Executes a cancel or refund operation on the specified OrderRef..
+     * Cancel or refund.
      *
      */
     public function testV1PaymentsByOrderRefOperationsCancelOrRefundPut()
@@ -115,7 +115,7 @@ class PaymentsApiTest extends TestCase
     /**
      * Test case for v1PaymentsByOrderRefOperationsCapturePut
      *
-     * Executes a capture operation on the specified OrderRef..
+     * Capture.
      *
      */
     public function testV1PaymentsByOrderRefOperationsCapturePut()
@@ -125,7 +125,7 @@ class PaymentsApiTest extends TestCase
     /**
      * Test case for v1PaymentsByOrderRefOperationsRecomputePut
      *
-     * Executes a recompute operation on the specified OrderRef..
+     * Recompute schedule.
      *
      */
     public function testV1PaymentsByOrderRefOperationsRecomputePut()

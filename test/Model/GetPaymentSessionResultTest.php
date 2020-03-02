@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace OpenAPI\Client;
+namespace pachirapay;
 
 use PHPUnit\Framework\TestCase;
 
@@ -36,7 +36,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description All payment operation data for the response
- * @package     OpenAPI\Client
+ * @package     pachirapay
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -124,6 +124,27 @@ class GetPaymentSessionResultTest extends TestCase
      * Test attribute "stored_payment_method_label"
      */
     public function testPropertyStoredPaymentMethodLabel()
+    {
+    }
+
+    /**
+     * Test attribute "authentication_status"
+     */
+    public function testPropertyAuthenticationStatus()
+    {
+    }
+
+    /**
+     * Test attribute "liability_shift_status"
+     */
+    public function testPropertyLiabilityShiftStatus()
+    {
+    }
+
+    /**
+     * Test attribute "authentication_data"
+     */
+    public function testPropertyAuthenticationData()
     {
     }
 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace OpenAPI\Client;
+namespace pachirapay;
 
 use PHPUnit\Framework\TestCase;
 
@@ -36,7 +36,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description StoredPaymentMethod
- * @package     OpenAPI\Client
+ * @package     pachirapay
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
@@ -138,6 +138,13 @@ class StoredPaymentMethodTest extends TestCase
      * Test attribute "truncated_payment_method_number"
      */
     public function testPropertyTruncatedPaymentMethodNumber()
+    {
+    }
+
+    /**
+     * Test attribute "label"
+     */
+    public function testPropertyLabel()
     {
     }
 }

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace CpaymentConnector\Model;
+namespace pachirapay\Model;
 
 use \ArrayAccess;
-use \CpaymentConnector\ObjectSerializer;
+use \pachirapay\ObjectSerializer;
 
 /**
  * CardPaymentResponse Class Doc Comment
  *
  * @category Class
  * @description The card payment response
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -61,8 +61,8 @@ class CardPaymentResponse implements ModelInterface, ArrayAccess
         'merchant_account_ref' => 'string',
         'response_code' => 'string',
         'complementary_response_code' => 'string',
-        'schedules' => '\CpaymentConnector\Model\ScheduleLight[]',
-        'stored_card' => '\CpaymentConnector\Model\StoredCard',
+        'schedules' => '\pachirapay\Model\ScheduleLight[]',
+        'stored_card' => '\pachirapay\Model\StoredCard',
         'response_message' => 'string'
     ];
 
@@ -462,7 +462,7 @@ class CardPaymentResponse implements ModelInterface, ArrayAccess
     /**
      * Gets schedules
      *
-     * @return \CpaymentConnector\Model\ScheduleLight[]|null
+     * @return \pachirapay\Model\ScheduleLight[]|null
      */
     public function getSchedules()
     {
@@ -472,7 +472,7 @@ class CardPaymentResponse implements ModelInterface, ArrayAccess
     /**
      * Sets schedules
      *
-     * @param \CpaymentConnector\Model\ScheduleLight[]|null $schedules All schedules data
+     * @param \pachirapay\Model\ScheduleLight[]|null $schedules All schedules data
      *
      * @return $this
      */
@@ -486,7 +486,7 @@ class CardPaymentResponse implements ModelInterface, ArrayAccess
     /**
      * Gets stored_card
      *
-     * @return \CpaymentConnector\Model\StoredCard|null
+     * @return \pachirapay\Model\StoredCard|null
      */
     public function getStoredCard()
     {
@@ -496,7 +496,7 @@ class CardPaymentResponse implements ModelInterface, ArrayAccess
     /**
      * Sets stored_card
      *
-     * @param \CpaymentConnector\Model\StoredCard|null $stored_card stored_card
+     * @param \pachirapay\Model\StoredCard|null $stored_card stored_card
      *
      * @return $this
      */

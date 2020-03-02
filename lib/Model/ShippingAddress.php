@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace CpaymentConnector\Model;
+namespace pachirapay\Model;
 
 use \ArrayAccess;
-use \CpaymentConnector\ObjectSerializer;
+use \pachirapay\ObjectSerializer;
 
 /**
  * ShippingAddress Class Doc Comment
  *
  * @category Class
  * @description 
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -220,6 +220,18 @@ class ShippingAddress implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['city'] === null) {
+            $invalidProperties[] = "'city' can't be null";
+        }
+        if ($this->container['line1'] === null) {
+            $invalidProperties[] = "'line1' can't be null";
+        }
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['zip_code'] === null) {
+            $invalidProperties[] = "'zip_code' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -238,7 +250,7 @@ class ShippingAddress implements ModelInterface, ArrayAccess
     /**
      * Gets city
      *
-     * @return string|null
+     * @return string
      */
     public function getCity()
     {
@@ -248,7 +260,7 @@ class ShippingAddress implements ModelInterface, ArrayAccess
     /**
      * Sets city
      *
-     * @param string|null $city Gets or sets the city field.
+     * @param string $city The city.
      *
      * @return $this
      */
@@ -262,7 +274,7 @@ class ShippingAddress implements ModelInterface, ArrayAccess
     /**
      * Gets line1
      *
-     * @return string|null
+     * @return string
      */
     public function getLine1()
     {
@@ -272,7 +284,7 @@ class ShippingAddress implements ModelInterface, ArrayAccess
     /**
      * Sets line1
      *
-     * @param string|null $line1 Gets or sets the line1 field.
+     * @param string $line1 The address line 1.
      *
      * @return $this
      */
@@ -296,7 +308,7 @@ class ShippingAddress implements ModelInterface, ArrayAccess
     /**
      * Sets line2
      *
-     * @param string|null $line2 Gets or sets the line2 field.
+     * @param string|null $line2 The address line 2.
      *
      * @return $this
      */
@@ -310,7 +322,7 @@ class ShippingAddress implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return string|null
+     * @return string
      */
     public function getName()
     {
@@ -320,7 +332,7 @@ class ShippingAddress implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param string|null $name Gets or sets the name field.
+     * @param string $name The address name.
      *
      * @return $this
      */
@@ -344,7 +356,7 @@ class ShippingAddress implements ModelInterface, ArrayAccess
     /**
      * Sets place_called
      *
-     * @param string|null $place_called Gets or sets the place called field.
+     * @param string|null $place_called The place called.
      *
      * @return $this
      */
@@ -358,7 +370,7 @@ class ShippingAddress implements ModelInterface, ArrayAccess
     /**
      * Gets zip_code
      *
-     * @return string|null
+     * @return string
      */
     public function getZipCode()
     {
@@ -368,7 +380,7 @@ class ShippingAddress implements ModelInterface, ArrayAccess
     /**
      * Sets zip_code
      *
-     * @param string|null $zip_code Gets or sets the zip code field.
+     * @param string $zip_code The zip code.
      *
      * @return $this
      */

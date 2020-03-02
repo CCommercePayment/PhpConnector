@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace CpaymentConnector\Model;
+namespace pachirapay\Model;
 
 use \ArrayAccess;
-use \CpaymentConnector\ObjectSerializer;
+use \pachirapay\ObjectSerializer;
 
 /**
  * Card3DsCheckEnrollmentRequest Class Doc Comment
  *
  * @category Class
  * @description The Card3DS Payment Request
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -59,12 +59,12 @@ class Card3DsCheckEnrollmentRequest implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'return_url' => 'string',
-        'context' => '\CpaymentConnector\Model\CardPaymentContextData',
-        'options' => '\CpaymentConnector\Model\Options',
-        'order' => '\CpaymentConnector\Model\Order',
-        'card' => '\CpaymentConnector\Model\CardData',
-        'stored_card' => '\CpaymentConnector\Model\StoredCard',
-        'validation_mode' => '\CpaymentConnector\Model\ValidationModeOverride',
+        'context' => '\pachirapay\Model\CardPaymentContextData',
+        'options' => '\pachirapay\Model\Options',
+        'order' => '\pachirapay\Model\Order',
+        'card' => '\pachirapay\Model\CardData',
+        'stored_card' => '\pachirapay\Model\StoredCard',
+        'validation_mode' => '\pachirapay\Model\ValidationModeOverride',
         'notification_url' => 'string'
     ];
 
@@ -283,7 +283,7 @@ class Card3DsCheckEnrollmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets context
      *
-     * @return \CpaymentConnector\Model\CardPaymentContextData
+     * @return \pachirapay\Model\CardPaymentContextData
      */
     public function getContext()
     {
@@ -293,7 +293,7 @@ class Card3DsCheckEnrollmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets context
      *
-     * @param \CpaymentConnector\Model\CardPaymentContextData $context context
+     * @param \pachirapay\Model\CardPaymentContextData $context context
      *
      * @return $this
      */
@@ -307,7 +307,7 @@ class Card3DsCheckEnrollmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets options
      *
-     * @return \CpaymentConnector\Model\Options|null
+     * @return \pachirapay\Model\Options|null
      */
     public function getOptions()
     {
@@ -317,7 +317,7 @@ class Card3DsCheckEnrollmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \CpaymentConnector\Model\Options|null $options options
+     * @param \pachirapay\Model\Options|null $options options
      *
      * @return $this
      */
@@ -331,7 +331,7 @@ class Card3DsCheckEnrollmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets order
      *
-     * @return \CpaymentConnector\Model\Order
+     * @return \pachirapay\Model\Order
      */
     public function getOrder()
     {
@@ -341,7 +341,7 @@ class Card3DsCheckEnrollmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets order
      *
-     * @param \CpaymentConnector\Model\Order $order order
+     * @param \pachirapay\Model\Order $order order
      *
      * @return $this
      */
@@ -355,7 +355,7 @@ class Card3DsCheckEnrollmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets card
      *
-     * @return \CpaymentConnector\Model\CardData|null
+     * @return \pachirapay\Model\CardData|null
      */
     public function getCard()
     {
@@ -365,7 +365,7 @@ class Card3DsCheckEnrollmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets card
      *
-     * @param \CpaymentConnector\Model\CardData|null $card card
+     * @param \pachirapay\Model\CardData|null $card card
      *
      * @return $this
      */
@@ -379,7 +379,7 @@ class Card3DsCheckEnrollmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets stored_card
      *
-     * @return \CpaymentConnector\Model\StoredCard|null
+     * @return \pachirapay\Model\StoredCard|null
      */
     public function getStoredCard()
     {
@@ -389,7 +389,7 @@ class Card3DsCheckEnrollmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets stored_card
      *
-     * @param \CpaymentConnector\Model\StoredCard|null $stored_card stored_card
+     * @param \pachirapay\Model\StoredCard|null $stored_card stored_card
      *
      * @return $this
      */
@@ -403,7 +403,7 @@ class Card3DsCheckEnrollmentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets validation_mode
      *
-     * @return \CpaymentConnector\Model\ValidationModeOverride|null
+     * @return \pachirapay\Model\ValidationModeOverride|null
      */
     public function getValidationMode()
     {
@@ -413,7 +413,7 @@ class Card3DsCheckEnrollmentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets validation_mode
      *
-     * @param \CpaymentConnector\Model\ValidationModeOverride|null $validation_mode validation_mode
+     * @param \pachirapay\Model\ValidationModeOverride|null $validation_mode validation_mode
      *
      * @return $this
      */

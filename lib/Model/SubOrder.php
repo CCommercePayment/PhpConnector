@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace CpaymentConnector\Model;
+namespace pachirapay\Model;
 
 use \ArrayAccess;
-use \CpaymentConnector\ObjectSerializer;
+use \pachirapay\ObjectSerializer;
 
 /**
  * SubOrder Class Doc Comment
  *
  * @category Class
  * @description SubOrder
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -214,6 +214,12 @@ class SubOrder implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['amount'] === null) {
+            $invalidProperties[] = "'amount' can't be null";
+        }
+        if ($this->container['order_ref'] === null) {
+            $invalidProperties[] = "'order_ref' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -232,7 +238,7 @@ class SubOrder implements ModelInterface, ArrayAccess
     /**
      * Gets amount
      *
-     * @return int|null
+     * @return int
      */
     public function getAmount()
     {
@@ -242,7 +248,7 @@ class SubOrder implements ModelInterface, ArrayAccess
     /**
      * Sets amount
      *
-     * @param int|null $amount Gets or sets the amount field.
+     * @param int $amount The order's amount to pay.
      *
      * @return $this
      */
@@ -266,7 +272,7 @@ class SubOrder implements ModelInterface, ArrayAccess
     /**
      * Sets invoice_id
      *
-     * @param string|null $invoice_id Gets or sets the invoice identifier field.
+     * @param string|null $invoice_id The invoice identifier.
      *
      * @return $this
      */
@@ -290,7 +296,7 @@ class SubOrder implements ModelInterface, ArrayAccess
     /**
      * Sets order_amount_without_tax
      *
-     * @param int|null $order_amount_without_tax Gets or sets the order amount without tax field.
+     * @param int|null $order_amount_without_tax The order amount without VAT.
      *
      * @return $this
      */
@@ -304,7 +310,7 @@ class SubOrder implements ModelInterface, ArrayAccess
     /**
      * Gets order_ref
      *
-     * @return string|null
+     * @return string
      */
     public function getOrderRef()
     {
@@ -314,7 +320,7 @@ class SubOrder implements ModelInterface, ArrayAccess
     /**
      * Sets order_ref
      *
-     * @param string|null $order_ref Gets or sets the order reference field.
+     * @param string $order_ref The order reference.
      *
      * @return $this
      */
@@ -338,7 +344,7 @@ class SubOrder implements ModelInterface, ArrayAccess
     /**
      * Sets tax_amount
      *
-     * @param int|null $tax_amount Gets or sets the tax amount field.
+     * @param int|null $tax_amount The tax amount.  Optional, useful in case payment without VAT (PRO...)
      *
      * @return $this
      */

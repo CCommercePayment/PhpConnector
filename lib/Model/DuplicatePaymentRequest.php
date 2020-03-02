@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace CpaymentConnector\Model;
+namespace pachirapay\Model;
 
 use \ArrayAccess;
-use \CpaymentConnector\ObjectSerializer;
+use \pachirapay\ObjectSerializer;
 
 /**
  * DuplicatePaymentRequest Class Doc Comment
  *
  * @category Class
  * @description The AuthorByCopy Payment Request
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -58,11 +58,11 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'context' => '\CpaymentConnector\Model\CardPaymentContextData',
-        'options' => '\CpaymentConnector\Model\Options',
-        'order' => '\CpaymentConnector\Model\Order',
-        'copy_reference' => '\CpaymentConnector\Model\CopyReference',
-        'validation_mode' => '\CpaymentConnector\Model\ValidationModeOverride',
+        'context' => '\pachirapay\Model\CardPaymentContextData',
+        'options' => '\pachirapay\Model\Options',
+        'order' => '\pachirapay\Model\Order',
+        'copy_reference' => '\pachirapay\Model\CopyReference',
+        'validation_mode' => '\pachirapay\Model\ValidationModeOverride',
         'notification_url' => 'string'
     ];
 
@@ -247,7 +247,7 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets context
      *
-     * @return \CpaymentConnector\Model\CardPaymentContextData
+     * @return \pachirapay\Model\CardPaymentContextData
      */
     public function getContext()
     {
@@ -257,7 +257,7 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets context
      *
-     * @param \CpaymentConnector\Model\CardPaymentContextData $context context
+     * @param \pachirapay\Model\CardPaymentContextData $context context
      *
      * @return $this
      */
@@ -271,7 +271,7 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets options
      *
-     * @return \CpaymentConnector\Model\Options|null
+     * @return \pachirapay\Model\Options|null
      */
     public function getOptions()
     {
@@ -281,7 +281,7 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \CpaymentConnector\Model\Options|null $options options
+     * @param \pachirapay\Model\Options|null $options options
      *
      * @return $this
      */
@@ -295,7 +295,7 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets order
      *
-     * @return \CpaymentConnector\Model\Order
+     * @return \pachirapay\Model\Order
      */
     public function getOrder()
     {
@@ -305,7 +305,7 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets order
      *
-     * @param \CpaymentConnector\Model\Order $order order
+     * @param \pachirapay\Model\Order $order order
      *
      * @return $this
      */
@@ -319,7 +319,7 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets copy_reference
      *
-     * @return \CpaymentConnector\Model\CopyReference
+     * @return \pachirapay\Model\CopyReference
      */
     public function getCopyReference()
     {
@@ -329,7 +329,7 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets copy_reference
      *
-     * @param \CpaymentConnector\Model\CopyReference $copy_reference copy_reference
+     * @param \pachirapay\Model\CopyReference $copy_reference copy_reference
      *
      * @return $this
      */
@@ -343,7 +343,7 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Gets validation_mode
      *
-     * @return \CpaymentConnector\Model\ValidationModeOverride|null
+     * @return \pachirapay\Model\ValidationModeOverride|null
      */
     public function getValidationMode()
     {
@@ -353,7 +353,7 @@ class DuplicatePaymentRequest implements ModelInterface, ArrayAccess
     /**
      * Sets validation_mode
      *
-     * @param \CpaymentConnector\Model\ValidationModeOverride|null $validation_mode validation_mode
+     * @param \pachirapay\Model\ValidationModeOverride|null $validation_mode validation_mode
      *
      * @return $this
      */

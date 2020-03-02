@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace CpaymentConnector\Model;
+namespace pachirapay\Model;
 
 use \ArrayAccess;
-use \CpaymentConnector\ObjectSerializer;
+use \pachirapay\ObjectSerializer;
 
 /**
  * StoredCard Class Doc Comment
  *
  * @category Class
  * @description All StoredCard data
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -227,7 +227,7 @@ class StoredCard implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param string $id The stored card identifier
+     * @param string $id The stored payment method identifier
      *
      * @return $this
      */
@@ -251,7 +251,7 @@ class StoredCard implements ModelInterface, ArrayAccess
     /**
      * Sets label
      *
-     * @param string|null $label The label for the stored card (display only)
+     * @param string|null $label The label for the stored payment method (display only)
      *
      * @return $this
      */

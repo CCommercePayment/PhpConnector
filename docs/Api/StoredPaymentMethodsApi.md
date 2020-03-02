@@ -1,4 +1,4 @@
-# CpaymentConnector\StoredPaymentMethodsApi
+# pachirapay\StoredPaymentMethodsApi
 
 All URIs are relative to *http://localhost*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGet
 
-> \CpaymentConnector\Model\StoredPaymentMethodResponse v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGet($merchant_id, $merchant_site_id, $customer_ref, $auth_token)
+> \pachirapay\Model\StoredPaymentMethodResponse v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGet($merchant_id, $merchant_site_id, $customer_ref, $auth_token)
 
 Gets stored payment methods by CustomerRef
 
@@ -26,7 +26,7 @@ Gets the stored payment methods by customer reference.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\StoredPaymentMethodsApi(
+$apiInstance = new pachirapay\Api\StoredPaymentMethodsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CpaymentConnector\Model\StoredPaymentMethodResponse**](../Model/StoredPaymentMethodResponse.md)
+[**\pachirapay\Model\StoredPaymentMethodResponse**](../Model/StoredPaymentMethodResponse.md)
 
 ### Authorization
 
@@ -88,7 +88,7 @@ Deletes the specified stored payment method.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\StoredPaymentMethodsApi(
+$apiInstance = new pachirapay\Api\StoredPaymentMethodsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -137,7 +137,7 @@ No authorization required
 
 ## v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGet
 
-> \CpaymentConnector\Model\StoredPaymentMethodResponse v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGet($merchant_id, $merchant_site_id, $stored_payment_method_id, $auth_token)
+> \pachirapay\Model\StoredPaymentMethodResponse v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGet($merchant_id, $merchant_site_id, $stored_payment_method_id, $auth_token)
 
 Gets a stored payment method
 
@@ -150,7 +150,7 @@ Gets the stored payment method by its unique identifier.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\StoredPaymentMethodsApi(
+$apiInstance = new pachirapay\Api\StoredPaymentMethodsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\CpaymentConnector\Model\StoredPaymentMethodResponse**](../Model/StoredPaymentMethodResponse.md)
+[**\pachirapay\Model\StoredPaymentMethodResponse**](../Model/StoredPaymentMethodResponse.md)
 
 ### Authorization
 
@@ -210,13 +210,13 @@ Stores a new payment method.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-$apiInstance = new CpaymentConnector\Api\StoredPaymentMethodsApi(
+$apiInstance = new pachirapay\Api\StoredPaymentMethodsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $auth_token = 'auth_token_example'; // string | Gets or sets the authentication token.
-$stored_payment_method_request = new \CpaymentConnector\Model\StoredPaymentMethodRequest(); // \CpaymentConnector\Model\StoredPaymentMethodRequest | The payment method to store.
+$stored_payment_method_request = new \pachirapay\Model\StoredPaymentMethodRequest(); // \pachirapay\Model\StoredPaymentMethodRequest | The payment method to store.
 
 try {
     $result = $apiInstance->v1StoredPaymentMethodsPost($auth_token, $stored_payment_method_request);
@@ -233,7 +233,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_token** | **string**| Gets or sets the authentication token. |
- **stored_payment_method_request** | [**\CpaymentConnector\Model\StoredPaymentMethodRequest**](../Model/StoredPaymentMethodRequest.md)| The payment method to store. | [optional]
+ **stored_payment_method_request** | [**\pachirapay\Model\StoredPaymentMethodRequest**](../Model/StoredPaymentMethodRequest.md)| The payment method to store. | [optional]
 
 ### Return type
 

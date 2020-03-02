@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,18 +26,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace OpenAPI\Client;
+namespace pachirapay;
 
-use \OpenAPI\Client\Configuration;
-use \OpenAPI\Client\ApiException;
-use \OpenAPI\Client\ObjectSerializer;
+use \pachirapay\Configuration;
+use \pachirapay\ApiException;
+use \pachirapay\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * StoredPaymentMethodsApiTest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -75,7 +75,7 @@ class StoredPaymentMethodsApiTest extends TestCase
     /**
      * Test case for v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGet
      *
-     * Gets the stored payment methods by customer reference..
+     * Gets stored payment methods by CustomerRef.
      *
      */
     public function testV1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdCustomerRefByCustomerRefGet()
@@ -85,7 +85,7 @@ class StoredPaymentMethodsApiTest extends TestCase
     /**
      * Test case for v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdDelete
      *
-     * Deletes the specified stored payment method..
+     * Deletes a stored payment method.
      *
      */
     public function testV1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdDelete()
@@ -95,7 +95,7 @@ class StoredPaymentMethodsApiTest extends TestCase
     /**
      * Test case for v1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGet
      *
-     * Gets the stored payment method by identifier..
+     * Gets a stored payment method.
      *
      */
     public function testV1StoredPaymentMethodsMerchantsByMerchantIdSitesByMerchantSiteIdStoredPaymentMethodIdByStoredPaymentMethodIdGet()
@@ -105,7 +105,7 @@ class StoredPaymentMethodsApiTest extends TestCase
     /**
      * Test case for v1StoredPaymentMethodsPost
      *
-     * Creates the specified stored payment method..
+     * Stores a new payment method..
      *
      */
     public function testV1StoredPaymentMethodsPost()

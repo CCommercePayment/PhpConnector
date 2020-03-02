@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace CpaymentConnector\Api;
+namespace pachirapay\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use CpaymentConnector\ApiException;
-use CpaymentConnector\Configuration;
-use CpaymentConnector\HeaderSelector;
-use CpaymentConnector\ObjectSerializer;
+use pachirapay\ApiException;
+use pachirapay\Configuration;
+use pachirapay\HeaderSelector;
+use pachirapay\ObjectSerializer;
 
 /**
  * PaymentsApi Class Doc Comment
  *
  * @category Class
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -125,9 +125,9 @@ class PaymentsApi
      * @param  string $merchant_site_id The merchant site identifier. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
      *
-     * @throws \CpaymentConnector\ApiException on non-2xx response
+     * @throws \pachirapay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CpaymentConnector\Model\PaymentOperationsResponse
+     * @return \pachirapay\Model\PaymentOperationsResponse
      */
     public function v1PaymentsAllByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet($order_ref, $merchant_id, $merchant_site_id, $auth_token)
     {
@@ -145,9 +145,9 @@ class PaymentsApi
      * @param  string $merchant_site_id The merchant site identifier. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
      *
-     * @throws \CpaymentConnector\ApiException on non-2xx response
+     * @throws \pachirapay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CpaymentConnector\Model\PaymentOperationsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \pachirapay\Model\PaymentOperationsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1PaymentsAllByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGetWithHttpInfo($order_ref, $merchant_id, $merchant_site_id, $auth_token)
     {
@@ -184,20 +184,20 @@ class PaymentsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\CpaymentConnector\Model\PaymentOperationsResponse' === '\SplFileObject') {
+                    if ('\pachirapay\Model\PaymentOperationsResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CpaymentConnector\Model\PaymentOperationsResponse', []),
+                        ObjectSerializer::deserialize($content, '\pachirapay\Model\PaymentOperationsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\CpaymentConnector\Model\PaymentOperationsResponse';
+            $returnType = '\pachirapay\Model\PaymentOperationsResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -216,7 +216,7 @@ class PaymentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CpaymentConnector\Model\PaymentOperationsResponse',
+                        '\pachirapay\Model\PaymentOperationsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -264,7 +264,7 @@ class PaymentsApi
      */
     public function v1PaymentsAllByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGetAsyncWithHttpInfo($order_ref, $merchant_id, $merchant_site_id, $auth_token)
     {
-        $returnType = '\CpaymentConnector\Model\PaymentOperationsResponse';
+        $returnType = '\pachirapay\Model\PaymentOperationsResponse';
         $request = $this->v1PaymentsAllByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGetRequest($order_ref, $merchant_id, $merchant_site_id, $auth_token);
 
         return $this->client
@@ -451,9 +451,9 @@ class PaymentsApi
      * @param  string $order_tag The order Tag (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
      *
-     * @throws \CpaymentConnector\ApiException on non-2xx response
+     * @throws \pachirapay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CpaymentConnector\Model\PaymentOperationsResponse
+     * @return \pachirapay\Model\PaymentOperationsResponse
      */
     public function v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdByOrderTagGet($order_ref, $merchant_id, $merchant_site_id, $order_tag, $auth_token)
     {
@@ -472,9 +472,9 @@ class PaymentsApi
      * @param  string $order_tag The order Tag (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
      *
-     * @throws \CpaymentConnector\ApiException on non-2xx response
+     * @throws \pachirapay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CpaymentConnector\Model\PaymentOperationsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \pachirapay\Model\PaymentOperationsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdByOrderTagGetWithHttpInfo($order_ref, $merchant_id, $merchant_site_id, $order_tag, $auth_token)
     {
@@ -511,20 +511,20 @@ class PaymentsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\CpaymentConnector\Model\PaymentOperationsResponse' === '\SplFileObject') {
+                    if ('\pachirapay\Model\PaymentOperationsResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CpaymentConnector\Model\PaymentOperationsResponse', []),
+                        ObjectSerializer::deserialize($content, '\pachirapay\Model\PaymentOperationsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\CpaymentConnector\Model\PaymentOperationsResponse';
+            $returnType = '\pachirapay\Model\PaymentOperationsResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -543,7 +543,7 @@ class PaymentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CpaymentConnector\Model\PaymentOperationsResponse',
+                        '\pachirapay\Model\PaymentOperationsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -593,7 +593,7 @@ class PaymentsApi
      */
     public function v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdByOrderTagGetAsyncWithHttpInfo($order_ref, $merchant_id, $merchant_site_id, $order_tag, $auth_token)
     {
-        $returnType = '\CpaymentConnector\Model\PaymentOperationsResponse';
+        $returnType = '\pachirapay\Model\PaymentOperationsResponse';
         $request = $this->v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdByOrderTagGetRequest($order_ref, $merchant_id, $merchant_site_id, $order_tag, $auth_token);
 
         return $this->client
@@ -794,9 +794,9 @@ class PaymentsApi
      * @param  string $merchant_site_id The merchant site identifier. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
      *
-     * @throws \CpaymentConnector\ApiException on non-2xx response
+     * @throws \pachirapay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CpaymentConnector\Model\PaymentOperationsResponse
+     * @return \pachirapay\Model\PaymentOperationsResponse
      */
     public function v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGet($order_ref, $merchant_id, $merchant_site_id, $auth_token)
     {
@@ -814,9 +814,9 @@ class PaymentsApi
      * @param  string $merchant_site_id The merchant site identifier. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
      *
-     * @throws \CpaymentConnector\ApiException on non-2xx response
+     * @throws \pachirapay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CpaymentConnector\Model\PaymentOperationsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \pachirapay\Model\PaymentOperationsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGetWithHttpInfo($order_ref, $merchant_id, $merchant_site_id, $auth_token)
     {
@@ -853,20 +853,20 @@ class PaymentsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\CpaymentConnector\Model\PaymentOperationsResponse' === '\SplFileObject') {
+                    if ('\pachirapay\Model\PaymentOperationsResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CpaymentConnector\Model\PaymentOperationsResponse', []),
+                        ObjectSerializer::deserialize($content, '\pachirapay\Model\PaymentOperationsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\CpaymentConnector\Model\PaymentOperationsResponse';
+            $returnType = '\pachirapay\Model\PaymentOperationsResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -885,7 +885,7 @@ class PaymentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CpaymentConnector\Model\PaymentOperationsResponse',
+                        '\pachirapay\Model\PaymentOperationsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -933,7 +933,7 @@ class PaymentsApi
      */
     public function v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGetAsyncWithHttpInfo($order_ref, $merchant_id, $merchant_site_id, $auth_token)
     {
-        $returnType = '\CpaymentConnector\Model\PaymentOperationsResponse';
+        $returnType = '\pachirapay\Model\PaymentOperationsResponse';
         $request = $this->v1PaymentsByOrderRefMerchantsByMerchantIdSitesByMerchantSiteIdGetRequest($order_ref, $merchant_id, $merchant_site_id, $auth_token);
 
         return $this->client
@@ -1116,11 +1116,11 @@ class PaymentsApi
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
+     * @param  \pachirapay\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
      *
-     * @throws \CpaymentConnector\ApiException on non-2xx response
+     * @throws \pachirapay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CpaymentConnector\Model\PaymentOperationsResponse
+     * @return \pachirapay\Model\PaymentOperationsResponse
      */
     public function v1PaymentsByOrderRefOperationsCancelOrRefundPut($order_ref, $auth_token, $payment_operation_request = null)
     {
@@ -1135,11 +1135,11 @@ class PaymentsApi
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
+     * @param  \pachirapay\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
      *
-     * @throws \CpaymentConnector\ApiException on non-2xx response
+     * @throws \pachirapay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CpaymentConnector\Model\PaymentOperationsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \pachirapay\Model\PaymentOperationsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1PaymentsByOrderRefOperationsCancelOrRefundPutWithHttpInfo($order_ref, $auth_token, $payment_operation_request = null)
     {
@@ -1176,20 +1176,20 @@ class PaymentsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\CpaymentConnector\Model\PaymentOperationsResponse' === '\SplFileObject') {
+                    if ('\pachirapay\Model\PaymentOperationsResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CpaymentConnector\Model\PaymentOperationsResponse', []),
+                        ObjectSerializer::deserialize($content, '\pachirapay\Model\PaymentOperationsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\CpaymentConnector\Model\PaymentOperationsResponse';
+            $returnType = '\pachirapay\Model\PaymentOperationsResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1208,7 +1208,7 @@ class PaymentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CpaymentConnector\Model\PaymentOperationsResponse',
+                        '\pachirapay\Model\PaymentOperationsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1225,7 +1225,7 @@ class PaymentsApi
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
+     * @param  \pachirapay\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1247,14 +1247,14 @@ class PaymentsApi
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
+     * @param  \pachirapay\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function v1PaymentsByOrderRefOperationsCancelOrRefundPutAsyncWithHttpInfo($order_ref, $auth_token, $payment_operation_request = null)
     {
-        $returnType = '\CpaymentConnector\Model\PaymentOperationsResponse';
+        $returnType = '\pachirapay\Model\PaymentOperationsResponse';
         $request = $this->v1PaymentsByOrderRefOperationsCancelOrRefundPutRequest($order_ref, $auth_token, $payment_operation_request);
 
         return $this->client
@@ -1296,7 +1296,7 @@ class PaymentsApi
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
+     * @param  \pachirapay\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1411,11 +1411,11 @@ class PaymentsApi
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
+     * @param  \pachirapay\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
      *
-     * @throws \CpaymentConnector\ApiException on non-2xx response
+     * @throws \pachirapay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CpaymentConnector\Model\PaymentOperationsResponse
+     * @return \pachirapay\Model\PaymentOperationsResponse
      */
     public function v1PaymentsByOrderRefOperationsCapturePut($order_ref, $auth_token, $payment_operation_request = null)
     {
@@ -1430,11 +1430,11 @@ class PaymentsApi
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
+     * @param  \pachirapay\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
      *
-     * @throws \CpaymentConnector\ApiException on non-2xx response
+     * @throws \pachirapay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CpaymentConnector\Model\PaymentOperationsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \pachirapay\Model\PaymentOperationsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1PaymentsByOrderRefOperationsCapturePutWithHttpInfo($order_ref, $auth_token, $payment_operation_request = null)
     {
@@ -1471,20 +1471,20 @@ class PaymentsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\CpaymentConnector\Model\PaymentOperationsResponse' === '\SplFileObject') {
+                    if ('\pachirapay\Model\PaymentOperationsResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CpaymentConnector\Model\PaymentOperationsResponse', []),
+                        ObjectSerializer::deserialize($content, '\pachirapay\Model\PaymentOperationsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\CpaymentConnector\Model\PaymentOperationsResponse';
+            $returnType = '\pachirapay\Model\PaymentOperationsResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1503,7 +1503,7 @@ class PaymentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CpaymentConnector\Model\PaymentOperationsResponse',
+                        '\pachirapay\Model\PaymentOperationsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1520,7 +1520,7 @@ class PaymentsApi
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
+     * @param  \pachirapay\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1542,14 +1542,14 @@ class PaymentsApi
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
+     * @param  \pachirapay\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function v1PaymentsByOrderRefOperationsCapturePutAsyncWithHttpInfo($order_ref, $auth_token, $payment_operation_request = null)
     {
-        $returnType = '\CpaymentConnector\Model\PaymentOperationsResponse';
+        $returnType = '\pachirapay\Model\PaymentOperationsResponse';
         $request = $this->v1PaymentsByOrderRefOperationsCapturePutRequest($order_ref, $auth_token, $payment_operation_request);
 
         return $this->client
@@ -1591,7 +1591,7 @@ class PaymentsApi
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
+     * @param  \pachirapay\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1706,11 +1706,11 @@ class PaymentsApi
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
+     * @param  \pachirapay\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
      *
-     * @throws \CpaymentConnector\ApiException on non-2xx response
+     * @throws \pachirapay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CpaymentConnector\Model\PaymentOperationsResponse
+     * @return \pachirapay\Model\PaymentOperationsResponse
      */
     public function v1PaymentsByOrderRefOperationsRecomputePut($order_ref, $auth_token, $payment_operation_request = null)
     {
@@ -1725,11 +1725,11 @@ class PaymentsApi
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
+     * @param  \pachirapay\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
      *
-     * @throws \CpaymentConnector\ApiException on non-2xx response
+     * @throws \pachirapay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CpaymentConnector\Model\PaymentOperationsResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \pachirapay\Model\PaymentOperationsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1PaymentsByOrderRefOperationsRecomputePutWithHttpInfo($order_ref, $auth_token, $payment_operation_request = null)
     {
@@ -1766,20 +1766,20 @@ class PaymentsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\CpaymentConnector\Model\PaymentOperationsResponse' === '\SplFileObject') {
+                    if ('\pachirapay\Model\PaymentOperationsResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CpaymentConnector\Model\PaymentOperationsResponse', []),
+                        ObjectSerializer::deserialize($content, '\pachirapay\Model\PaymentOperationsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\CpaymentConnector\Model\PaymentOperationsResponse';
+            $returnType = '\pachirapay\Model\PaymentOperationsResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1798,7 +1798,7 @@ class PaymentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CpaymentConnector\Model\PaymentOperationsResponse',
+                        '\pachirapay\Model\PaymentOperationsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1815,7 +1815,7 @@ class PaymentsApi
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
+     * @param  \pachirapay\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1837,14 +1837,14 @@ class PaymentsApi
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
+     * @param  \pachirapay\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function v1PaymentsByOrderRefOperationsRecomputePutAsyncWithHttpInfo($order_ref, $auth_token, $payment_operation_request = null)
     {
-        $returnType = '\CpaymentConnector\Model\PaymentOperationsResponse';
+        $returnType = '\pachirapay\Model\PaymentOperationsResponse';
         $request = $this->v1PaymentsByOrderRefOperationsRecomputePutRequest($order_ref, $auth_token, $payment_operation_request);
 
         return $this->client
@@ -1886,7 +1886,7 @@ class PaymentsApi
      *
      * @param  string $order_ref The OrderRef. (required)
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
+     * @param  \pachirapay\Model\PaymentOperationsRequest $payment_operation_request The payment operation request. Materialized by the Body of the PUT request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

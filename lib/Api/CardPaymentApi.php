@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace CpaymentConnector\Api;
+namespace pachirapay\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use CpaymentConnector\ApiException;
-use CpaymentConnector\Configuration;
-use CpaymentConnector\HeaderSelector;
-use CpaymentConnector\ObjectSerializer;
+use pachirapay\ApiException;
+use pachirapay\Configuration;
+use pachirapay\HeaderSelector;
+use pachirapay\ObjectSerializer;
 
 /**
  * CardPaymentApi Class Doc Comment
  *
  * @category Class
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -121,11 +121,11 @@ class CardPaymentApi
      * Authorization / payment
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\CardPaymentRequest $card_payment_request All data needed to make card payment (optional)
+     * @param  \pachirapay\Model\CardPaymentRequest $card_payment_request All data needed to make card payment (optional)
      *
-     * @throws \CpaymentConnector\ApiException on non-2xx response
+     * @throws \pachirapay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \CpaymentConnector\Model\CardPaymentResponse
+     * @return \pachirapay\Model\CardPaymentResponse
      */
     public function v1PaymentsCardPaymentPost($auth_token, $card_payment_request = null)
     {
@@ -139,11 +139,11 @@ class CardPaymentApi
      * Authorization / payment
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\CardPaymentRequest $card_payment_request All data needed to make card payment (optional)
+     * @param  \pachirapay\Model\CardPaymentRequest $card_payment_request All data needed to make card payment (optional)
      *
-     * @throws \CpaymentConnector\ApiException on non-2xx response
+     * @throws \pachirapay\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \CpaymentConnector\Model\CardPaymentResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \pachirapay\Model\CardPaymentResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function v1PaymentsCardPaymentPostWithHttpInfo($auth_token, $card_payment_request = null)
     {
@@ -180,20 +180,20 @@ class CardPaymentApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\CpaymentConnector\Model\CardPaymentResponse' === '\SplFileObject') {
+                    if ('\pachirapay\Model\CardPaymentResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\CpaymentConnector\Model\CardPaymentResponse', []),
+                        ObjectSerializer::deserialize($content, '\pachirapay\Model\CardPaymentResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\CpaymentConnector\Model\CardPaymentResponse';
+            $returnType = '\pachirapay\Model\CardPaymentResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -212,7 +212,7 @@ class CardPaymentApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\CpaymentConnector\Model\CardPaymentResponse',
+                        '\pachirapay\Model\CardPaymentResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -228,7 +228,7 @@ class CardPaymentApi
      * Authorization / payment
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\CardPaymentRequest $card_payment_request All data needed to make card payment (optional)
+     * @param  \pachirapay\Model\CardPaymentRequest $card_payment_request All data needed to make card payment (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -249,14 +249,14 @@ class CardPaymentApi
      * Authorization / payment
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\CardPaymentRequest $card_payment_request All data needed to make card payment (optional)
+     * @param  \pachirapay\Model\CardPaymentRequest $card_payment_request All data needed to make card payment (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function v1PaymentsCardPaymentPostAsyncWithHttpInfo($auth_token, $card_payment_request = null)
     {
-        $returnType = '\CpaymentConnector\Model\CardPaymentResponse';
+        $returnType = '\pachirapay\Model\CardPaymentResponse';
         $request = $this->v1PaymentsCardPaymentPostRequest($auth_token, $card_payment_request);
 
         return $this->client
@@ -297,7 +297,7 @@ class CardPaymentApi
      * Create request for operation 'v1PaymentsCardPaymentPost'
      *
      * @param  string $auth_token Gets or sets the authentication token. (required)
-     * @param  \CpaymentConnector\Model\CardPaymentRequest $card_payment_request All data needed to make card payment (optional)
+     * @param  \pachirapay\Model\CardPaymentRequest $card_payment_request All data needed to make card payment (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

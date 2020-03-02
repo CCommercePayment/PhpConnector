@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace CpaymentConnector\Model;
+namespace pachirapay\Model;
 
 use \ArrayAccess;
-use \CpaymentConnector\ObjectSerializer;
+use \pachirapay\ObjectSerializer;
 
 /**
  * StoredPaymentMethodRequest Class Doc Comment
  *
  * @category Class
- * @package  CpaymentConnector
+ * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -57,8 +57,8 @@ class StoredPaymentMethodRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'context' => '\CpaymentConnector\Model\CardPaymentContextData',
-        'card' => '\CpaymentConnector\Model\CardData'
+        'context' => '\pachirapay\Model\CardPaymentContextData',
+        'card' => '\pachirapay\Model\CardData'
     ];
 
     /**
@@ -213,7 +213,7 @@ class StoredPaymentMethodRequest implements ModelInterface, ArrayAccess
     /**
      * Gets context
      *
-     * @return \CpaymentConnector\Model\CardPaymentContextData|null
+     * @return \pachirapay\Model\CardPaymentContextData|null
      */
     public function getContext()
     {
@@ -223,7 +223,7 @@ class StoredPaymentMethodRequest implements ModelInterface, ArrayAccess
     /**
      * Sets context
      *
-     * @param \CpaymentConnector\Model\CardPaymentContextData|null $context context
+     * @param \pachirapay\Model\CardPaymentContextData|null $context context
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class StoredPaymentMethodRequest implements ModelInterface, ArrayAccess
     /**
      * Gets card
      *
-     * @return \CpaymentConnector\Model\CardData|null
+     * @return \pachirapay\Model\CardData|null
      */
     public function getCard()
     {
@@ -247,7 +247,7 @@ class StoredPaymentMethodRequest implements ModelInterface, ArrayAccess
     /**
      * Sets card
      *
-     * @param \CpaymentConnector\Model\CardData|null $card card
+     * @param \pachirapay\Model\CardData|null $card card
      *
      * @return $this
      */
