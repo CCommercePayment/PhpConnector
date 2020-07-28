@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**redirection_url** | **string** | The redirection url (ex 3DS acs server) | [optional] 
-**params** | **map[string,string]** | All params for the redirection | [optional] 
-**redirection_type** | **string** | The redirection type (GET, POST) | [optional] 
+**redirection_url** | **string** |  | [optional] 
+**params** | **map[string,string]** |  | [optional] 
+**redirection_type** | **string** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

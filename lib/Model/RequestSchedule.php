@@ -1,6 +1,6 @@
 <?php
 /**
- * LoanOffer
+ * RequestSchedule
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \pachirapay\ObjectSerializer;
 
 /**
- * LoanOffer Class Doc Comment
+ * RequestSchedule Class Doc Comment
  *
  * @category Class
  * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class LoanOffer implements ModelInterface, ArrayAccess
+class RequestSchedule implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class LoanOffer implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'LoanOffer';
+    protected static $openAPIModelName = 'RequestSchedule';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,9 @@ class LoanOffer implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'loan_ref' => 'string',
-        'loan_terms' => '\pachirapay\Model\LoanTerm[]'
+        'amount' => 'int',
+        'date' => '\DateTime',
+        'rank' => 'int'
     ];
 
     /**
@@ -67,8 +68,9 @@ class LoanOffer implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'loan_ref' => null,
-        'loan_terms' => null
+        'amount' => 'int64',
+        'date' => 'date-time',
+        'rank' => 'int32'
     ];
 
     /**
@@ -98,8 +100,9 @@ class LoanOffer implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'loan_ref' => 'loanRef',
-        'loan_terms' => 'loanTerms'
+        'amount' => 'amount',
+        'date' => 'date',
+        'rank' => 'rank'
     ];
 
     /**
@@ -108,8 +111,9 @@ class LoanOffer implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'loan_ref' => 'setLoanRef',
-        'loan_terms' => 'setLoanTerms'
+        'amount' => 'setAmount',
+        'date' => 'setDate',
+        'rank' => 'setRank'
     ];
 
     /**
@@ -118,8 +122,9 @@ class LoanOffer implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'loan_ref' => 'getLoanRef',
-        'loan_terms' => 'getLoanTerms'
+        'amount' => 'getAmount',
+        'date' => 'getDate',
+        'rank' => 'getRank'
     ];
 
     /**
@@ -182,8 +187,9 @@ class LoanOffer implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['loan_ref'] = isset($data['loan_ref']) ? $data['loan_ref'] : null;
-        $this->container['loan_terms'] = isset($data['loan_terms']) ? $data['loan_terms'] : null;
+        $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
+        $this->container['date'] = isset($data['date']) ? $data['date'] : null;
+        $this->container['rank'] = isset($data['rank']) ? $data['rank'] : null;
     }
 
     /**
@@ -211,49 +217,73 @@ class LoanOffer implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets loan_ref
+     * Gets amount
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getLoanRef()
+    public function getAmount()
     {
-        return $this->container['loan_ref'];
+        return $this->container['amount'];
     }
 
     /**
-     * Sets loan_ref
+     * Sets amount
      *
-     * @param string|null $loan_ref loan_ref
+     * @param int|null $amount amount
      *
      * @return $this
      */
-    public function setLoanRef($loan_ref)
+    public function setAmount($amount)
     {
-        $this->container['loan_ref'] = $loan_ref;
+        $this->container['amount'] = $amount;
 
         return $this;
     }
 
     /**
-     * Gets loan_terms
+     * Gets date
      *
-     * @return \pachirapay\Model\LoanTerm[]|null
+     * @return \DateTime|null
      */
-    public function getLoanTerms()
+    public function getDate()
     {
-        return $this->container['loan_terms'];
+        return $this->container['date'];
     }
 
     /**
-     * Sets loan_terms
+     * Sets date
      *
-     * @param \pachirapay\Model\LoanTerm[]|null $loan_terms loan_terms
+     * @param \DateTime|null $date date
      *
      * @return $this
      */
-    public function setLoanTerms($loan_terms)
+    public function setDate($date)
     {
-        $this->container['loan_terms'] = $loan_terms;
+        $this->container['date'] = $date;
+
+        return $this;
+    }
+
+    /**
+     * Gets rank
+     *
+     * @return int|null
+     */
+    public function getRank()
+    {
+        return $this->container['rank'];
+    }
+
+    /**
+     * Sets rank
+     *
+     * @param int|null $rank rank
+     *
+     * @return $this
+     */
+    public function setRank($rank)
+    {
+        $this->container['rank'] = $rank;
 
         return $this;
     }

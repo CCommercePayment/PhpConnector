@@ -1,14 +1,12 @@
-# # Order
+# # RequestSchedule
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**order_ref** | **string** |  | 
-**invoice_id** | **int** |  | [optional] 
-**order_tag** | **string** |  | [optional] 
-**order_date** | [**\DateTime**](\DateTime.md) |  | 
-**amount** | **int** |  | 
+**amount** | **int** |  | [optional] 
+**date** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**rank** | **int** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

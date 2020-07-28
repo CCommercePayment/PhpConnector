@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentFeeTest
+ * PaymentSessionSubOrderResultTest
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ namespace pachirapay;
 use PHPUnit\Framework\TestCase;
 
 /**
- * PaymentFeeTest Class Doc Comment
+ * PaymentSessionSubOrderResultTest Class Doc Comment
  *
  * @category    Class
- * @description PaymentFee
+ * @description All payment operation data of the suborder
  * @package     pachirapay
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class PaymentFeeTest extends TestCase
+class PaymentSessionSubOrderResultTest extends TestCase
 {
 
     /**
@@ -72,65 +72,44 @@ class PaymentFeeTest extends TestCase
     }
 
     /**
-     * Test "PaymentFee"
+     * Test "PaymentSessionSubOrderResult"
      */
-    public function testPaymentFee()
+    public function testPaymentSessionSubOrderResult()
     {
     }
 
     /**
-     * Test attribute "min_amount"
+     * Test attribute "order_ref"
      */
-    public function testPropertyMinAmount()
+    public function testPropertyOrderRef()
     {
     }
 
     /**
-     * Test attribute "max_amount"
+     * Test attribute "payment_result_code"
      */
-    public function testPropertyMaxAmount()
+    public function testPropertyPaymentResultCode()
     {
     }
 
     /**
-     * Test attribute "rate"
+     * Test attribute "payment_result_code_message"
      */
-    public function testPropertyRate()
+    public function testPropertyPaymentResultCodeMessage()
     {
     }
 
     /**
-     * Test attribute "amount"
+     * Test attribute "payment_result_complementary_code"
      */
-    public function testPropertyAmount()
+    public function testPropertyPaymentResultComplementaryCode()
     {
     }
 
     /**
-     * Test attribute "start_date"
+     * Test attribute "payment_result_complementary_code_message"
      */
-    public function testPropertyStartDate()
-    {
-    }
-
-    /**
-     * Test attribute "end_date"
-     */
-    public function testPropertyEndDate()
-    {
-    }
-
-    /**
-     * Test attribute "report_delay_min"
-     */
-    public function testPropertyReportDelayMin()
-    {
-    }
-
-    /**
-     * Test attribute "report_delay_max"
-     */
-    public function testPropertyReportDelayMax()
+    public function testPropertyPaymentResultComplementaryCodeMessage()
     {
     }
 }

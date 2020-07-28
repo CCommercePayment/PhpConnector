@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**payment_card_ref** | **string** | The payment card reference | [optional] 
-**name** | **string** | The payment card name | [optional] 
-**payment_card_options** | [**\pachirapay\Model\PaymentCardOption[]**](PaymentCardOption.md) | All payment card options data | [optional] 
+**payment_card_ref** | **string** |  | [optional] 
+**name** | **string** |  | [optional] 
+**payment_card_options** | [**\pachirapay\Model\PaymentCardOption[]**](PaymentCardOption.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * GetPaymentSessionResult
+ * PaymentSessionSubOrderResult
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \pachirapay\ObjectSerializer;
 
 /**
- * GetPaymentSessionResult Class Doc Comment
+ * PaymentSessionSubOrderResult Class Doc Comment
  *
  * @category Class
- * @description All payment operation data for the response
+ * @description All payment operation data of the suborder
  * @package  pachirapay
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class GetPaymentSessionResult implements ModelInterface, ArrayAccess
+class PaymentSessionSubOrderResult implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'GetPaymentSessionResult';
+    protected static $openAPIModelName = 'PaymentSessionSubOrderResult';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -62,15 +62,7 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
         'payment_result_code' => 'int',
         'payment_result_code_message' => 'string',
         'payment_result_complementary_code' => 'int',
-        'payment_result_complementary_code_message' => 'string',
-        'stored_payment_method_id' => 'string',
-        'stored_payment_method_label' => 'string',
-        'authentication_status' => 'string',
-        'liability_shift_status' => 'string',
-        'authentication_data' => 'map[string,string]',
-        'sub_orders' => '\pachirapay\Model\PaymentSessionSubOrderResult[]',
-        'payment_method_type' => 'string',
-        'response_message' => 'string'
+        'payment_result_complementary_code_message' => 'string'
     ];
 
     /**
@@ -83,15 +75,7 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
         'payment_result_code' => 'int32',
         'payment_result_code_message' => null,
         'payment_result_complementary_code' => 'int32',
-        'payment_result_complementary_code_message' => null,
-        'stored_payment_method_id' => null,
-        'stored_payment_method_label' => null,
-        'authentication_status' => null,
-        'liability_shift_status' => null,
-        'authentication_data' => null,
-        'sub_orders' => null,
-        'payment_method_type' => null,
-        'response_message' => null
+        'payment_result_complementary_code_message' => null
     ];
 
     /**
@@ -125,15 +109,7 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
         'payment_result_code' => 'paymentResultCode',
         'payment_result_code_message' => 'paymentResultCodeMessage',
         'payment_result_complementary_code' => 'paymentResultComplementaryCode',
-        'payment_result_complementary_code_message' => 'paymentResultComplementaryCodeMessage',
-        'stored_payment_method_id' => 'storedPaymentMethodId',
-        'stored_payment_method_label' => 'storedPaymentMethodLabel',
-        'authentication_status' => 'authenticationStatus',
-        'liability_shift_status' => 'liabilityShiftStatus',
-        'authentication_data' => 'authenticationData',
-        'sub_orders' => 'subOrders',
-        'payment_method_type' => 'paymentMethodType',
-        'response_message' => 'responseMessage'
+        'payment_result_complementary_code_message' => 'paymentResultComplementaryCodeMessage'
     ];
 
     /**
@@ -146,15 +122,7 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
         'payment_result_code' => 'setPaymentResultCode',
         'payment_result_code_message' => 'setPaymentResultCodeMessage',
         'payment_result_complementary_code' => 'setPaymentResultComplementaryCode',
-        'payment_result_complementary_code_message' => 'setPaymentResultComplementaryCodeMessage',
-        'stored_payment_method_id' => 'setStoredPaymentMethodId',
-        'stored_payment_method_label' => 'setStoredPaymentMethodLabel',
-        'authentication_status' => 'setAuthenticationStatus',
-        'liability_shift_status' => 'setLiabilityShiftStatus',
-        'authentication_data' => 'setAuthenticationData',
-        'sub_orders' => 'setSubOrders',
-        'payment_method_type' => 'setPaymentMethodType',
-        'response_message' => 'setResponseMessage'
+        'payment_result_complementary_code_message' => 'setPaymentResultComplementaryCodeMessage'
     ];
 
     /**
@@ -167,15 +135,7 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
         'payment_result_code' => 'getPaymentResultCode',
         'payment_result_code_message' => 'getPaymentResultCodeMessage',
         'payment_result_complementary_code' => 'getPaymentResultComplementaryCode',
-        'payment_result_complementary_code_message' => 'getPaymentResultComplementaryCodeMessage',
-        'stored_payment_method_id' => 'getStoredPaymentMethodId',
-        'stored_payment_method_label' => 'getStoredPaymentMethodLabel',
-        'authentication_status' => 'getAuthenticationStatus',
-        'liability_shift_status' => 'getLiabilityShiftStatus',
-        'authentication_data' => 'getAuthenticationData',
-        'sub_orders' => 'getSubOrders',
-        'payment_method_type' => 'getPaymentMethodType',
-        'response_message' => 'getResponseMessage'
+        'payment_result_complementary_code_message' => 'getPaymentResultComplementaryCodeMessage'
     ];
 
     /**
@@ -268,12 +228,6 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
     const PAYMENT_RESULT_COMPLEMENTARY_CODE_MESSAGE_PAYMENT_INFORMATION_FILLING_ATTEMPT_LIMIT_EXCEEDED = 'paymentInformationFillingAttemptLimitExceeded';
     const PAYMENT_RESULT_COMPLEMENTARY_CODE_MESSAGE_REFUSED_BY_SCORING2 = 'refusedByScoring2';
     const PAYMENT_RESULT_COMPLEMENTARY_CODE_MESSAGE_NOT_AVAILABLE = 'notAvailable';
-    const AUTHENTICATION_STATUS_UNDEFINED = 'undefined';
-    const AUTHENTICATION_STATUS_AUTHENTICATED = 'authenticated';
-    const AUTHENTICATION_STATUS_NOT_AUTHENTICATED = 'notAuthenticated';
-    const LIABILITY_SHIFT_STATUS_UNDEFINED = 'undefined';
-    const LIABILITY_SHIFT_STATUS_SHIFT = 'shift';
-    const LIABILITY_SHIFT_STATUS_NO_SHIFT = 'noShift';
     
 
     
@@ -348,34 +302,6 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
         ];
     }
     
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getAuthenticationStatusAllowableValues()
-    {
-        return [
-            self::AUTHENTICATION_STATUS_UNDEFINED,
-            self::AUTHENTICATION_STATUS_AUTHENTICATED,
-            self::AUTHENTICATION_STATUS_NOT_AUTHENTICATED,
-        ];
-    }
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getLiabilityShiftStatusAllowableValues()
-    {
-        return [
-            self::LIABILITY_SHIFT_STATUS_UNDEFINED,
-            self::LIABILITY_SHIFT_STATUS_SHIFT,
-            self::LIABILITY_SHIFT_STATUS_NO_SHIFT,
-        ];
-    }
-    
 
     /**
      * Associative array for storing property values
@@ -397,14 +323,6 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
         $this->container['payment_result_code_message'] = isset($data['payment_result_code_message']) ? $data['payment_result_code_message'] : null;
         $this->container['payment_result_complementary_code'] = isset($data['payment_result_complementary_code']) ? $data['payment_result_complementary_code'] : null;
         $this->container['payment_result_complementary_code_message'] = isset($data['payment_result_complementary_code_message']) ? $data['payment_result_complementary_code_message'] : null;
-        $this->container['stored_payment_method_id'] = isset($data['stored_payment_method_id']) ? $data['stored_payment_method_id'] : null;
-        $this->container['stored_payment_method_label'] = isset($data['stored_payment_method_label']) ? $data['stored_payment_method_label'] : null;
-        $this->container['authentication_status'] = isset($data['authentication_status']) ? $data['authentication_status'] : null;
-        $this->container['liability_shift_status'] = isset($data['liability_shift_status']) ? $data['liability_shift_status'] : null;
-        $this->container['authentication_data'] = isset($data['authentication_data']) ? $data['authentication_data'] : null;
-        $this->container['sub_orders'] = isset($data['sub_orders']) ? $data['sub_orders'] : null;
-        $this->container['payment_method_type'] = isset($data['payment_method_type']) ? $data['payment_method_type'] : null;
-        $this->container['response_message'] = isset($data['response_message']) ? $data['response_message'] : null;
     }
 
     /**
@@ -428,22 +346,6 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
         if (!is_null($this->container['payment_result_complementary_code_message']) && !in_array($this->container['payment_result_complementary_code_message'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
                 "invalid value for 'payment_result_complementary_code_message', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getAuthenticationStatusAllowableValues();
-        if (!is_null($this->container['authentication_status']) && !in_array($this->container['authentication_status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'authentication_status', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getLiabilityShiftStatusAllowableValues();
-        if (!is_null($this->container['liability_shift_status']) && !in_array($this->container['liability_shift_status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'liability_shift_status', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -476,7 +378,7 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
     /**
      * Sets order_ref
      *
-     * @param string|null $order_ref The orderRef
+     * @param string|null $order_ref Gets or sets the order ref.
      *
      * @return $this
      */
@@ -500,7 +402,7 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
     /**
      * Sets payment_result_code
      *
-     * @param int|null $payment_result_code The response code of the service
+     * @param int|null $payment_result_code Gets or sets the return code.
      *
      * @return $this
      */
@@ -524,7 +426,7 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
     /**
      * Sets payment_result_code_message
      *
-     * @param string|null $payment_result_code_message The response code message of the service
+     * @param string|null $payment_result_code_message Gets or sets the return code message.
      *
      * @return $this
      */
@@ -557,7 +459,7 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
     /**
      * Sets payment_result_complementary_code
      *
-     * @param int|null $payment_result_complementary_code The complementary response code of the service
+     * @param int|null $payment_result_complementary_code Gets or sets the complementary return code.
      *
      * @return $this
      */
@@ -581,7 +483,7 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
     /**
      * Sets payment_result_complementary_code_message
      *
-     * @param string|null $payment_result_complementary_code_message The complementary response code message of the service
+     * @param string|null $payment_result_complementary_code_message Gets or sets the complementary return code message.
      *
      * @return $this
      */
@@ -597,216 +499,6 @@ class GetPaymentSessionResult implements ModelInterface, ArrayAccess
             );
         }
         $this->container['payment_result_complementary_code_message'] = $payment_result_complementary_code_message;
-
-        return $this;
-    }
-
-    /**
-     * Gets stored_payment_method_id
-     *
-     * @return string|null
-     */
-    public function getStoredPaymentMethodId()
-    {
-        return $this->container['stored_payment_method_id'];
-    }
-
-    /**
-     * Sets stored_payment_method_id
-     *
-     * @param string|null $stored_payment_method_id Stored Payment Method Id
-     *
-     * @return $this
-     */
-    public function setStoredPaymentMethodId($stored_payment_method_id)
-    {
-        $this->container['stored_payment_method_id'] = $stored_payment_method_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets stored_payment_method_label
-     *
-     * @return string|null
-     */
-    public function getStoredPaymentMethodLabel()
-    {
-        return $this->container['stored_payment_method_label'];
-    }
-
-    /**
-     * Sets stored_payment_method_label
-     *
-     * @param string|null $stored_payment_method_label Stored Payment Label
-     *
-     * @return $this
-     */
-    public function setStoredPaymentMethodLabel($stored_payment_method_label)
-    {
-        $this->container['stored_payment_method_label'] = $stored_payment_method_label;
-
-        return $this;
-    }
-
-    /**
-     * Gets authentication_status
-     *
-     * @return string|null
-     */
-    public function getAuthenticationStatus()
-    {
-        return $this->container['authentication_status'];
-    }
-
-    /**
-     * Sets authentication_status
-     *
-     * @param string|null $authentication_status The authentication status
-     *
-     * @return $this
-     */
-    public function setAuthenticationStatus($authentication_status)
-    {
-        $allowedValues = $this->getAuthenticationStatusAllowableValues();
-        if (!is_null($authentication_status) && !in_array($authentication_status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'authentication_status', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['authentication_status'] = $authentication_status;
-
-        return $this;
-    }
-
-    /**
-     * Gets liability_shift_status
-     *
-     * @return string|null
-     */
-    public function getLiabilityShiftStatus()
-    {
-        return $this->container['liability_shift_status'];
-    }
-
-    /**
-     * Sets liability_shift_status
-     *
-     * @param string|null $liability_shift_status The liability shift status
-     *
-     * @return $this
-     */
-    public function setLiabilityShiftStatus($liability_shift_status)
-    {
-        $allowedValues = $this->getLiabilityShiftStatusAllowableValues();
-        if (!is_null($liability_shift_status) && !in_array($liability_shift_status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'liability_shift_status', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['liability_shift_status'] = $liability_shift_status;
-
-        return $this;
-    }
-
-    /**
-     * Gets authentication_data
-     *
-     * @return map[string,string]|null
-     */
-    public function getAuthenticationData()
-    {
-        return $this->container['authentication_data'];
-    }
-
-    /**
-     * Sets authentication_data
-     *
-     * @param map[string,string]|null $authentication_data All authentication data, as a dictionary of multiple key/value pairs.
-     *
-     * @return $this
-     */
-    public function setAuthenticationData($authentication_data)
-    {
-        $this->container['authentication_data'] = $authentication_data;
-
-        return $this;
-    }
-
-    /**
-     * Gets sub_orders
-     *
-     * @return \pachirapay\Model\PaymentSessionSubOrderResult[]|null
-     */
-    public function getSubOrders()
-    {
-        return $this->container['sub_orders'];
-    }
-
-    /**
-     * Sets sub_orders
-     *
-     * @param \pachirapay\Model\PaymentSessionSubOrderResult[]|null $sub_orders Gets or sets the subOrder result.
-     *
-     * @return $this
-     */
-    public function setSubOrders($sub_orders)
-    {
-        $this->container['sub_orders'] = $sub_orders;
-
-        return $this;
-    }
-
-    /**
-     * Gets payment_method_type
-     *
-     * @return string|null
-     */
-    public function getPaymentMethodType()
-    {
-        return $this->container['payment_method_type'];
-    }
-
-    /**
-     * Sets payment_method_type
-     *
-     * @param string|null $payment_method_type Gets or sets the type of the payment method.
-     *
-     * @return $this
-     */
-    public function setPaymentMethodType($payment_method_type)
-    {
-        $this->container['payment_method_type'] = $payment_method_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets response_message
-     *
-     * @return string|null
-     */
-    public function getResponseMessage()
-    {
-        return $this->container['response_message'];
-    }
-
-    /**
-     * Sets response_message
-     *
-     * @param string|null $response_message The global response message
-     *
-     * @return $this
-     */
-    public function setResponseMessage($response_message)
-    {
-        $this->container['response_message'] = $response_message;
 
         return $this;
     }
